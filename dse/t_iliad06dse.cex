@@ -1,10 +1,9 @@
 #!datamodels
 Collection|Model|Label|Description
-urn:cite2:hmt:dse.v1:msBil6|urn:cite2:cite:datamodels.v1:dsemodel|Relations of text, manuscript page and documentary image for all edited texts.
-
+urn:cite2:hmt:dse.v1:burney86il6|urn:cite2:cite:datamodels.v1:dsemodel|Relations of text, manuscript page and documentary image for all edited texts.
 
 #!citerelationset
-urn|urn:cite2:hmt:dse.v1:msBil6
+urn|urn:cite2:hmt:dse.v1:burney86il6
 label|Collection of DSE records for Iliad 6 in the British Library, Burney 86
 text|image|surface
-urn:cts:greekLit:tlg0012.tlg001.burney86:6.1|urn:cite2:citebl:burney86imgs.v1:burney_ms_86_f055r@0.1426,0.5398,0.3972,0.02392|urn:cite2:hmt:msB.v1:55r
+urn:cts:greekLit:tlg0012.tlg001.burney86:6.1|urn:cite2:citebl:burney86imgs.v1:burney_ms_86_f055r@0.1426,0.5398,0.3972,0.02392|urn:cite2:hmt:burney86.v1:55r

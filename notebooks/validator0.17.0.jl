@@ -43,6 +43,9 @@ begin
 	
 end
 
+# ╔═╡ e4a81af6-55df-456c-ab3f-6636d2f0d631
+md"""*Unhide the following cell to see the packages used in this notebook.*"""
+
 # ╔═╡ bbef0d04-803e-11ec-2d0c-99bccd51e7f3
 md"""> ### MID validating notebook:   `v0.17.0`
 >
@@ -56,9 +59,6 @@ md"""> ### MID validating notebook:   `v0.17.0`
 
 # ╔═╡ 59201f18-0185-4beb-bd39-9367a783150d
 @bind loadem Button("Reload data from repository")
-
-# ╔═╡ 067132a6-c7bf-4df0-b852-923e6efbb423
-
 
 # ╔═╡ 976cbb8f-9257-47b2-b047-4f0c66567439
 md"> ## 1. Verification of DSE indexing"
@@ -230,6 +230,9 @@ $(@bind surface Select(surfacemenu()))
 # ╔═╡ 80d8f71d-f4ca-4590-8f7f-9e1420f52879
 surfaceurn = isempty(surface) ? nothing  : Cite2Urn(surface)
 
+# ╔═╡ acb117e5-0e65-42da-a388-38362fa4f2f3
+surfaces(r, strict = false)
+
 # ╔═╡ 64db31f9-564f-417e-84f2-0069ce3a14e8
 function waiting()
 	"<span class=\"waiting\">No surface selected</span>"
@@ -373,8 +376,8 @@ CitablePhysicalText = "~0.9.5"
 CitableTeiReaders = "~0.10.1"
 CitableText = "~0.15.2"
 EditionBuilders = "~0.8.2"
-EditorsRepo = "~0.18.3"
-ManuscriptOrthography = "~0.4.2"
+EditorsRepo = "~0.18.4"
+ManuscriptOrthography = "~0.4.3"
 Orthography = "~0.18.2"
 PlutoUI = "~0.7.50"
 PolytonicGreek = "~0.18.0"
@@ -386,7 +389,7 @@ PLUTO_MANIFEST_TOML_CONTENTS = """
 
 julia_version = "1.8.5"
 manifest_format = "2.0"
-project_hash = "2ad9e7d7cd157570fe4ce5c1f630870d76d85be0"
+project_hash = "406bbbbb75d6c7de6ffb4e1e9454bbd2dbb2d59a"
 
 [[deps.ANSIColoredPrinters]]
 git-tree-sha1 = "574baf8110975760d391c710b6341da1afa48d8c"
@@ -1038,10 +1041,10 @@ uuid = "1914dd2f-81c6-5fcd-8719-6d5c9610ff09"
 version = "0.5.10"
 
 [[deps.ManuscriptOrthography]]
-deps = ["Compat", "DocStringExtensions", "Documenter", "Orthography", "PolytonicGreek", "Test", "TestSetExtensions", "Unicode"]
-git-tree-sha1 = "76ea77f238dec13b4397fba5d026a5d9504248ab"
+deps = ["DocStringExtensions", "Documenter", "Orthography", "PolytonicGreek", "Test", "TestSetExtensions", "Unicode"]
+git-tree-sha1 = "1eb59e7ea8b54efb2914dc27eed64de1dcad8640"
 uuid = "c7d01213-112e-44c9-bed3-ac95fd3728c7"
-version = "0.4.2"
+version = "0.4.3"
 
 [[deps.MappedArrays]]
 git-tree-sha1 = "e8b359ef06ec72e8c030463fe02efe5527ee5142"
@@ -1565,11 +1568,11 @@ version = "17.4.0+0"
 """
 
 # ╔═╡ Cell order:
-# ╠═50f5bcdd-dd1f-459c-89fe-7f7a81905f20
+# ╟─e4a81af6-55df-456c-ab3f-6636d2f0d631
+# ╟─50f5bcdd-dd1f-459c-89fe-7f7a81905f20
 # ╟─bbef0d04-803e-11ec-2d0c-99bccd51e7f3
 # ╟─ba30002a-997b-40c0-9990-5ab72db94422
 # ╟─59201f18-0185-4beb-bd39-9367a783150d
-# ╠═067132a6-c7bf-4df0-b852-923e6efbb423
 # ╟─bbe0b2f7-7be5-41d5-9400-1c47cf8580b5
 # ╟─976cbb8f-9257-47b2-b047-4f0c66567439
 # ╟─09369bf5-fc9a-4e62-be15-96f5cbf1c5d7
@@ -1593,6 +1596,7 @@ version = "17.4.0+0"
 # ╟─5e45dfb7-5ba4-4a29-8ac4-b933bbff40d0
 # ╟─80d8f71d-f4ca-4590-8f7f-9e1420f52879
 # ╟─194501ae-d930-4f55-b806-4fa56d88e478
+# ╠═acb117e5-0e65-42da-a388-38362fa4f2f3
 # ╟─64db31f9-564f-417e-84f2-0069ce3a14e8
 # ╟─11867dd1-f497-4efd-8b8c-a233483aa521
 # ╟─00000000-0000-0000-0000-000000000001

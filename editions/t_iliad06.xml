@@ -5,8 +5,8 @@
     <fileDesc>
       <titleStmt>
         <title>Iliad</title>
-        <editor></editor>
-        <editor></editor>
+        <editor>Andrei Chura</editor>
+        <editor>Meagan Warren</editor>
       </titleStmt>
       <publicationStmt>
         <p>Unpublished edition of the Burney 86 manuscript for the Homer Multitext project</p>
@@ -19,14 +19,14 @@
   <text>
     <body>
       <div n="6">
-      <l n="title">Please ADD title of book
-      </l>
+        <l n="title">Please ADD title of book
+        </l>
 
-      <l n="1">Please edit *Iliad* 6.1!
-      </l>
+        <l n="1">Please edit *Iliad* 6.1!
+        </l>
 
 
       </div>
     </body>
-    </text>
+  </text>
 </TEI>

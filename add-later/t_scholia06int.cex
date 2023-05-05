@@ -1,0 +1,9 @@
+#!datamodels
+Collection|Model|Label|Description
+urn:cite2:hmt:dse.v1:t_scholia06int|urn:cite2:cite:datamodels.v1:dsemodel|Relations of text, manuscript page and documentary image for all edited texts.
+
+
+#!citerelationset
+urn|urn:cite2:hmt:dse.v1:t_scholia06int
+label|Collection of DSE records for interlinear scholia to Iliad 6 in the British Library, Burney 86
+text|image|surface

@@ -1,6 +1,10 @@
 urn|file|converter|diplomatic|normalized|orthography
+
+urn:cts:greekLit:tlg0012.tlg001.burney86:|t_iliad06.xml|TEIDivLine|MidDiplomaticBuilder("Diplomatic edition builder","burney86dipl")|MidNormalizedBuilder("Normalized edition builder","burney86normed")|msGreek()
+
 urn:cts:greekLit:tlg5026.burney86.hmt:|t_scholia06.xml|TEIThreeDivsGrouped|MidDiplomaticBuilder("Diplomatic edition builder","dipl")|MidNormalizedBuilder("Normalized edition builder","normed")|msGreek()
+
 urn:cts:greekLit:tlg5026.burney86im.hmt:|t_scholia06im.xml|TEIThreeDivsGrouped|MidDiplomaticBuilder("Diplomatic edition builder","dipl")|MidNormalizedBuilder("Normalized edition builder","normed")|msGreek()
 urn:cts:greekLit:tlg5026.burney86int.hmt:|t_scholia06int.xml|TEIThreeDivsGrouped|MidDiplomaticBuilder("Diplomatic edition builder","dipl")|MidNormalizedBuilder("Normalized edition builder","normed")|msGreek()
 urn:cts:greekLit:tlg5026.burney86il.hmt:|t_scholia06il.xml|TEIThreeDivsGrouped|MidDiplomaticBuilder("Diplomatic edition builder","dipl")|MidNormalizedBuilder("Normalized edition builder","normed")|msGreek()
-urn:cts:greekLit:tlg0012.tlg001.burney86:|t_iliad06.xml|TEIDivLine|MidDiplomaticBuilder("Diplomatic edition builder","burney86dipl")|MidNormalizedBuilder("Normalized edition builder","burney86normed")|msGreek()
+
