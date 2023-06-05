@@ -8,9 +8,13 @@ Examples from relevant texts and data collections:
 - page 55 *recto*: `urn:cite2:hmt:burney86.v1:55r`
 - image of page 55 *recto*: `urn:cite2:citebl:burney86imgs.v1:burney_ms_86_f055r`
 
- 
+
+Guide to editing: from the [HMT summer 2021 summer experience](https://homermultitext.github.io/hmt-se2021/references).
+
 ## Starting a validating dashboard
 
 Open a terminal in this repository, and:
 
     julia --project=dashboard dashboard/validatordashboard.jl
+
+    
