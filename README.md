@@ -13,8 +13,9 @@ Guide to editing: from the [HMT summer 2021 summer experience](https://homermult
 
 ## Starting a validating dashboard
 
-Open a terminal in this repository, and:
+Open a terminal in this repository, and run this command:
 
     julia --project=dashboard dashboard/validatordashboard.jl
 
     
+(If you have this repository open in Visual Studio Code, use the terminal menu to open a `New Terminal`: it will already be in thge right directory to run the command above.)    
