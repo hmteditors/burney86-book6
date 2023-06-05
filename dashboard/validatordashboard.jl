@@ -21,13 +21,13 @@ TEXTHEIGHT = 600
 
 r = repository(pwd())
 
+
 assetfolder = joinpath(pwd(), "dashboard", "assets")
 app = dash(assets_folder = assetfolder, include_assets_files=true)
 
 app.layout = html_div() do
     dcc_markdown() do 
         """*Dashboard version*: **$(DASHBOARD_VERSION)**. 
-
         """
     end,
     html_h1("MID validating dashboard"),
@@ -91,14 +91,19 @@ callback!(
         
         completeness = dcc_markdown(completenesshdr * completenessimg)
         
+
         accuracyhdr = "### 1.B. Verify accuracy of indexing\n*Check that the diplomatic reading and the indexed image correspond.*\n\n"
         accuracypassages = indexingaccuracy_html(r, surfurn, height=TEXTHEIGHT, strict = false)
         accuracy = dcc_markdown(accuracyhdr * accuracypassages)
         
+        orthography = ""
+        #=
         orthohdr = "> ## 2. Verification: orthography\n\nHighlighted tokens contain invalid characters.\n\n"
-        orthopsgs = orthographicvalidity_html(r, surfurn, strict = false)
-        orthography = dcc_markdown(orthohdr * orthopsgs,dangerously_allow_html=true)
-
+        #orthopsgs = orthographicvalidity_html(r, surfurn)
+        orthography = "TBA: type of r is $(typeof(r)), surfurn is $(surfurn) yielding ..."  * orthographicvalidity_html(r, surfurn)
+        
+        #dcc_markdown(orthohdr * orthopsgs, dangerously_allow_html=true)
+        =#
         (completeness, accuracy, orthography)
     end
 end
