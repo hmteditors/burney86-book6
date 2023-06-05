@@ -9,3 +9,8 @@ Examples from relevant texts and data collections:
 - image of page 55 *recto*: `urn:cite2:citebl:burney86imgs.v1:burney_ms_86_f055r`
 
  
+## Starting a validating dashboard
+
+Open a terminal in this repository, and:
+
+    julia --project=dashboard dashboard/validatordashboard.jl
