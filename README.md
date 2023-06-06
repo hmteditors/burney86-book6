@@ -15,6 +15,7 @@ Guide to editing: from the [HMT summer 2021 summer experience](https://homermult
 
 - Search HMT [authority lists](https://www.homermultitext.org/authlists/)
 - [Codex browser](https://www.homermultitext.org/codex-browser/)
+- Image [lightbox](https://www.homermultitext.org/lightbox/)
 - [Alphabetic search](https://www.homermultitext.org/alpha-search/) of edited texts
 
 ## Starting a validating dashboard
