@@ -11,6 +11,11 @@ Examples from relevant texts and data collections:
 
 Guide to editing: from the [HMT summer 2021 summer experience](https://homermultitext.github.io/hmt-se2021/references).
 
+## Key links from `homermultitext.org`
+
+- Search HMT [authority lists](https://www.homermultitext.org/authlists/)
+- [Alphabetic search](https://www.homermultitext.org/alpha-search/) of edited texts
+
 ## Starting a validating dashboard
 
 Open a terminal in this repository, and run this command:
