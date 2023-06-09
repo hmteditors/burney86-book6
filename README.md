@@ -9,7 +9,18 @@ Examples from relevant texts and data collections:
 - image of page 55 *recto*: `urn:cite2:citebl:burney86imgs.v1:burney_ms_86_f055r`
 
 
-Guide to editing: from the [HMT summer 2021 summer experience](https://homermultitext.github.io/hmt-se2021/references).
+## Guide to editing
+
+Refer to (and help improve!) the in-progress 2023 version of the [HMT project editor's guide](http://homermultitext.github.io/hmt-editors-guide/).
+
+
+## Key links from `homermultitext.org`
+
+- Search HMT [authority lists](https://www.homermultitext.org/authlists/)
+- Find [MS pages by *Iliad* reference](https://www.homermultitext.org/iliad-browser/)
+- [Codex browser](https://www.homermultitext.org/codex-browser/)
+- Image [lightbox](https://www.homermultitext.org/lightbox/)
+- [Alphabetic search](https://www.homermultitext.org/alpha-search/) of edited texts
 
 ## Starting a validating dashboard
 
