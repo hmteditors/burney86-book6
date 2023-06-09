@@ -1,3 +1,4 @@
 scratch/
 .vscode/
 Manifest.toml
+.DS_Store
