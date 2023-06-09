@@ -16,72 +16,25 @@
       </sourceDesc>
     </fileDesc>
   </teiHeader>
-  <text>
-    <group n="6">
-      <text n="burney86">
-         <body> 
-         <div n="FOLIO_NUMBER" type="scholion">
-            <div n="lemma">
-               <p></p>
-            </div>
-            <div n="ref">
-               <p></p>
-            </div>
-            <div n="comment">
-               <p></p>
-            </div>
-         </div>
-        </body>
-      </text>
+
+  
+<text>
+<group n="6"> 
   <text n="burney86im">
          <body> 
-         <div n="FOLIO_NUMBER" type="scholion">
+         <div n="55r_8" type="scholion">
             <div n="lemma">
                <p></p>
             </div>
             <div n="ref">
-               <p></p>
+               <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.9</p>
             </div>
             <div n="comment">
-               <p></p>
+               <p>τὸ λαμπρὸν τῆς περικεφαλαίας <choice><abbr>κτὰ</abbr><expan>κατὰ</expan></choice> τὸ μέτωπον ὄν:</p>
             </div>
          </div>
         </body>
       </text>
-
-      <text n="burney86int">
-         <body> 
-         <div n="FOLIO_NUMBER" type="scholion">
-            <div n="lemma">
-               <p></p>
-            </div>
-            <div n="ref">
-               <p></p>
-            </div>
-            <div n="comment">
-               <p></p>
-            </div>
-         </div>
-        </body>
-      </text>
-
-      <text n="burney86il">
-         <body> 
-         <div n="FOLIO_NUMBER" type="scholion">
-            <div n="lemma">
-               <p></p>
-            </div>
-            <div n="ref">
-               <p></p>
-            </div>
-            <div n="comment">
-               <p></p>
-            </div>
-         </div>
-        </body>
-      </text>
-
-
     </group>
   </text>
 </TEI>
