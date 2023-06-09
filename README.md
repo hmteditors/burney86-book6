@@ -29,4 +29,6 @@ Open a terminal in this repository, and run this command:
     julia --project=dashboard dashboard/validatordashboard.jl
 
     
-(If you have this repository open in Visual Studio Code, use the terminal menu to open a `New Terminal`: it will already be in thge right directory to run the command above.)    
+(If you have this repository open in Visual Studio Code, use the terminal menu to open a `New Terminal`: it will already be in the right directory to run the command above.)    
+
+
