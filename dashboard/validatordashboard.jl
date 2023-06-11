@@ -2,7 +2,7 @@ using Pkg
 Pkg.instantiate()
 
 
-DASHBOARD_VERSION = "0.18.0"
+DASHBOARD_VERSION = "0.19.0"
 
 using Dash
 using CitableBase
@@ -97,13 +97,12 @@ callback!(
         accuracy = dcc_markdown(accuracyhdr * accuracypassages)
         
         orthography = ""
-        #=
-        orthohdr = "> ## 2. Verification: orthography\n\nHighlighted tokens contain invalid characters.\n\n"
-        #orthopsgs = orthographicvalidity_html(r, surfurn)
-        orthography = "TBA: type of r is $(typeof(r)), surfurn is $(surfurn) yielding ..."  * orthographicvalidity_html(r, surfurn)
         
-        #dcc_markdown(orthohdr * orthopsgs, dangerously_allow_html=true)
-        =#
+        orthohdr = "> ## 2. Verification: orthography\n\nHighlighted tokens contain invalid characters.\n\n"
+        orthopsgs = orthographicvalidity_html(r, surfurn)
+        #orthography = orthographicvalidity_html(r, surfurn)
+        orthography = dcc_markdown(orthohdr * orthopsgs, dangerously_allow_html=true)
+        
         (completeness, accuracy, orthography)
     end
 end
