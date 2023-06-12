@@ -1,9 +1,9 @@
 #!datamodels
 Collection|Model|Label|Description
-urn:cite2:hmt:dse.v1:burney86scholia6|urn:cite2:cite:datamodels.hmt:dsemodel|Relations of text, manuscript page and documentary image for all edited texts.
+urn:cite2:hmt:dse.v1:burney86scholia6|urn:cite2:cite:datamodels.v1:dsemodel|Relations of text, manuscript page and documentary image for all edited texts.
 
 #!citerelationset
-urn|urn:cite2:hmt:dse.hmt:burney86scholia6
+urn|urn:cite2:hmt:dse.v1:burney86scholia6
 label|Collection of DSE records for scholia to Iliad 6 in the British Library, Burney 86
 text|image|surface
 urn:cts:greekLit:tlg5026.burney86int.hmt:6.55r_1|urn:cite2:citebl:burney86imgs.v1:burney_ms_86_f055r@0.03710,0.4822,0.1105,0.06565|urn:cite2:hmt:burney86.v1:55r
