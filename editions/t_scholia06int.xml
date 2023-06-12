@@ -44,6 +44,17 @@
                <p>πρότερον ἐγέγραπτο <q>μεσσηγὺς ποταμοῖο <persName n="urn:cite2:hmt:place.v1:place93">σκαμάνδροιο</persName>: καὶ στόμα λίμνης</q>: ὕστερον δὲ <persName n="urn:cite2:hmt:pers.v1:pers16">ἀρίσταρχος</persName> ταύτην εὑρὼν ἐπέκρινε: <persName n="urn:cite2:hmt:pers.v1:pers991">χάρης</persName> δὲ <choice><abbr>γρ´</abbr><expan>γράφει</expan></choice> <q>μεσσηγὺς ποταμοῖο <persName n="urn:cite2:hmt:place.v1:place93">σκαμάνδροιο</persName> καὶ <placeName n="urn:cite2:hmt:place.v1:place92">σιμόεντος</placeName></q>⁑</p>
             </div>
          </div>
+         <div n="55r_15" type="scholion">
+            <div n="lemma">
+               <p>ὑπαντιάσας:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.17</p>
+            </div>
+            <div n="comment">
+               <p>ἢ <w>ὑπερασπίσας</w>: ἢ ἐναντιωθείς <persName n="urn:cite2:hmt:pers.v1:pers215">διομήδει</persName>: ἢ ἀντὶ τοῦ πρὸ τούτου: ἵv' <unclear>ῇ</unclear> τὸ ὑπερβατὸν: ἀλλὰ πρόσθεν ὑπαντίασας. ἄμφω θυμὸν ἀπηῦρα⁑</p>
+            </div>
+         </div> 
         </body>
       </text>
     </group>
