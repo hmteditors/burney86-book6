@@ -63,7 +63,7 @@
                  <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.22</p>
             </div>
             <div n="comment">
-               <p>παρὰ <choice><abbr>τ</abbr><expan>τὰ</expan></choice> νάματα: ἢ παρὰ <choice><abbr>τ</abbr><expan>τὰ</expan></choice> νήϊ ξύλα: ὅ ἐστιν ἀμαδρυάς⁑</p>
+               <p>παρὰ τὰ νάματα: ἢ παρὰ τὰ νήϊ ξύλα: ὅ ἐστιν ἀμαδρυάς⁑</p>
             </div>
          </div>
          <div n="55v_21" type="scholion">
@@ -77,6 +77,39 @@
                <p>τὸν ἐξ ἀδαδουχήτων γάμων: τὸν νόθον: σκότιον δὲ, ὡς λόγιον: τὸ γὰρ κύριον παροξύνεται παρα <persName n="urn:cite2:hmt:pers.v1:pers5">πινδάρω</persName>⁑</p>
             </div>
          </div>
+         <div n="55v_22" type="scholion">
+            <div n="lemma">
+               <p>ἐξενάριξεν ἔγχεϊ χαλκείω:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.30</p>
+            </div>
+            <div n="comment">
+               <p>τὸ ἒγχει δύναται καὶ τοῖς ἄνω τοῦ ἐξενάριξε: συνεκδοχικῶς ἀντὶ τοῦ ἐφόνευσεν: σώζει μὲν οὖν καὶ πρὸς τὰ ἑξῆς⁑</p>
+            </div>
+         </div> 
+         <div n="55v_23" type="scholion">
+            <div n="lemma">
+               <p><persName n="">ἄβληρον</persName>:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.32</p>
+            </div>
+            <div n="comment">
+               <p>βλῶ βλήσω: βληρὸς καὶ ἄβληρος⁑</p>
+            </div>
+         </div>   
+         <div n="55v_25" type="scholion">
+            <div n="lemma">
+               <p><persName n="urn:cite2:hmt:pers.v1:pers717">ἄδρηστον</persName> δ' ἂρ ἔπειτα:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.37</p>
+            </div>
+            <div n="comment">
+               <p>καλὸν ἐπεισόδιον πρὸς ἐξαλλαγὴν <w>ταυτότ<unclear>ησ</unclear>τος</w>⁑</p>
+            </div>
+         </div>  
         </body>
       </text>
     </group>

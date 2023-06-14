@@ -85,7 +85,7 @@
                  <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.16</p>
             </div>
             <div n="comment">
-            <p>δοκεῖ ἡ προσθήκη κάλλιστον τοῦτο καὶ βιωφελὲς ὑπάρχον ἐξ εὐτελίζειν ὡς οὐ κακὸν καλὸν: καίτοι ἐχρῆν μᾶλλον καὶ βοηθόν τινα ἐκ θεῶν τούτῳ ἀναπλάσαι ἵν' ἡμεῖς προτρεπώμεθα ἐπὶ τὸ <w>φιλό<unclear>ξ</unclear>ενον</w>: ἢ οὖν ἁπλῶς ἀναπεφώνηται: ὡς τὸ οὐδὲ ἑκηβολίαι: ἢ ἀποδοκιμάζει τὴν ἄκριτον φιλοξενίαν: καὶ τὸ μὴ ἐπικρίνειν ποῖος τίς ἐστιν: ᾧ μένει δεξιὰν συνάπτειν: ἀρετῶν γὰρ ἵδιον. οὐχὶ τὸ πάνιας φιλεῖν: ἀλλὰ τινὰς: διὸ οὐδένα φίλον ἔσχεν: εἶτα καὶ ἐπίορκος μετὰ τῶν ἄλλων ὑπόκειται: τὰ δὲ καλὰ καθαρεύειν ἀπὸ τῶν ἐναντίων ὀφείλει⁑</p>
+            <p>δοκεῖ ἡ προσθήκη κάλλιστον τοῦτο καὶ βιωφελὲς ὑπάρχον ἐξ εὐτελίζειν ὡς οὐ κακὸν καλὸν: καίτοι ἐχρῆν μᾶλλον καὶ βοηθόν τινα ἐκ θεῶν τούτῳ ἀναπλάσαι ἵν' ἡμεῖς προτρεπώμεθα ἐπὶ τὸ <w>φιλό<unclear>ξ</unclear>ενον</w>: ἢ οὖν ἁπλῶς ἀναπεφώνηται: ὡς τὸ οὐδὲ ἑκηβολίαι: ἢ ἀποδοκιμάζει τὴν ἄκριτον φιλοξενίαν: καὶ τὸ μὴ ἐπικρίνειν ποῖος τίς ἐστιν: ᾧ μένει δεξιὰν συνάπτειν: ἀρετῶν γὰρ ἵδιον. οὐχὶ τὸ πάντας φιλεῖν: ἀλλὰ τινὰς: διὸ οὐδένα φίλον ἔσχεν: εἶτα καὶ ἐπίορκος μετὰ τῶν ἄλλων ὑπόκειται: τὰ δὲ καλὰ καθαρεύειν ἀπὸ τῶν ἐναντίων ὀφείλει⁑</p>
             </div>
          </div> 
          <div n="55v_16" type="scholion">
@@ -120,7 +120,40 @@
             <div n="comment">
                <p>ἀγαυοῦ τῷ <w>γέ<unclear>ν</unclear>ει</w>: ἢ τῷ κάλλει: οὐ γὰρ δὴ τοῦ <persName n="urn:cite2:hmt:pers.v1:pers79"><w>λαομέ<unclear>δ</unclear>οντος</w></persName> τὸν τρόπον ἐπαινεῖ: ὃς τοὺς περὶ <persName n="urn:cite2:hmt:pers.v1:pers40">ἀπόλλωνα</persName> ἠδίκησε: καὶ αὖθιο τὸν <persName n="urn:cite2:hmt:pers.v1:pers71">ἡρακλεά</persName>⁑</p>
             </div>
-         </div>        
+         </div> 
+         <div n="55v_24" type="scholion">
+            <div n="lemma">
+               <p><placeName n="">πήδασον</placeName> αἰπεινήν:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.35</p>
+            </div>
+            <div n="comment">
+               <p>ταύτην τὴν <placeName n="">πήδασον</placeName>: πρότερον μὲν, <placeName n="">μονηνίαν</placeName> φασὶ καλεῖσθαι:<persName n="urn:cite2:hmt:pers.v1:pers1">ἀχιλλέως</persName> δὲ ἐπιπολὺ πολιορκοῦντος: εἶτα μέλλοντος ἀναχωρεῖν: <persName n="">πεισιδίκη</persName> παρθένος τίς ἐρασθεῖσα αὐτοῦ. ἐν μήλῳ ἔγραψεν: μὴ σπεῦδ' <persName n="urn:cite2:hmt:pers.v1:pers1">ἀχιλλεῦ</persName> πρὶν <placeName n="">μονηνίαν</placeName> ἕλεις: ὕδωρ γὰρ οὐκ ἔνεστι <w>διψῶσ<unclear>ϊ</unclear></w> κακῶς: ὃ δὲ περιμείνας. ὑπέταξε τὴν πόλιν: <placeName n="">πήδασον</placeName> τὴν προς <placeName n="urn:cite2:hmt:place.v1:place85">καρίᾳ</placeName> καὶ <placeName n="urn:cite2:hmt:place.v1:place291">ἁλικαρνασῶ</placeName>: ἣν ἀπὸ <persName n="urn:cite2:hmt:pers.v1:pers1252">πηγάσου</persName> καλοῦσιν: ὑπέσχοντο γὰρ δώσειν αὐτῶ χώραν: ἣν ὁ ἵππος νυχθημέρῳ <w>περιτροχάσ<unclear>ε</unclear></w> διὸ καὶ χάραγμα τοῦ ἵππου ἔχουσιν ἐστί δὲ καὶ ἄλλη <rs type="ethnic" n="urn:cite2:hmt:pers.v1:pers220">τρωὰς</rs> ἣν ἅμα <placeName n="urn:cite2:hmt:place.v1:place59">λυρνησῶ</placeName> <choice><abbr>κταλεγεί</abbr><expan>καταλεγεί</expan></choice>⁑</p>
+            </div>
+         </div>
+         <div n="55v_26" type="scholion">
+            <div n="lemma">
+               <p>ἀτυζομένω:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.38</p>
+            </div>
+            <div n="comment">
+               <p>ἄτω: ἄττω: ἀτύσω: ἀτύζω <rs type="ethnic" n="urn:cite2:hmt:place.v1:place77">αἰολικῶς</rs>: ἀτυζομένω δὲ, ἀντὶ τοῦ ταρασσομένω⁑</p>
+            </div>
+         </div>
+         <div n="55v_27" type="scholion">
+            <div n="lemma">
+               <p>ὄζω μυρικίνω:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.39</p>
+            </div>
+            <div n="comment">
+               <p>ἐπεὶ` μεταξὺ ποταμῶν ἡ μάχη, εἰκότως μυρίκαι πολλαὶ: καὶ ἐν τῇ δολοφονία θῆκεν ἀνα μυρίκην⁑</p>
+            </div>
+         </div>       
         </body>
       </text>
     </group>
