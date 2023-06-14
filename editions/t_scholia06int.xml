@@ -109,7 +109,29 @@
             <div n="comment">
                <p>καλὸν ἐπεισόδιον πρὸς ἐξαλλαγὴν ταυτότητος⁑</p>
             </div>
-         </div>  
+         </div>
+         <div n="56r_42" type="scholion">
+            <div n="lemma">
+               <p>ἄξια δέξαι ἄποινα:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.46</p>
+            </div>
+            <div n="comment">
+               <p>οὔκ ὥρισε ποσότητα ἐν ἑαυτῶ <choice><abbr>κταλιπὼν</abbr><expan>καταλιπὼν</expan></choice> τὸν ἀριθμόν⁑</p>
+            </div>
+         </div>
+         <div n="56r_45" type="scholion">
+            <div n="lemma">
+               <p>ἦ σοι ἄριστα:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.56</p>
+            </div>
+            <div n="comment">
+               <p>περισπαστέον τὸν <rs type="waw">η</rs>: τιαπορητικος γάρ ιν: πολὺ δὲ τὸ ἦθος ἐμφαίνει λέγων: ἆρα καλά ἐστιν ἃ πέπονθας πρὸς αὐτῶν,⁑</p>
+            </div>
+         </div>    
         </body>
       </text>
     </group>

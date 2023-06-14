@@ -153,7 +153,62 @@
             <div n="comment">
                <p>ἐπεὶ` μεταξὺ ποταμῶν ἡ μάχη, εἰκότως μυρίκαι πολλαὶ: καὶ ἐν τῇ δολοφονία θῆκεν ἀνα μυρίκην⁑</p>
             </div>
-         </div>       
+         </div>
+         <div n="56r_40" type="scholion">
+            <div n="lemma">
+               <p>αὐτὼ μὲν ἐβήτην πρὸς πόλιν:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.40</p>
+            </div>
+            <div n="comment">
+               <p>γραφικῶς: οἱ μὲν ἵπποι φεύγουσιν ἐπικειμένου τοῦ ζυγοῦ: τὸ δὲ ἅρμα ἐμπέπλεκται μυρίκης κλάδῳ: ὁ δὲ <persName n="urn:cite2:hmt:pers.v1:pers717">ἄδραστος</persName> κυλισθεὶς ἐκ τοῦ ἅρματος, κεῖται παρὰ τὸν τροχὸν ἐπιπρόσωπον: ὁ δὲ <persName n="urn:cite2:hmt:pers.v1:pers119"><choice><abbr>μενέλα</abbr><expan>μενέλαος</expan></choice></persName> ἀνατετακὼς τὸ δόρυ. ἐφέστηκεν αὐτῶ⁑</p>
+            </div>
+         </div>
+         <div n="56r_41" type="scholion">
+            <div n="lemma">
+               <p>ἐλίσσετο γούνων:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.45</p>
+            </div>
+            <div n="comment">
+               <p>οὐδεὶς <rs type="ethnic" n="urn:cite2:hmt:place.v1:place3">ἑλλήνων</rs> τοῦτο ποιεῖ: γούνον δὲ. ὡς ἀσθενούσης κατ' ἐκεῖνο τὸ μέρος τῆς ψυχῆς⁑</p>
+            </div>
+         </div>
+         <div n="56r_43" type="scholion">
+            <div n="lemma">
+               <p>πολύκμητος:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.48</p>
+            </div>
+            <div n="comment">
+               <p>ὁ <w><gap/><unclear>῾</unclear>´δ<gap/></w> εἰργασμένος: ἢ ὁ πολλοὺς <w>κ<unclear>ά</unclear>μνειν</w> τουτίν ἀποθνήσκειν ποιῶν: ἢ ὁ εἰς <w>πολλ<unclear>οὺς</unclear></w> καμάτους ἐπιτήδειος: ἢ ὁ δυσκατέργαστος⁑</p>
+            </div>
+         </div>
+         <div n="56r_44" type="scholion">
+            <div n="lemma">
+               <p>τιὴ δὲ σὺ κήδεαι:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.55</p>
+            </div>
+            <div n="comment">
+               <p>εὐχὴν δαιμονίαν τὸν ἔλεον εἶπεν: τίη: μία λέξις ἀδιαίρετος⁑</p>
+            </div>
+         </div>
+         <div n="56r_46" type="scholion">
+            <div n="lemma">
+               <p>μὴ δ' ὄντινα:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.58</p>
+            </div>
+            <div n="comment">
+               <p>μισητὰ καὶ οὐ᾽κ <w>ἁρμό<unclear>ζο</unclear>ν<unclear>τα</unclear></w> βασιλικῶς ἤθει τὰ ῥήματα: τρόπου γὰρ ἐνδείκνυσι θηριοτήτα: ὁ δὲ ἀκροατὴς <choice><abbr>ἄνος</abbr><expan>ἄνθρωπος</expan></choice>, μισεῖ τὸ ἄγαν πικρὸν καὶ ἀπάνθρωπον: ὅθεν κἂν ταῖς τραγῳδίαις, κρύπτουσι τοὺς δρῶντας τὰ τοιαῦτα ἐν ταῖς σκηναῖς: καὶ ἢ φωναῖς τισιν ἐξακουομέναις: ἢ δι' ἀγγέλων ὕστερον σημαίνουσι τὰ πραχθέντα: οὐδὲν ἄλλο. μὴ αὐτοὶ συνμισηθῶσι τοῖς δρωμένοις: λεκτέον δὲ ὅτι εἰ μὲν ἐλέγετο ταῦτα πρὸ τῆς ἐπιορκίας, ἔγκλημα ἂν: ἐπεὶ δὲ μετὰ τοὺς ὅρκους καὶ τὴν παράβασιν. οὐκ ἐπαχθὴς <persName n="urn:cite2:hmt:pers.v1:pers22">ἀγαμέμνων</persName>: σχεδὸν οὖν ὑπὲρ τῶν θεῶν ὀργίζεται: ἄλλως τε πρᾶος μέν ἰν πρὸς τοὺς ἀρχομένους: βαρὺς δὲ τοῖς ἀντιπάλοις: καὶ αὐτίκα ἂν ἐξείποι <persName n="urn:cite2:hmt:pers.v1:pers22">ἀγαμέμνονι</persName>. βασιλεὺς γὰρ ἀγαθὸς κρατερός τ' αἰχμητής⁑</p>
+            </div>
+         </div>             
         </body>
       </text>
     </group>
