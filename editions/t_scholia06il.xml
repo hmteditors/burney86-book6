@@ -208,7 +208,128 @@
             <div n="comment">
                <p>διὰ τοὺς τροχούς</p>
             </div>
-         </div>                   
+         </div>
+         <div n="56r_52" type="scholion">
+            <div n="lemma">
+               <p></p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.40</p>
+            </div>
+            <div n="comment">
+               <p>παρὰ τὸν ἄξονα: ἐπεὶ` καὶ παρὰ τροχὸν ἐξεκυλίσθη:</p>
+            </div>
+         </div>
+         <div n="56r_53" type="scholion">
+            <div n="lemma">
+               <p></p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.41</p>
+            </div>
+            <div n="comment">
+               <p>ἐκπολησσόμενοι ἔφευγον: καὶ φοβούμενοι ἢ ταρασσόμενοι:</p>
+            </div>
+         </div>
+         <div n="56r_54" type="scholion">
+            <div n="lemma">
+               <p></p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.43</p>
+            </div>
+            <div n="comment">
+               <p>στόμα τὸ πρόσωπον: οὕτω <rs type="ethnic" n="urn:cite2:hmt:place.v1:place27">λάκωνες</rs>:</p>
+            </div>
+         </div>
+         <div n="56r_55" type="scholion">
+            <div n="lemma">
+               <p></p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.46</p>
+            </div>
+            <div n="comment">
+               <p>λείπει ταῦτα λέγων: ἢ ἀπὸ τοῦ διηγηματικοῦ: ἐπὶ τὸ μιμητικόν:</p>
+            </div>
+         </div>
+         <div n="56r_56" type="scholion">
+            <div n="lemma">
+               <p></p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.47</p>
+            </div>
+            <div n="comment">
+               <p>ἵνα μὴ ὡς πτωχῶ ἀπιστῆ:</p>
+            </div>
+         </div>
+         <div n="56r_57" type="scholion">
+            <div n="lemma">
+               <p></p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.49</p>
+            </div>
+            <div n="comment">
+               <p>μετὰ χαρᾶς δοίη: ἢ τὴν πράσιν ἑτέρω ὀνόματι ἐσκέπασεν</p>
+            </div>
+         </div>
+         <div n="56r_58" type="scholion">
+            <div n="lemma">
+               <p></p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.51</p>
+            </div>
+            <div n="comment">
+               <p>διὸ καὶ μαλθακὸς αἰχμητής</p>
+            </div>
+         </div>
+         <div n="56r_59" type="scholion">
+            <div n="lemma">
+               <p></p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.54</p>
+            </div>
+            <div n="comment">
+               <p>πρὶν συνθέσθαι <persName n="urn:cite2:hmt:pers.v1:pers119"><choice><abbr>μενέλα</abbr><expan>μενέλαον</expan></choice></persName>:</p>
+            </div>
+         </div>
+         <div n="56r_60" type="scholion">
+            <div n="lemma">
+               <p></p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.55</p>
+            </div>
+            <div n="comment">
+               <p>πολὺ τὸ <choice><abbr>ἄρθ</abbr><expan>ἄρθρον</expan></choice>: τὸ δὲ σχῆμα πολὺ παρὰ <rs type="ethnic" n="urn:cite2:hmt:place.v1:place76">ἀττικοῖς</rs> ἐστι</p>
+            </div>
+         </div>
+         <div n="56r_61" type="scholion">
+            <div n="lemma">
+               <p></p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.58</p>
+            </div>
+            <div n="comment">
+               <p>σικτέον εἰς τὸ ἡμετέρας:</p>
+            </div>
+         </div>
+          <div n="56r_62" type="scholion">
+            <div n="lemma">
+               <p></p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.68</p>
+            </div>
+            <div n="comment">
+               <p>ἀντὶ τοῦ ἐπιθυμῶν:</p>
+            </div>
+         </div>                                     
       </body>
       </text>
     </group>

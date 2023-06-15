@@ -118,7 +118,7 @@
                  <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.46</p>
             </div>
             <div n="comment">
-               <p>οὔκ ὥρισε ποσότητα ἐν ἑαυτῶ <choice><abbr>κταλιπὼν</abbr><expan>καταλιπὼν</expan></choice> τὸν ἀριθμόν⁑</p>
+               <p>οὔχ ὥρισε ποσότητα ἐν ἑαυτῶ <choice><abbr>κταλιπὼν</abbr><expan>καταλιπὼν</expan></choice> τὸν ἀριθμόν⁑</p>
             </div>
          </div>
          <div n="56r_45" type="scholion">
@@ -129,9 +129,42 @@
                  <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.56</p>
             </div>
             <div n="comment">
-               <p>περισπαστέον τὸν <rs type="waw">η</rs>: τιαπορητικος γάρ ιν: πολὺ δὲ τὸ ἦθος ἐμφαίνει λέγων: ἆρα καλά ἐστιν ἃ πέπονθας πρὸς αὐτῶν,⁑</p>
+               <p>περισπαστέον τον <rs type="waw">η</rs>: τιαπορητικος γάρ εστιν: πολὺ δὲ τὸ ἦθος ἐμφαίνει λέγων: ἆρα καλά ἐστιν ἃ πέπονθας πρὸς αὐτῶν,⁑</p>
             </div>
-         </div>    
+         </div>
+         <div n="56r_47" type="scholion">
+            <div n="lemma">
+               <p>ἀκήδεστοι:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.60</p>
+            </div>
+            <div n="comment">
+               <p>μὴ ἔχοντες τὸν κηδεύοντα⁑</p>
+            </div>
+         </div>
+         <div n="56r_48" type="scholion">
+            <div n="lemma">
+               <p>ἄφαντοι:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.60</p>
+            </div>
+            <div n="comment">
+               <p>ὡς μὴ δὲ μνημεῖον αὐτῶν παραλείπεσθαι⁑</p>
+            </div>
+         </div>
+         <div n="56r_49" type="scholion">
+            <div n="lemma">
+               <p>αἴσιμα παρειπών:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.62</p>
+            </div>
+            <div n="comment">
+               <p>εἰμαρμένα: ἢ τὰ πρέποντα τα τοῖς ἀδικουμένοις: ἐμαρτύρησε δὲ ὁ ποιητὴς αὐτῶ: ὡς καλῶς διαθεμένω τοὺς λόγους⁑</p>
+            </div>
+         </div>        
         </body>
       </text>
     </group>
