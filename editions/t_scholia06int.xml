@@ -164,7 +164,30 @@
             <div n="comment">
                <p>εἰμαρμένα: ἢ τὰ πρέποντα τα τοῖς ἀδικουμένοις: ἐμαρτύρησε δὲ ὁ ποιητὴς αὐτῶ: ὡς καλῶς διαθεμένω τοὺς λόγους⁑</p>
             </div>
-         </div>        
+         </div>
+         <div n="56v_65" type="scholion">
+            <div n="lemma">
+               <p>ἔνθά κεν αὖτε <rs type="ethnic" n="urn:cite2:hmt:pers.v1:pers220">τρῷες</rs> ἀρηϊφίλων ὑπ' <placeName n="urn:cite2:hmt:place.v1:place96">ἀχαιῶν</placeName>:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.73</p>
+            </div>
+            <div n="comment">
+               <p>οἶδε τὸ τῆς εἱμαρμένης ὁ <w>πο<unclear>ιη</unclear>τὴς</w>: ὡς καὶ ἐπ <persName n="urn:cite2:hmt:pers.v1:pers1"><choice><abbr>ἀχιλλέ</abbr><expan>ἀχιλλέως</expan></choice></persName>: καὶ νῦν ἀπώλοντο ἂν. εἰ μὴ ἱκέτευσαν: ἐπεὶ δὲ ἱκέτευσαν, μόνον <w>ἐδυ<unclear>σ</unclear>υχησαν</w>⁑</p>
+            </div>
+         </div>
+         <div n="56v_66" type="scholion">
+            <div n="lemma">
+               <p>πριαμίδης <persName n="urn:cite2:hmt:pers.v1:pers507">ἕλενος</persName>:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.76</p>
+            </div>
+            <div n="comment">
+               <p>λέγεται τὸν <persName n="urn:cite2:hmt:pers.v1:pers507">ἕλενον</persName>, δίδυμον εἶναι <persName n="urn:cite2:hmt:pers.v1:pers813">κασάνδρα</persName>: τεχθέντας δὲ. <w>καταλ<unclear>ε</unclear>ιφθῆναι</w> μὲν. ἐν τῴ τοῦ <persName n="urn:cite2:hmt:pers.v1:pers521">θυμβραίου</persName> <persName n="urn:cite2:hmt:pers.v1:pers40">ἀπόλλωνος</persName> <w>ἱερ<unclear>ῷ</unclear></w> καὶ δράκοντας ἀποψῆσαι τὴν ἀκοήν καὶ τὴν μαντείαν ἐντεῦθε λαβείν.</p>
+               
+            </div>
+         </div>           
         </body>
       </text>
     </group>
