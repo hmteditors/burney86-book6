@@ -251,9 +251,42 @@
             </div>
             <div n="comment">
                <p><persName n="urn:cite2:hmt:pers.v1:pers15">ζηνόδοτος</persName> <rs type="ethnic" n="urn:cite2:hmt:pers.v1:pers220">τρώων</rs>: ἀμπεδίον συλήσομεν ἔντεα νεκροὺς: ἵνα μὴ μόνον εἰς τὴν πρᾶξιν: ἀλλὰ καὶ εἰς τὸ κέρδος συμπεριλαμβάνοι ἑαυτὸν ὁ <persName n="urn:cite2:hmt:pers.v1:pers117"><choice><abbr>νέ</abbr><expan>νέστωρ</expan></choice>
-               </persName>: ἀγνοεῖ δὲ ὅτι ἔθος ἐστιν ὁμηρικὸν τὸ τοιοῦτον: ὡς ἐν τῷ ἄλλοι μὲν γὰρ ὅσοι θεοὶ εἴσ' ἐν ὀλύμπω: σοί τ' ἐπιπείθονται: καὶ δεδμήμεθα ἕκαστος: ἔδει γαρ δέδμηνται: καὶ πάλιν: ἀλλ' ἄγεθ' ὡς ἂν ἐγὼ εἴπω: πειθώμεθα πάντες: νῦν μὲν δόρπον ἔλεσθαι: τὸ δὲ νεκροὺς τεθνεώτας, ὡς τάφρον ὀρυκτήν⁑</p>
+               </persName>: ἀγνοεῖ δὲ ὅτι ἔθος ἐστιν ὁμηρικὸν τὸ τοιοῦτον: ὡς ἐν τῷ ἄλλοι μὲν γὰρ ὅσοι θεοὶ εἴσ' ἐν ὀλύμπω: σοί τ' ἐπιπείθονται: καὶ δεδμήμεθα ἕκαστος: ἔδει γαρ δέδμηνται: καὶ πάλιν: ἀλλ' ἄγεθ' ὡς ἂν ἐγὼ εἴπω: πειθώμεθα πάντες: νῦν μὲν δόρπον ἕλεσθαι: τὸ δὲ νεκροὺς τεθνεῶτας, ὡς τάφρον ὀρυκτήν⁑</p>
             </div>
-         </div>                            
+         </div>
+         <div n="56v_67" type="scholion">
+            <div n="lemma">
+               <p><persName n="urn:cite2:hmt:pers.v1:pers142">αἰνεία</persName> τε καὶ <persName n="urn:cite2:hmt:pers.v1:pers172">ἕκτορ</persName>:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.77</p>
+            </div>
+            <div n="comment">
+               <p>διὰ τὸ ἀλαζονικὸν. συμπεριλαμβάνει καὶ τὸν <persName n="urn:cite2:hmt:pers.v1:pers142">αἰνείαν</persName>: τραχὺς γὰρ πρὸς τοὺς συμβούλους ὁ <persName n="urn:cite2:hmt:pers.v1:pers172">ἕκτωρ</persName>⁑</p>
+            </div>
+         </div>
+         <div n="56v_68" type="scholion">
+            <div n="lemma">
+               <p><rs type="ethnic" n="urn:cite2:hmt:pers.v1:pers220">τρῴων</rs> καὶ <rs type="ethnic" n="urn:cite2:hmt:place.v1:place75">λυκίων</rs>:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.78</p>
+            </div>
+            <div n="comment">
+               <p><rs type="ethnic" n="urn:cite2:hmt:place.v1:place75">λυκίων</rs> κατ ἐξοχὴν τῶν συμμάχων: ἐγκέκλιται δὲ, ἐρήρεισται: ὅθεν καὶ ἀστραβῆ κίονα καὶ κίονι κεκλιμένη: καὶ <persName n="urn:cite2:hmt:pers.v1:pers233">ἀλκινόου</persName> δ' ἐκ' τοῦδ' ἔχεται: οἷον ἐὰν ἀπόλεισθε ὑμεῖς, στραφήσεται ὁ πόλεμος καὶ ἡ βουλή⁑</p>
+            </div>
+         </div>
+         <div n="56v_69" type="scholion">
+            <div n="lemma">
+               <p>μάχεσθαί τε φρονέειν τε:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.79</p>
+            </div>
+            <div n="comment">
+               <p>ἀρετὴ τῶν ἡγουμένων: βουλεύεσθαι μὲν ἄριστα τὸ συμφέρον: πράττειν δὲ κάλλιστα τὸ βεβουλευμένον: θεραπεύει δὲ αὐτοὺς: ἵνα ὡς <w>φρόνιμο<unclear>ι</unclear></w> δέξαιντο τὴν συμβουλήν: <persName n="urn:cite2:hmt:pers.v1:pers172">ἕκτορα</persName> δὲ πέμπει ὡς πείθοντα τὴν θεὸν διὰ τῆς ἀξιοπιστίας⁑</p>
+            </div>
+         </div>                                            
         </body>
       </text>
     </group>
