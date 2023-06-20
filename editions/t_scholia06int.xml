@@ -196,9 +196,42 @@
                  <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.80</p>
             </div>
             <div n="comment">
-               <p></p>
+               <p>ὁ τρόπος <w>σύλλ<unclear>η</unclear>ψις</w> τῷ μὲν ἑνὶ <w>στῆ<unclear>ν</unclear>αι</w> προ τῶν: πυλῶν μὴ συγχωροῦντι φυγεῖν: ἑτέρῳ δὲ περιϊέναι <w>ὀρύνο<unclear>ν</unclear>τι</w>: ἢ τὸ στῆτε, τῆς <w>φ<unclear>υγ</unclear>ῆς</w> παύεσθε: οἱ δὲ` <w><unclear>ἀν</unclear>τιστρέφουσιν</w> ὡς τὸ εἵματα ἀμφί <w><unclear>εσα</unclear>σα</w> θυώδεα καὶ λούσασα⁑</p>
             </div>
-         </div>             
+         </div>
+         <div n="56v_71" type="scholion">
+            <div n="lemma">
+               <p>ἐν χερσὶ γυναικῶν:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.81</p>
+            </div>
+            <div n="comment">
+               <p>καλῶς οὐκ εἶπε πύλῃσιν: ἢ οἰκησιν εὐσχερωνέστερον δὲ τοῦ ἱστορουμένου περὶ τὰς <rs type="ethnic" n="urn:cite2:hmt:place.v1:place111">περσικὰς</rs> γυναῖκες⁑</p>
+            </div>
+         </div>
+         <div n="56v_72" type="scholion">
+            <div n="lemma">
+               <p><w>γεραιά<gap/></w>:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.87</p>
+            </div>
+            <div n="comment">
+               <p>τινὲ`ς  γεραρὰς τὰς <w>ἱερ<gap/>ας</w> τὰς ἐκ τῶν ἱερῶν γέραι δεχομένας τὸ δὲ ξυνάγουσα; ἀντὶ τοῦ συνάξουσα⁑</p>
+            </div>
+         </div>
+         <div n="56v_77" type="scholion">
+            <div n="lemma">
+               <p>ἀθηναίης ἐπὶ γούνασι:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.92</p>
+            </div>
+            <div n="comment">
+               <p>ἡ <rs type="waw">ἐπι</rs>, ἀντὶ τῆς <rs type="waw">παρα</rs>: ὁμοιως τῷ ἡ μενὸν ἐπ ἐσχάρη ἧστο: στράβων γάρ φησιν: <w>καθ<unclear>ῆσθαι</unclear></w> πρώην τὰ ἀγάλματα τῆς <persName n="urn:cite2:hmt:pers.v1:pers67">ἀθηνᾶς</persName>, ἢ ἐξαρτῆσαι αὐτῆς⁑</p>
+            </div>
+         </div>                     
         </body>
       </text>
     </group>

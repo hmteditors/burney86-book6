@@ -43,7 +43,18 @@
             <div n="comment">
                <p>ἐνεδύσαντο τὴν γὴν ταφέντες:</p>
             </div>
-         </div>  
+         </div> 
+         <div n="56v_75" type="scholion">
+            <div n="lemma">
+               <p>ἐν πόλει ἄκρῃ:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.88</p>
+            </div>
+            <div n="comment">
+               <p>δίαλυσις: ἢ μετατύπωσις ὁ τρόπος: φασὶν <persName n="urn:cite2:hmt:pers.v1:pers192">ἥφαιστον</persName> ἐκ τῶν ὀστῶν <persName n="urn:cite2:hmt:pers.v1:pers24">πέλοπος</persName>, πεποιηκέναι τὸ παλλάδιον⁑</p>
+            </div>
+         </div>    
         </body>
       </text>
     </group>

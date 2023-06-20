@@ -286,7 +286,40 @@
             <div n="comment">
                <p>ἀρετὴ τῶν ἡγουμένων: βουλεύεσθαι μὲν ἄριστα τὸ συμφέρον: πράττειν δὲ κάλλιστα τὸ βεβουλευμένον: θεραπεύει δὲ αὐτοὺς: ἵνα ὡς <w>φρόνιμο<unclear>ι</unclear></w> δέξαιντο τὴν συμβουλήν: <persName n="urn:cite2:hmt:pers.v1:pers172">ἕκτορα</persName> δὲ πέμπει ὡς πείθοντα τὴν θεὸν διὰ τῆς ἀξιοπιστίας⁑</p>
             </div>
-         </div>                                            
+         </div>
+         <div n="56v_73" type="scholion">
+            <div n="lemma">
+               <p>νηὸν: οἴξασα κληῗδι θύρας:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.88</p>
+            </div>
+            <div n="comment">
+               <p>περισσοὶ οἱ δύον: διὸ οὐ δὲ ὑπὸ τοῦ <persName n="urn:cite2:hmt:pers.v1:pers172">ἕκτορος</persName> λέγονται: τί γὰρ αὐτῇ προσῆκε τὸ οἶξαι⁑</p>
+            </div>
+         </div>
+         <div n="56v_74" type="scholion">
+            <div n="lemma">
+               <p>ἀθηναίης <choice><abbr>γλαυκώπιδ</abbr><expan>γλαυκώπιδος</expan></choice>:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.88</p>
+            </div>
+            <div n="comment">
+               <p>εἰς τὸ <choice><abbr>γλαυκώπιδ</abbr><expan>γλαυκώπιδος</expan></choice>. στικτέον: καὶ λείπει ἡ <rs type="waw">εις</rs>: συνάξασα εἰς τὸν ναὸν τὰς γεραιὰς: καὶ ἀνοίξασα τὰς θύρας ἐν τῇ ἀκροπόλει:</p>
+            </div>
+         </div>
+         <div n="56v_76" type="scholion">
+            <div n="lemma">
+               <p>θεῖναι ἀθηναίησ:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.92</p>
+            </div>
+            <div n="comment">
+               <p>φασὶ τὸ διοπετὲς ἀνδρὸς δορὰν ἠμφιέσθαι: ἔχειν δὲ στέμματα: καὶ ἠλεκάτην: ἐν δὲ τῇ κεφαλῇ πόλιν: κἂν τῇ δεξιᾶ. δόρυ⁑</p>
+            </div>
+         </div>                                                     
         </body>
       </text>
     </group>
