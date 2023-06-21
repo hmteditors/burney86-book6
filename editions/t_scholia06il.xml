@@ -329,7 +329,73 @@
             <div n="comment">
                <p>ἀντὶ τοῦ ἐπιθυμῶν:</p>
             </div>
-         </div>                                     
+         </div>
+         <div n="56v_82" type="scholion">
+            <div n="lemma">
+               <p></p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.76</p>
+            </div>
+            <div n="comment">
+               <p><persName n="urn:cite2:hmt:pers.v1:pers16">ἀρίσταρχος</persName> μάντις τ' οἰωνοπώλος τε:</p>
+            </div>
+         </div> 
+         <div n="56v_83" type="scholion">
+            <div n="lemma">
+               <p></p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.84</p>
+            </div>
+            <div n="comment">
+               <p>ἐγὼ καὶ <persName n="urn:cite2:hmt:pers.v1:pers142">αἰνείας</persName>: πιθανῶς τοῖς κινδύνοις ἑαυτὸν καταλέγει⁑</p>
+            </div>
+         </div> 
+         <div n="56v_84" type="scholion">
+            <div n="lemma">
+               <p></p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.86</p>
+            </div>
+            <div n="comment">
+               <p>πλεονάζει ἡ μετα:</p>
+            </div>
+         </div> 
+         <div n="56v_85" type="scholion">
+            <div n="lemma">
+               <p></p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.90</p>
+            </div>
+            <div n="comment">
+               <p>διδάσκει ἐκ τῶν καλλιστευόντων τιμᾶν τοὺς θεούς:</p>
+            </div>
+         </div>
+         <div n="56v_86" type="scholion">
+            <div n="lemma">
+               <p></p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.94</p>
+            </div>
+            <div n="comment">
+               <p>βοῦν ἀγελαίην:</p>
+            </div>
+         </div>
+         <div n="56v_87" type="scholion">
+            <div n="lemma">
+               <p></p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.96</p>
+            </div>
+            <div n="comment">
+               <p><persName n="urn:cite2:hmt:pers.v1:pers16">ἀρίσταρχος</persName> ὥς κεν</p>
+            </div>
+         </div>                                                    
       </body>
       </text>
     </group>

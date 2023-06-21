@@ -319,7 +319,51 @@
             <div n="comment">
                <p>φασὶ τὸ διοπετὲς ἀνδρὸς δορὰν ἠμφιέσθαι: ἔχειν δὲ στέμματα: καὶ ἠλεκάτην: ἐν δὲ τῇ κεφαλῇ πόλιν: κἂν τῇ δεξιᾶ. δόρυ⁑</p>
             </div>
-         </div>                                                     
+         </div>
+         <div n="56v_78" type="scholion">
+            <div n="lemma">
+               <p>δυοκαίδεκα βοῦς:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.93</p>
+            </div>
+            <div n="comment">
+               <p>δωδεκηὶς θυσία εστιν: παρὰ τοῖς <rs type="ethnic" n="urn:cite2:hmt:place.v1:place76">ἀττικοῖς</rs>: εὐεπίφορος δὲ ὁ <choice><abbr>ποιητ`</abbr><expan>ποιητὴς</expan></choice> εἰς τὸ <num value="12">ϊβ</num>⁑</p>
+            </div>
+         </div>
+         <div n="56v_79" type="scholion">
+            <div n="lemma">
+               <p>ἤνις ἠκέστας:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.94</p>
+            </div>
+            <div n="comment">
+               <p>νέας: ἀδαμάστους, ἀκεντήτους⁑</p>
+            </div>
+         </div>
+         <div n="56v_80" type="scholion">
+            <div n="lemma">
+               <p>ἀπόσχῃ <placeName n="urn:cite2:hmt:place.v1:place6">ἰλίου</placeName> ἱρῆς:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.96</p>
+            </div>
+            <div n="comment">
+               <p>τινὲς οὕτω διεῖλον: ἀπόσχῃ <placeName n="urn:cite2:hmt:place.v1:place6">ἰλίου</placeName> ἱρῆς: ἄγριον αἰχμητήν <w>κρα<unclear>τ</unclear>ερὸν</w> <persName n="urn:cite2:hmt:pers.v1:pers69">ἀπολλόδωρος</persName> δὲ, κρατερὸν μήστωρα φόβοιο: ὅ ἐστιν ἰσχυρὸν εἰς τὸ μῆσασθαι φυγήν⁑</p>
+            </div>
+         </div>
+         <div n="56v_81" type="scholion">
+            <div n="lemma">
+               <p>αἰχμητήν:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.97</p>
+            </div>
+            <div n="comment">
+               <p>ἐν τῷ αἰχμάζειν κράτιστον: ἵνα μὴ ὑπὲρ εὐτελοῦς <w>δ<unclear>ει</unclear>κ<unclear>οῖ</unclear>εν</w> καταφεύγειν εἰς θεούς⁑</p>
+            </div>
+         </div>                                                          
         </body>
       </text>
     </group>
