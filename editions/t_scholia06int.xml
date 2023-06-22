@@ -231,7 +231,29 @@
             <div n="comment">
                <p>ἡ ἐπι, ἀντὶ τῆς παρα: ὁμοιως τῷ ἡ μενὸν ἐπ ἐσχάρη ἧστο: στράβων γάρ φησιν: <w>καθ<unclear>ῆσθαι</unclear></w> πρώην τὰ ἀγάλματα τῆς <persName n="urn:cite2:hmt:pers.v1:pers67">ἀθηνᾶς</persName>, ἢ ἐξαρτῆσαι αὐτῆς⁑</p>
             </div>
-         </div>                     
+         </div>
+         <div n="57r_96" type="scholion">
+            <div n="lemma">
+               <p>δαίμοσιν ἀρήσασθε:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.115</p>
+            </div>
+            <div n="comment">
+               <p>ἐπέρρωσεν αὐτοὺς χρηστῇ ἐλπίδι: δεδίασι γὰρ, ὡς παρασπονδίσαντες⁑</p>
+            </div>
+         </div>  
+         <div n="57r_97" type="scholion">
+            <div n="lemma">
+               <p>ὥς ἄρα φωνήσας ἀπέβη:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.116</p>
+            </div>
+            <div n="comment">
+               <p>καὶ πῶς ἔδει τοσαύτῃ περιστάσει συνεχομένων τῶν <rs type="ethnic" n="urn:cite2:hmt:pers.v1:pers67">τρώων</rs> ἀναχωρεῖν: καὶ μὴ μᾶλλον ἐπικηρυκεύσασθαι τὴν θυσίαν: ἀλλ ᾔδει τοὺς <rs type="ethnic" n="urn:cite2:hmt:pers.v1:pers67">τρῶας</rs> ἐθελοκακοῦντας τῇ ἀπουσία <persName n="urn:cite2:hmt:pers.v1:pers129"><choice><abbr>ἀλεξανδς</abbr><expan>ἀλεξανδρος</expan></choice></persName>: ἐφ ὃν μάλιστα ὥρμητο: ἣ δεισιδαίμων ὢν. οὐ θέλει παρέργως τὴν θυσίαν γενέσθαι: ἄλλως τε παροξύνει αὐτοὺς καὶ <choice><abbr>κταλείπει</abbr><expan>καταλείπει</expan></choice> <persName n="urn:cite2:hmt:pers.v1:pers142">αἰνείαν</persName>: ἢ πρὸς ἀνάπαυσιν τῶν <w>στρατευ<unclear>νύ</unclear>των</w>: διὸ καὶ τὸ μονομαχίον παράγεται: ἢ ἐπεὶ` ὠνείδισται ὑπὸ <persName n="urn:cite2:hmt:pers.v1:pers195">σαρπηδόνος</persName>, <persName n="urn:cite2:hmt:pers.v1:pers129">ἀλέξανδρον</persName> θέλει παρεγεῖραι⁑</p>
+            </div>
+         </div>                   
         </body>
       </text>
     </group>

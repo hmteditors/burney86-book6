@@ -395,7 +395,62 @@
             <div n="comment">
                <p><persName n="urn:cite2:hmt:pers.v1:pers16">ἀρίσταρχος</persName> ὥς κεν</p>
             </div>
-         </div>                                                    
+         </div>
+         <div n="57r_102" type="scholion">
+            <div n="lemma">
+               <p></p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.104</p>
+            </div>
+            <div n="comment">
+               <p>διὰ τὸ πάντη ἐποιχόμενοι</p>
+            </div>
+         </div>
+         <div n="57r_103" type="scholion">
+            <div n="lemma">
+               <p></p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.108</p>
+            </div>
+            <div n="comment">
+               <p>ὁ <rs type="waw">δε</rs> ἀντὶ τοῦ <rs type="waw">γαρ</rs></p>
+            </div>
+         </div>
+         <div n="57r_104" type="scholion">
+            <div n="lemma">
+               <p></p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.120</p>
+            </div>
+            <div n="comment">
+               <p>ὡς διεστώτων καὶ ἀναπαυομενών</p>
+            </div>
+         </div>
+         <div n="57r_105" type="scholion">
+            <div n="lemma">
+               <p></p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.121</p>
+            </div>
+            <div n="comment">
+               <p><persName n="urn:cite2:hmt:pers.v1:pers16"><choice><abbr>ἀρίσταρχ</abbr><expan>ἀρίσρταρχος</expan></choice></persName> δυϊκόν⁑</p>
+            </div>
+         </div>
+         <div n="57r_106" type="scholion">
+            <div n="lemma">
+               <p></p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.124</p>
+            </div>
+            <div n="comment">
+               <p>δευτέραν γὰρ ἔχων τάξιν <persName n="urn:cite2:hmt:pers.v1:pers195">σαρπηδόνος</persName>. οὐ προεμάχει: ἢ ἐν τῇ πρὸς ἐμὲ μάχῃ:</p>
+            </div>
+         </div>                                 
       </body>
       </text>
     </group>
