@@ -363,7 +363,18 @@
             <div n="comment">
                <p>ἐν τῷ αἰχμάζειν κράτιστον: ἵνα μὴ ὑπὲρ εὐτελοῦς <w>δ<unclear>ει</unclear>κ<unclear>οῖ</unclear>εν</w> καταφεύγειν εἰς θεούς⁑</p>
             </div>
-         </div>                                                          
+         </div>
+         <div n="57r_88" type="scholion">
+            <div n="lemma">
+               <p>φημὶ γενέσθαι:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.98</p>
+            </div>
+            <div n="comment">
+               <p>καλῶς οὐκ εἶπεν εἶναι: ἀλλὰ γενέσθαι νῦν ὑπὸ <persName n="urn:cite2:hmt:pers.v1:pers67">ἀθηνᾶς</persName></p>
+            </div>
+         </div>                                                              
         </body>
       </text>
     </group>
