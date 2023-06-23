@@ -496,7 +496,117 @@
             <div n="comment">
                <p>μέχρι γὰρ τοῦ τρῶσαι τοὺς θεοὺς. ἀφῄρηταί τὴν ἀχλύν⁑</p>
             </div>
-         </div>                                                                             
+         </div>
+         <div n="57v_108" type="scholion">
+            <div n="lemma">
+               <p>δυστήνων:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.127</p>
+            </div>
+            <div n="comment">
+               <p>κακὴν στάσιν ἐχόντων⁑</p>
+            </div>
+         </div>
+         <div n="57v_109" type="scholion">
+            <div n="lemma">
+               <p>εἰ δέ τις ἀθανάτων:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.128</p>
+            </div>
+            <div n="comment">
+               <p> ἐπεὶ` εἶπε φᾶν δέ τιν' ἀθανάτων: διὰ τοῦτο ταῦτα φησίν⁑</p>
+            </div>
+         </div>
+         <div n="57v_111" type="scholion">
+            <div n="lemma">
+               <p>οὐ <persName n="urn:cite2:hmt:pers.v1:pers224">δρύαντος</persName> υἱός:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.130</p>
+            </div>
+            <div n="comment">
+               <p><rs type="ethnic" n="">ἡδωνῶν</rs> τῶν πρὸς <placeName n="">πάγγαιον</placeName> βασιλεὺς μὴ προσδεξάμενος τὴν ἔφοβον <persName n="urn:cite2:hmt:pers.v1:pers59">διονύσου</persName>⁑</p>
+            </div>
+         </div>
+         <div n="57v_112" type="scholion">
+            <div n="lemma">
+               <p>μαινομένοιο <persName n="urn:cite2:hmt:pers.v1:pers59">διωνύσου</persName>:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.132</p>
+            </div>
+            <div n="comment">
+               <p>ὡς χλωρὸν δέος: <persName n="urn:cite2:hmt:pers.v1:pers59">διόνυσος</persName> δὲ παρα τον <persName n="urn:cite2:hmt:pers.v1:pers8">δία</persName> καὶ τὴν <placeName n="urn:cite2:hmt:place.v1:place302">νύσσι</placeName>⁑</p>
+            </div>
+         </div>
+         <div n="57v_114" type="scholion">
+            <div n="lemma">
+               <p>θύσθλα:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.134</p>
+            </div>
+            <div n="comment">
+               <p>οἱ μὲ`ν τοὺς κλάδους: οἱ δὲ`, ἀμπέλους: οἱ δὲ`, τοὺς θύρσους⁑</p>
+            </div>
+         </div>
+         <div n="57v_115" type="scholion">
+            <div n="lemma">
+               <p>βουπλῆγι:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.135</p>
+            </div>
+            <div n="comment">
+               <p>μάστιγι ἢ πελέκει⁑</p>
+            </div>
+         </div>
+         <div n="57v_116" type="scholion">
+            <div n="lemma">
+               <p><persName n="urn:cite2:hmt:pers.v1:pers59">διώνυσος</persName> δὲ φοβηθεὶς:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.135</p>
+            </div>
+            <div n="comment">
+               <p>μικρὸς γὰρ ἦν: ἀπὸ τοῦ καὶ τὰς τιθήνας αὐτῷ συνκαταλέγεσθαι: καὶ εἰς τὸν κόλπον αὐτὸν δεδυκέναι καὶ μὴ τιμωρήσασθαι τὸν <persName n="urn:cite2:hmt:pers.v1:pers718">λυκοῦργον</persName>:</p>
+            </div>
+         </div>
+         <div n="57v_117" type="scholion">
+            <div n="lemma">
+               <p><persName n="urn:cite2:hmt:pers.v1:pers19">θέτις</persName> δ' ὑπεδέξατο:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.136</p>
+            </div>
+            <div n="comment">
+               <p><persName n="urn:cite2:hmt:pers.v1:pers19">θέτις</persName> ἦν ἐυλόγως τὸν ἀμφορέα λάβη: ἢ ὅτι χρησμὸς ἐδόθη ἁλιεύειν ἐν τόπῳ <persName n="urn:cite2:hmt:pers.v1:pers59">διόνυσον</persName> ἁλιέα βαπτίζοι τὲ ὡς <persName n="">φιλόχορος</persName>⁑</p>
+            </div>
+         </div>
+         <div n="57v_120" type="scholion">
+            <div n="lemma">
+               <p>οἵη περ φύλων γενεὴ:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.146</p>
+            </div>
+            <div n="comment">
+               <p>οὐκ ἄντικρυς ὀνειδίζει τὸ γένος: ἀλλὰ τὰ φῦλλα οἷς εἴκασεν: καὶ ἀλλαχοῦ δειλὼ, οἷον φύλλοισι⁑</p>
+            </div>
+         </div>     
+         <div n="57v_121" type="scholion">
+            <div n="lemma">
+               <p>ἠμὲν φύει: ἤδ' ἀπολήγει:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.149</p>
+            </div>
+            <div n="comment">
+               <p>δύναται μὲν καὶ <choice><abbr>ἄρθ</abbr><expan>ἄρθρα</expan></choice> εἶναι: ἄμεινον δὲ συνδέσμους ἐκ δέχεσθαι αὐτοὺς: <persName n="urn:cite2:hmt:pers.v1:pers341">ἀλεξίων</persName> δὲ εὐθύνει τὰ <choice><abbr>ἄρθ</abbr><expan>ἄρθρα</expan></choice>: σολοικισμὸν <choice><abbr>κτὰ</abbr><expan>κατὰ</expan></choice> τὴν φράσιν νομίζων: καὶ φησι πῶς ἑνικὸν ὂν τὸ γενεὴ ἐπιμερίζεσθαι δύναται κακῶς: δύναται γὰρ καὶ ἐξ ἑνικοῦ ἐπιμερισμὸς γενέσθαι⁑</p>
+            </div>
+         </div>                                                                                  
         </body>
       </text>
     </group>

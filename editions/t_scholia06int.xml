@@ -253,7 +253,63 @@
             <div n="comment">
                <p>καὶ πῶς ἔδει τοσαύτῃ περιστάσει συνεχομένων τῶν <rs type="ethnic" n="urn:cite2:hmt:pers.v1:pers67">τρώων</rs> ἀναχωρεῖν: καὶ μὴ μᾶλλον ἐπικηρυκεύσασθαι τὴν θυσίαν: ἀλλ ᾔδει τοὺς <rs type="ethnic" n="urn:cite2:hmt:pers.v1:pers67">τρῶας</rs> ἐθελοκακοῦντας τῇ ἀπουσία <persName n="urn:cite2:hmt:pers.v1:pers129"><choice><abbr>ἀλεξανδς</abbr><expan>ἀλεξανδρος</expan></choice></persName>: ἐφ ὃν μάλιστα ὥρμητο: ἣ δεισιδαίμων ὢν. οὐ θέλει παρέργως τὴν θυσίαν γενέσθαι: ἄλλως τε παροξύνει αὐτοὺς καὶ <choice><abbr>κταλείπει</abbr><expan>καταλείπει</expan></choice> <persName n="urn:cite2:hmt:pers.v1:pers142">αἰνείαν</persName>: ἢ πρὸς ἀνάπαυσιν τῶν <w>στρατευ<unclear>νύ</unclear>των</w>: διὸ καὶ τὸ μονομαχίον παράγεται: ἢ ἐπεὶ` ὠνείδισται ὑπὸ <persName n="urn:cite2:hmt:pers.v1:pers195">σαρπηδόνος</persName>, <persName n="urn:cite2:hmt:pers.v1:pers129">ἀλέξανδρον</persName> θέλει παρεγεῖραι⁑</p>
             </div>
-         </div>                   
+         </div>
+         <div n="57v_107" type="scholion">
+            <div n="lemma">
+               <p>προβέβηκας:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.125</p>
+            </div>
+            <div n="comment">
+               <p>ὣς δὴ ἀναπαυομένων τῶν φαλᾶγγων⁑</p>
+            </div>
+         </div>
+         <div n="57v_110" type="scholion">
+            <div n="lemma">
+               <p>κατ' οὐρανοῦ <choice><abbr><w>εἰλήλο<gap/>θ</w></abbr><expan><w>εἰλήλο<gap/>θας</w></expan></choice>:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.128</p>
+            </div>
+            <div n="comment">
+               <p>οὕτως <persName n="urn:cite2:hmt:pers.v1:pers16"><choice><abbr>ἀρίσταρχ</abbr><expan>ἀρίσταρχος</expan></choice></persName>: ὡς τὸ ὡς φαμένη κατέβαιν' <w>ὑπερ<unclear>ι</unclear></w> <cit><q>βὰν δὲ κατ' ἱδαίων ὀρέων</q> <ref>urn:cts:greekLit:tlg0012.tlg001.perseus-grc2:11.196</ref>
+               </cit>⁑</p>
+            </div>
+         </div>
+         <div n="57v_113" type="scholion">
+            <div n="lemma">
+               <p><placeName n="urn:cite2:hmt:place.v1:place302">νυσήϊον</placeName>:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.133</p>
+            </div>
+            <div n="comment">
+               <p>ἐν διαφόροις τόποις ἱστοροῦσι τὰ περὶ <placeName n="urn:cite2:hmt:place.v1:place302">νυσίαν</placeName>: ἄμεινον δὲ τὰ περὶ <placeName n="urn:cite2:hmt:place.v1:place70">θρᾴκην</placeName> ἀκούειν:  καὶ <choice><abbr>κτὰ</abbr><expan>κατὰ</expan></choice> <placeName n="urn:cite2:hmt:place.v1:place446">σαμοθράκην</placeName> δύνειν τὸν <persName n="urn:cite2:hmt:pers.v1:pers59">διόνυσον</persName>: ἔνθα καὶ <persName n="urn:cite2:hmt:pers.v1:pers19">θέτις</persName> διῆγε μεσσηγὺς <placeName n="urn:cite2:hmt:place.v1:place132">σάμου</placeName> τὲ καὶ <placeName n="urn:cite2:hmt:place.v1:place201">ἴμβρου</placeName> παιπαλοέσσης⁑</p>
+            </div>
+         </div>  
+         <div n="57v_118" type="scholion">
+            <div n="lemma">
+               <p>θεοὶ ῥεῖα ζώοντες:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.138</p>
+            </div>
+            <div n="comment">
+               <p>ὁ γὰρ ἡμῶν βίος, παρα τὴν βίαν:</p>
+            </div>
+         </div>  
+         <div n="57v_119" type="scholion">
+            <div n="lemma">
+               <p>τυφλὸν ἔθηκεν:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.139</p>
+            </div>
+            <div n="comment">
+               <p>επεὶ` <w>ἐ<unclear>θ</unclear>εώρει</w> τὰς τελετὰς, οἰκείως κολάζεται τὰς ὄψεις⁑</p>
+            </div>
+         </div>                     
         </body>
       </text>
     </group>
