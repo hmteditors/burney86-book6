@@ -450,7 +450,63 @@
             <div n="comment">
                <p>δευτέραν γὰρ ἔχων τάξιν <persName n="urn:cite2:hmt:pers.v1:pers195">σαρπηδόνος</persName>. οὐ προεμάχει: ἢ ἐν τῇ πρὸς ἐμὲ μάχῃ:</p>
             </div>
-         </div>                                 
+         </div>
+         <div n="57v_123" type="scholion">
+            <div n="lemma">
+               <p></p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.127</p>
+            </div>
+            <div n="comment">
+               <p>ὡς υἷες <rs type="ethnic" n="urn:cite2:hmt:place.v1:place96">ἀχαιῶν</rs>:</p>
+            </div>
+         </div>
+         <div n="57v_124" type="scholion">
+            <div n="lemma">
+               <p></p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.128</p>
+            </div>
+            <div n="comment">
+               <p>τὸ παράδοξον: τῆς τόλμης ἐκπληττόμενος λέγει ταῦτα</p>
+            </div>
+         </div> 
+         <div n="57v_125" type="scholion">
+            <div n="lemma">
+               <p></p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.138</p>
+            </div>
+            <div n="comment">
+               <p>ὠργίσθησαν:</p>
+            </div>
+         </div> 
+         <div n="57v_126" type="scholion">
+            <div n="lemma">
+               <p></p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.146</p>
+            </div>
+            <div n="comment">
+               <p>φύλλα:</p>
+            </div>
+         </div>   
+         <div n="57v_127" type="scholion">
+            <div n="lemma">
+               <p></p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.148</p>
+            </div>
+            <div n="comment">
+               <p>εἰς ὕψος θάλλουσα <persName n="urn:cite2:hmt:pers.v1:pers21"><choice><abbr>ἀριστοφά</abbr><expan>ἀριστοφάνης</expan></choice></persName> δὲ, τηλεθόωντα <choice><abbr>γρ´</abbr><expan>γράφει</expan></choice></p>
+            </div>
+         </div> 
+                                         
       </body>
       </text>
     </group>
