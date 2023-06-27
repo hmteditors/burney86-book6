@@ -606,7 +606,73 @@
             <div n="comment">
                <p>δύναται μὲν καὶ <choice><abbr>ἄρθ</abbr><expan>ἄρθρα</expan></choice> εἶναι: ἄμεινον δὲ συνδέσμους ἐκ δέχεσθαι αὐτοὺς: <persName n="urn:cite2:hmt:pers.v1:pers341">ἀλεξίων</persName> δὲ εὐθύνει τὰ <choice><abbr>ἄρθ</abbr><expan>ἄρθρα</expan></choice>: σολοικισμὸν <choice><abbr>κτὰ</abbr><expan>κατὰ</expan></choice> τὴν φράσιν νομίζων: καὶ φησι πῶς ἑνικὸν ὂν τὸ γενεὴ ἐπιμερίζεσθαι δύναται κακῶς: δύναται γὰρ καὶ ἐξ ἑνικοῦ ἐπιμερισμὸς γενέσθαι⁑</p>
             </div>
-         </div>                                                                                  
+         </div>
+         <div n="58r_129" type="scholion">
+            <div n="lemma">
+               <p>κέρδιστος:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.153</p>
+            </div>
+            <div n="comment">
+               <p>μέσον ἐστὶ τοῦτο: ὡς συγγενὴς δὲ οὐ βλασφημεῖ: ἡ δὲ ἐπανάληψις τὸ ἔνδοξον παρίστησιν⁑</p>
+            </div>
+         </div>
+         <div n="58r_130" type="scholion">
+            <div n="lemma">
+               <p><persName n="urn:cite2:hmt:pers.v1:pers720">βελλεροφόντην</persName>:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.155</p>
+            </div>
+            <div n="comment">
+               <p><persName n="urn:cite2:hmt:pers.v1:pers720">λεωφόντης</persName> πρότερον ἐκαλεῖτο: <persName n="urn:cite2:hmt:pers.v1:pers1251">βέλλερον</persName> δὲ ἱππικῇ φονεύσας, οὕτως ὠνόμασται⁑</p>
+            </div>
+         </div>
+         <div n="58r_132" type="scholion">
+            <div n="lemma">
+               <p>ἐμήσατο:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.157</p>
+            </div>
+            <div n="comment">
+               <p><rs type="ethnic" n="urn:cite2:hmt:place.v1:place79">ἰακῶς</rs> τὸ ἐμήσατο⁑</p>
+            </div>
+         </div>
+         <div n="58r_133" type="scholion">
+            <div n="lemma">
+               <p>ἐπεὶ` πολὺ φέρτερον ἦεν:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.158</p>
+            </div>
+            <div n="comment">
+               <p>ὁ <persName n="urn:cite2:hmt:pers.v1:pers721">προῖτος</persName> τῶν <rs type="ethnic" n="urn:cite2:hmt:place.v1:place114">ἀργείων</rs> διὰ τὴν ἀρχήν⁑</p>
+            </div>
+         </div>
+         <div n="58r_135" type="scholion">
+            <div n="lemma">
+               <p>ἐπεμήνατο:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.160</p>
+            </div>
+            <div n="comment">
+               <p>πρὸς ἀποτροπὴν μανίαν ὀνομάζει τὸ πάθος: ὃ καὶ δία οὗσα ἐπεμήνατο: τινὲς δὲ ὑφ ἒν <persName n="urn:cite2:hmt:pers.v1:pers722">διάντεια</persName> κακῶς: ἀγνοοῦσι γὰρ ὅτι τὸ δία πολλαχῶς νοεῖται. παρ' <persName n="urn:cite2:hmt:pers.v1:pers17">ὁμήρῳ</persName>: ἢ δία <persName n="urn:cite2:hmt:pers.v1:pers722">ἄντεια</persName>: ὡς δία <persName n="urn:cite2:hmt:pers.v1:pers29">κλυταιμνῆστρα</persName>⁑</p>
+            </div>
+         </div>
+         <div n="58r_137" type="scholion">
+            <div n="lemma">
+               <p>δαΐφρονα <persName n="urn:cite2:hmt:pers.v1:pers720">βελλεροφόντην</persName>:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.163</p>
+            </div>
+            <div n="comment">
+               <p>δῆλον μὲν ἦν καὶ μὴ προστεθέντος τοῦ ὀνόματος ὅτι <persName n="urn:cite2:hmt:pers.v1:pers720">βελλεροφόντης</persName> λέγεται: περὶ γὰρ τούτου ὁ λόγος ἦν: ἄλλ ὅμως ἐπήνεγκε τοὔνομα: τοῦτον ἐν αχήματι κινῶν: τοῦτο δὲ`. ἐπὶ τῇ σωφροσύνῃ τοῦ ἀνδρὸς ἡδόμενος, διὰ στόματος ἔχει: οἷς γὰρ ἡδόμεθα τούτους ἀνὰ στόμα ἔχομεν⁑</p>
+            </div>
+         </div>                  
         </body>
       </text>
     </group>

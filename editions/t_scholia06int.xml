@@ -320,7 +320,51 @@
             <div n="comment">
                <p>ὑποστικτέον εἰς τὸ θέλεις: καὶ τὸ δαήμεναι. ἀντὶ τοῦ δάηθι: τινες δέ <w>φ<unclear>α</unclear>σιν</w> τὸ ἔστω, ὥς τοι ξεῖνε φίλ' καὶ μὴ νεμεσήσαιεν: ἢ διὰ μέσου τὸ πολλοὶ δέ μιν ἄνδρες ἴσασι⁑</p>
             </div>
-         </div>                      
+         </div>
+         <div n="58r_128" type="scholion">
+            <div n="lemma">
+               <p>πόλις <placeName n="urn:cite2:hmt:place.v1:place165">ἐφύρη</placeName>:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.152</p>
+            </div>
+            <div n="comment">
+               <p>ἡ <placeName n="urn:cite2:hmt:place.v1:place165">κόρινθος</placeName>: ἔστι δἐ καὶ ἐν <placeName n="urn:cite2:hmt:place.v1:place73">θεσπρωτίᾳ</placeName> καὶ ἐν <placeName n="urn:cite2:hmt:place.v1:place2">θεσσαλίᾳ</placeName> καὶ ἐν <placeName n="urn:cite2:hmt:place.v1:place">οἰνόῃ</placeName> καὶ νῆσος περὶ <placeName n="urn:cite2:hmt:place.v1:place298">μῆλον</placeName>⁑</p>
+            </div>
+         </div>
+         <div n="58r_131" type="scholion">
+            <div n="lemma">
+               <p>κάλλος τε καὶ ἠνορέην:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.156</p>
+            </div>
+            <div n="comment">
+               <p>οὐδὲν γὰρ  κάλλος. ἄνευ ἀνδρίας: ὡς δῆλον ἐκ <persName n="urn:cite2:hmt:pers.v1:pers728">νιρέως</persName>: δυεῖν δὲ <w><unclear>ἄ</unclear>ντων</w> πλεονεκτημάτων. τὴν ἀνδρίαν ἐρατεινὴν εἶπεν⁑</p>
+            </div>
+         </div>
+         <div n="58r_134" type="scholion">
+            <div n="lemma">
+               <p><persName n="urn:cite2:hmt:pers.v1:pers8">ζεὺς</persName> γὰρ ὐπὸ σκήπτρῳ ἐδάμασεν:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.159</p>
+            </div>
+            <div n="comment">
+               <p>τοὺς <rs type="ethnic" n="urn:cite2:hmt:place.v1:place114">ἀργείους</rs> <persName n="urn:cite2:hmt:pers.v1:pers721">προίτῳ</persName> ὑπεταξε⁑</p>
+            </div>
+         </div>
+         <div n="58r_136" type="scholion">
+            <div n="lemma">
+               <p>ἀγαθὰ φρονέοντα:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.162</p>
+            </div>
+            <div n="comment">
+               <p>τοῦτο ἐκπεφώνηκεν ἀφ' ἑαυτού: ὡς κἀκεῖ: <choice><abbr>κτὰ</abbr><expan>κατὰ</expan></choice> μοιχῶν νομοθετῶν φησιν: ὡς ἀπόλοιτο καὶ ἄλλος ὅστις τοιαῦτα γε ῥέζοι: καὶ οὐκ ἀρετὰ κακὰ ἔργα⁑</p>
+            </div>
+         </div>                                         
         </body>
       </text>
     </group>
