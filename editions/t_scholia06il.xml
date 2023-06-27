@@ -195,7 +195,7 @@
                  <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.31</p>
             </div>
             <div n="comment">
-               <p>διχῶς καὶ <persName n="">ἐτάονα</persName>:</p>
+               <p>διχῶς καὶ <persName n="urn:cite2:hmt:pers.v1:pers711">ἐτάονα</persName>:</p>
             </div>
          </div>
          <div n="55v_39" type="scholion">
@@ -506,7 +506,72 @@
                <p>εἰς ὕψος θάλλουσα <persName n="urn:cite2:hmt:pers.v1:pers21"><choice><abbr>ἀριστοφά</abbr><expan>ἀριστοφάνης</expan></choice></persName> δὲ, τηλεθόωντα <choice><abbr>γρ´</abbr><expan>γράφει</expan></choice></p>
             </div>
          </div> 
-                                         
+         <div n="58r_147" type="scholion">
+            <div n="lemma">
+               <p></p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.162</p>
+            </div>
+            <div n="comment">
+               <p>ὁ <choice><abbr>παρατ</abbr><expan>παρατατικὸς</expan></choice> τὴν πολλάκις ταῦτα λέγουσαν ἐσήμανεν</p>
+            </div>
+         </div> 
+         <div n="58r_148" type="scholion">
+            <div n="lemma">
+               <p></p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.165</p>
+            </div>
+            <div n="comment">
+               <p>ἀντὶ τοῦ μοὶ: ὡς οὐδὲ σοὶ ὧ ἦμαι: ᾧ ἔρροντι:</p>
+            </div>
+         </div>
+         <div n="58r_149" type="scholion">
+            <div n="lemma">
+               <p></p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.167</p>
+            </div>
+            <div n="comment">
+               <p>ὡς ξένον:</p>
+            </div>
+         </div> 
+         <div n="58r_150" type="scholion">
+            <div n="lemma">
+               <p></p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.169</p>
+            </div>
+            <div n="comment">
+               <p>πινακιδίῳ:</p>
+            </div>
+         </div>
+         <div n="58r_151" type="scholion">
+            <div n="lemma">
+               <p></p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.171</p>
+            </div>
+            <div n="comment">
+               <p>αἰσίοις οἰωνοῖς:</p>
+            </div>
+         </div> 
+         <div n="58r_152" type="scholion">
+            <div n="lemma">
+               <p></p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.173</p>
+            </div>
+            <div n="comment">
+               <p>ἀπὸ τοῦ <w>προφρόν<gap/>ς</w></p>
+            </div>
+         </div>                                                                                              
       </body>
       </text>
     </group>

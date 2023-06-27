@@ -667,12 +667,78 @@
                <p>δαΐφρονα <persName n="urn:cite2:hmt:pers.v1:pers720">βελλεροφόντην</persName>:</p>
             </div>
             <div n="ref">
-                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.163</p>
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.162</p>
             </div>
             <div n="comment">
                <p>δῆλον μὲν ἦν καὶ μὴ προστεθέντος τοῦ ὀνόματος ὅτι <persName n="urn:cite2:hmt:pers.v1:pers720">βελλεροφόντης</persName> λέγεται: περὶ γὰρ τούτου ὁ λόγος ἦν: ἄλλ ὅμως ἐπήνεγκε τοὔνομα: τοῦτον ἐν αχήματι κινῶν: τοῦτο δὲ`. ἐπὶ τῇ σωφροσύνῃ τοῦ ἀνδρὸς ἡδόμενος, διὰ στόματος ἔχει: οἷς γὰρ ἡδόμεθα τούτους ἀνὰ στόμα ἔχομεν⁑</p>
             </div>
-         </div>                  
+         </div>
+         <div n="58r_139" type="scholion">
+            <div n="lemma">
+               <p>τεθναίης ὦ <persName n="urn:cite2:hmt:pers.v1:pers721">προῖτε</persName>:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.164</p>
+            </div>
+            <div n="comment">
+               <p>καλόν σοι τὸ ἀποθανεῖν, εἰ μὴ τοῦ καθυβρίσαντός σε κατισχύσεις: ἄλλ εἰ βσύλει <w>ζῆ<unclear>ν</unclear></w>, ἐκεῖνον <w>ἄν<unclear>ε</unclear>λε</w>: εἰ γὰρ ἐμὲ <choice><abbr >ἠθέλη</abbr><expan>ἠθέλησε</expan></choice> βιάσασθαι, οὐδὲ σοῦ φείσεται⁑</p>
+            </div>
+         </div>
+         <div n="58r_140" type="scholion">
+            <div n="lemma">
+               <p>μιγήμεναι οὐκ ἐθελούσῃ:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.165</p>
+            </div>
+            <div n="comment">
+               <p>τρεῖς <choice><abbr>τρόπ</abbr><expan>τρόποι</expan></choice> μίξεων: ἢ βούλεταί τις, μὴ βουλομένης: ὡς νῦν: ἢ μὴ βουλόμενος βουλομενής, ὡς <persName n="urn:cite2:hmt:pers.v1:pers118">ὀδυσσεὺς</persName> παρ' οὐκ ἐθέλων ἐθελούσῃ τῇ <persName n="urn:cite2:hmt:pers.v1:pers1094">καλυψοῖ</persName>: ἢ ὡς <persName n="urn:cite2:hmt:pers.v1:pers27">αἴγισθος</persName> τὴν <persName n="urn:cite2:hmt:pers.v1:pers29">κλυταιμνῆστραν</persName>: ἐθέλων ἐθέλουσαν, ἀνήγαγεν ὅν δε δόμον δὲ. τέταρτος δὲ τρόπος οὐκ ἔστιν: οὐδεὶς γὰρ ἄκων ἀκούσῃ μίγνυται⁑</p>
+            </div>
+         </div> 
+         <div n="58r_143" type="scholion">
+            <div n="lemma">
+               <p>ᾧ πενθερῷ:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.170</p>
+            </div>
+            <div n="comment">
+               <p><persName n="">ἰοβάτη</persName>: ἢ <persName n="">ἀμισωδάρῳ</persName>⁑</p>
+            </div>
+         </div> 
+         <div n="58r_144" type="scholion">
+            <div n="lemma">
+               <p><placeName n="urn:cite2:hmt:place.v1:place93">ξάνθον</placeName> τε ῥέοντα:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.172</p>
+            </div>
+            <div n="comment">
+               <p>ποῖος γάρ φησι ποταμὸς οὐ ρεῖ: ῥητέον ὅτι ἐπεὶ` καὶ πόλις <placeName n="urn:cite2:hmt:place.v1:place75">λυκίας</placeName> ἐστὶ <placeName n="">ξάνθος</placeName>, ἢ εὐρὺ <w>ῥ<unclear>έ</unclear>οντα</w>: ἢ ἐπεὶ` ἀέναός ἐστιν⁑</p>
+            </div>
+         </div> 
+         <div n="58r_145" type="scholion">
+            <div n="lemma">
+               <p>ἐννῆμαρ μὲν ξείνισε:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.174</p>
+            </div>
+            <div n="comment">
+               <p>ἢ ὡς παρὰ κηδεστοῦ ἥκοντα φιλοφρονεῖται: ἢ ὅτι ἐν θυσίαις αὐτὸν εὗρεν: ἢ ὀκνων οὐκ ἀπεδίδου: μὴ θέλων ἀποδημεῖν τάχιστα διὰ τὴν γυναῖκα⁑</p>
+            </div>
+         </div> 
+         <div n="58r_146" type="scholion">
+            <div n="lemma">
+               <p>σῆμα ἰδέσθαι:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.176</p>
+            </div>
+            <div n="comment">
+               <p>σῆμα τὸ ἐπίταγμα: σημαίνων ἐπέτελλεν: ἢ τὸ πτυκτὸν τὸ ἔχον τὰ σήματα: ὅ ἐστι τὰ γράμματα⁑</p>
+            </div>
+         </div>                                                                                
         </body>
       </text>
     </group>

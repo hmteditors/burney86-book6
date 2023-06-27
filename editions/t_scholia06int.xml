@@ -364,7 +364,40 @@
             <div n="comment">
                <p>τοῦτο ἐκπεφώνηκεν ἀφ' ἑαυτού: ὡς κἀκεῖ: <choice><abbr>κτὰ</abbr><expan>κατὰ</expan></choice> μοιχῶν νομοθετῶν φησιν: ὡς ἀπόλοιτο καὶ ἄλλος ὅστις τοιαῦτα γε ῥέζοι: καὶ οὐκ ἀρετὰ κακὰ ἔργα⁑</p>
             </div>
-         </div>                                         
+         </div>
+         <div n="58r_138" type="scholion">
+            <div n="lemma">
+               <p>ἡ δὲ` ψευσαμένη:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.163</p>
+            </div>
+            <div n="comment">
+               <p>δείκυυσιν ὅτε τέλος ἔρωτος ἀποτεχθέντος, μῖσος ἐστί⁑</p>
+            </div>
+         </div>
+         <div n="58r_141" type="scholion">
+            <div n="lemma">
+               <p>χόλος λάβεν οἷον ἄκουσε:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.166</p>
+            </div>
+            <div n="comment">
+               <p><choice><abbr>ἀντ</abbr><expan>ἀντι</expan></choice> τοῦ παράδοξον: πῶς οὐκ ἤλεγξεν: ἢ διασύρει τὸ γυναικοπαθὲς τῶν <choice><abbr>ἀνῶν</abbr><expan>ἀνθρωπῶν</expan></choice>⁑</p>
+            </div>
+         </div>
+         <div n="58r_142" type="scholion">
+            <div n="lemma">
+               <p>σήματα λυγρά:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.168</p>
+            </div>
+            <div n="comment">
+               <p>γράμματα: οἱ δὲ`, κλῆρον ἐσημήνατο: ὅς μιν ἐπιγράψας: ἄτοπον γὰρ τοὺς πᾶσαν τέχνην εὑρόντας, οὐκ <w>εἰδ<unclear>έ</unclear>ναι</w> γράμματα: τινὲς δὲ ὡς παρ' <rs type="ethnic" n="urn:cite2:hmt:place.v1:place25">αιγυπτίοις</rs>: ἱερὰ ζώδια: δι' ὧν δηλοῦται τὰ πράγματα⁑</p>
+            </div>
+         </div>                                                                          
         </body>
       </text>
     </group>
