@@ -142,6 +142,9 @@ md"""Loaded parser capable of analyzing **$(nrow(p.df))** forms."""
 # ╔═╡ 8d39c4f7-6f4a-4f16-82c4-e4f029b8835b
 md"> Text data"
 
+# ╔═╡ d2b8e06c-7eb2-4259-a50f-5e5224f6182d
+
+
 # ╔═╡ 95eab698-aa17-483a-b575-05986b07bdd6
 
 
@@ -177,13 +180,17 @@ surfurn = isempty(surface) ? nothing : Cite2Urn(surface)
 
 # ╔═╡ 43ca983d-90b8-4878-b6bc-10fe55fc068c
 dsecoll = begin
-	tempurn = Cite2Urn("urn:cite2:hcmid:tempediting.v1:$(objectcomponent(surfurn))")
-	label = "DSE records for page $(objectcomponent(surfurn))"
-	DSECollection(tempurn, label, triples)
+	if isempty(surface)
+		nothing
+	else
+		tempurn = Cite2Urn("urn:cite2:hcmid:tempediting.v1:$(objectcomponent(surfurn))")
+		label = "DSE records for page $(objectcomponent(surfurn))"
+		DSECollection(tempurn, label, triples)
+	end
 end
 
 # ╔═╡ 34787840-a092-4969-9a56-e42e676a797b
-psglist = textsforsurface(surfurn, dsecoll)
+psglist = isnothing(dsecoll) ? [] : textsforsurface(surfurn, dsecoll)
 
 # ╔═╡ a846ffd2-28a0-4618-b1e6-80b28e405bf7
 pagecorpus = begin
@@ -1727,6 +1734,7 @@ version = "17.4.0+0"
 # ╠═0d0231d1-6ef5-4db9-ab94-0fb66269b916
 # ╟─c7c99d8d-331e-4083-af38-a6522dab8791
 # ╟─8d39c4f7-6f4a-4f16-82c4-e4f029b8835b
+# ╠═d2b8e06c-7eb2-4259-a50f-5e5224f6182d
 # ╟─34787840-a092-4969-9a56-e42e676a797b
 # ╟─a846ffd2-28a0-4618-b1e6-80b28e405bf7
 # ╠═5ecbbd60-94eb-4a93-9e0c-ec9d9823d2f1
