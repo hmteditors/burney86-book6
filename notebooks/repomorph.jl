@@ -21,6 +21,8 @@ begin
 	using PlutoUI
 	using Downloads
 
+	using DataFrames
+	
 	# Morphology:
 	using Kanones
 	# Required CITE architecture packages:
@@ -49,6 +51,9 @@ end
 # ╔═╡ e4a81af6-55df-456c-ab3f-6636d2f0d631
 md"""*Unhide the following cell to see the packages used in this notebook.*"""
 
+# ╔═╡ 6a95886d-985d-43f4-ad9f-6542d01d8b6a
+md"> Byzortho stuff to play with"
+
 # ╔═╡ 3cd3640f-e8a9-42ca-9588-59eb3036918d
 byzorthourl = "https://raw.githubusercontent.com/homermultitext/byzortho/master/orthoequivs.csv"
 
@@ -69,15 +74,19 @@ md"""> ### HMT editors: assess morphology
 """
 
 # ╔═╡ 59201f18-0185-4beb-bd39-9367a783150d
-@bind loadem Button("Reload data from repository")
+md"""$(@bind loadem Button("Reload data from repository")) $(@bind loadparser Button("Reload parser from file"))"""
+
+# ╔═╡ 98b70d8a-9c89-4a1b-9f9d-294e696fbb53
+md"""*See list of failed forms*: $(@bind seefails CheckBox())"""
 
 # ╔═╡ d151c98c-2cb8-4dc7-8c59-42288eb2e71c
 md"""
 
 ## How to do it
 
-- get texts for chosen surface
-- tokenize
+- √ get texts for chosen surface
+- √ tokenize
+- thoroughly check this nb for normalizing forms!
 - use byzortho dict to map tokens to analyzable forms
 - analyze these morphologically
 """
@@ -98,7 +107,7 @@ md"""---
 > Configuration and formatting you can ignore unless you're curious about how it works."""
 
 # ╔═╡ e0a05b0a-273d-4246-b71c-9a193784245f
-md"""> Repository and image services
+md"""> Repository
 
 """
 
@@ -115,51 +124,35 @@ r =  begin
 end
 
 
-# ╔═╡ 801be716-b830-4ab8-b6f1-17fece56abc0
-# Base URL for an ImageCitationTool
-function ict()
-	"http://www.homermultitext.org/ict2/?"
+# ╔═╡ 86ac5638-ea24-49e1-858b-821852f54c68
+c =  normalizedcorpus(r)
+
+# ╔═╡ db873991-a9ea-4430-a8fb-7b1cc6a447ab
+md"> Parser"
+
+# ╔═╡ 29e176c9-790e-4f92-8027-d9b6298c435d
+p = begin
+	loadparser
+	dfParser(joinpath(pwd(), "morphology", "current-core.csv"))
 end
 
-# ╔═╡ f185efb9-ce87-4807-a55a-2a0e10284b4a
-# API to work with an IIIF image service
-function iiifsvc()
-	IIIFservice("http://www.homermultitext.org/iipsrv",
-	"/project/homer/pyramidal/deepzoom")
-end
+# ╔═╡ 030156b5-6acc-48f8-a600-33c8afb46320
+md"""Loaded parser capable of analyzing **$(nrow(p.df))** forms."""
 
-# ╔═╡ cc210c3d-e5cc-4e1b-9e6d-e8c779f82742
-md"""> Substitute Pkg.TOML reader
->
-> *Julia's built-in TOML package part of `Pkg` but using `Pkg` turns off Pluto's built-in management system!  Easy enough to read a s imple TOML file into a dictionary, so that's what we do here.*
-"""
+# ╔═╡ 8d39c4f7-6f4a-4f16-82c4-e4f029b8835b
+md"> Text data"
 
-# ╔═╡ 346130d1-24e1-4146-a2c6-a3848ddb2828
-# Read TOML file into a dictionary, since using the normal Pkg TOML parser
-# would turn off Pluto package management!
-function tomldict(f)
-	dict = Dict()
-	#lns = readlines(joinpath(pwd(), "MID.toml"))
-	lns = readlines(f)
-	for ln in lns
-		cols = split(ln, "=")
-		if length(cols) == 2
-			val = replace(cols[2],"\"" => "") |> strip
-			key = strip(cols[1])
-			dict[key] = val
-		end
-	end
-	dict
-end
+# ╔═╡ 95eab698-aa17-483a-b575-05986b07bdd6
 
-# ╔═╡ 54e002c7-084e-4e0e-b8fe-c9b877092e52
-middict = begin
-	loadem
-	tomldict(joinpath(pwd(), "MID.toml"))
-end
+
+# ╔═╡ ac435375-f690-47b6-8596-c76a75cad795
+md"> DSE data for page"
+
+# ╔═╡ 7055f74e-3c28-4314-a303-2c732b9d08a2
+triples = dsetriples(r)
 
 # ╔═╡ 5e45dfb7-5ba4-4a29-8ac4-b933bbff40d0
-md"> Formatting"
+md"> UI and user selection of data by page"
 
 # ╔═╡ 194501ae-d930-4f55-b806-4fa56d88e478
 "Create a menu of string options with an initial blank item."
@@ -172,17 +165,81 @@ function surfacemenu()
 end
 
 # ╔═╡ bbe0b2f7-7be5-41d5-9400-1c47cf8580b5
+# ╠═╡ show_logs = false
 md""" ## Choose a surface to verify
 
 $(@bind surface Select(surfacemenu()))
 """
 
 
+# ╔═╡ 0543c8d7-a3fb-401f-a3d7-aaddf6421845
+surfurn = isempty(surface) ? nothing : Cite2Urn(surface)
+
+# ╔═╡ 43ca983d-90b8-4878-b6bc-10fe55fc068c
+dsecoll = begin
+	tempurn = Cite2Urn("urn:cite2:hcmid:tempediting.v1:$(objectcomponent(surfurn))")
+	label = "DSE records for page $(objectcomponent(surfurn))"
+	DSECollection(tempurn, label, triples)
+end
+
+# ╔═╡ 34787840-a092-4969-9a56-e42e676a797b
+psglist = textsforsurface(surfurn, dsecoll)
+
+# ╔═╡ a846ffd2-28a0-4618-b1e6-80b28e405bf7
+pagecorpus = begin
+	pagepsgs = []
+	for p in psglist
+		push!(pagepsgs, filter(cp -> urncontains(p, cp.urn), c.passages))
+	end
+	pagepsgs |> Iterators.flatten |> collect |> CitableTextCorpus
+end
+
+# ╔═╡ 5ecbbd60-94eb-4a93-9e0c-ec9d9823d2f1
+pagetokens = tokenize(pagecorpus, literaryGreek())
+
+# ╔═╡ b48af9fb-9b6f-402f-bc36-ad466dd20661
+lextokens = filter(t -> t.tokentype isa LexicalToken, pagetokens)
+
+# ╔═╡ c851a3af-46cf-4ea9-a0d2-6a5b52284e00
+scholiatokens = filter(t -> startswith(workcomponent(t.passage.urn), "tlg5026"), lextokens)
+
+# ╔═╡ 6e45c31d-c6bb-4322-a79d-e5a608bceac5
+vocab = map(t  -> t.passage.text, scholiatokens) |> unique
+
+# ╔═╡ 16acb9bc-002f-4ade-8b83-7cf466200700
+md"""Scholia for this page have **$(length(vocab))** distinct forms."""
+
+# ╔═╡ a0c1cc74-22b5-42bb-aecd-83083000a840
+parses = map(vocab) do wd
+	(wd, parsetoken(wd, p))
+	
+end
+
+# ╔═╡ 0d0231d1-6ef5-4db9-ab94-0fb66269b916
+sheep = filter(parses) do pr
+	! isempty(pr[2])
+end
+
+# ╔═╡ c7c99d8d-331e-4083-af38-a6522dab8791
+goats = begin
+	fails = filter(parses) do pr
+		isempty(pr[2])
+	end
+	map(pr -> pr[1], fails) |> sort
+end
+
+# ╔═╡ 23730b2b-916e-4d0d-9d44-3685b4570a82
+md"""Score: **$(length(sheep))** forms analyzed / **$(length(goats))** forms failed."""
+
+# ╔═╡ 6ff64312-ae96-40cb-93aa-655c5c7b469d
+if seefails
+	join(map(wd -> "1. $(wd)", goats), "\n") |> Markdown.parse
+else
+	md"(*Check the box above to see list of $(length(goats)) failures.*)"
+end
+
 # ╔═╡ 80d8f71d-f4ca-4590-8f7f-9e1420f52879
 surfaceurn = isempty(surface) ? nothing  : Cite2Urn(surface)
-
-# ╔═╡ acb117e5-0e65-42da-a388-38362fa4f2f3
-surfaces(r, strict = false)
 
 # ╔═╡ 64db31f9-564f-417e-84f2-0069ce3a14e8
 function waiting()
@@ -281,6 +338,7 @@ CitableObject = "e2b2f5ea-1cd8-4ce8-9b2b-05dad64c2a57"
 CitablePhysicalText = "e38a874e-a7c2-4ff3-8dea-81ae2e5c9b07"
 CitableTeiReaders = "b4325aa9-906c-402e-9c3f-19ab8a88308e"
 CitableText = "41e66566-473b-49d4-85b7-da83b66615d8"
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
 Downloads = "f43a241f-c20a-4ad4-852c-f6b1247861c6"
 EditionBuilders = "2fb66cca-c1f8-4a32-85dd-1a01a9e8cd8f"
 EditorsRepo = "3fa2051c-bcb6-4d65-8a68-41ff86d56437"
@@ -299,6 +357,7 @@ CitableObject = "~0.16.0"
 CitablePhysicalText = "~0.9.8"
 CitableTeiReaders = "~0.10.2"
 CitableText = "~0.16.0"
+DataFrames = "~1.5.0"
 EditionBuilders = "~0.8.3"
 EditorsRepo = "~0.18.7"
 Kanones = "~0.16.7"
@@ -314,7 +373,7 @@ PLUTO_MANIFEST_TOML_CONTENTS = """
 
 julia_version = "1.9.1"
 manifest_format = "2.0"
-project_hash = "5067e598d665f3fa96df60d67b56ec4eea997706"
+project_hash = "6ca83ad83d7cc81424cad8a7a8946e752ed7e289"
 
 [[deps.ANSIColoredPrinters]]
 git-tree-sha1 = "574baf8110975760d391c710b6341da1afa48d8c"
@@ -786,7 +845,7 @@ uuid = "6218d12a-5da1-5696-b52f-db25d2ecc6d1"
 version = "1.2.1"
 
 [[deps.ImageMagick_jll]]
-deps = ["Artifacts", "Ghostscript_jll", "JLLWrappers", "JpegTurbo_jll", "Libdl", "Libtiff_jll", "Pkg", "Zlib_jll", "libpng_jll"]
+deps = ["Artifacts", "Ghostscript_jll", "JLLWrappers", "JpegTurbo_jll", "Libdl", "Libtiff_jll", "OpenJpeg_jll", "Pkg", "Zlib_jll", "libpng_jll"]
 git-tree-sha1 = "124626988534986113cfd876e3093e4a03890f58"
 uuid = "c73af94c-d91f-53ed-93a7-00f77d67a9d7"
 version = "6.9.12+3"
@@ -1008,6 +1067,12 @@ version = "4.4.0+0"
 deps = ["Libdl", "OpenBLAS_jll", "libblastrampoline_jll"]
 uuid = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
 
+[[deps.LittleCMS_jll]]
+deps = ["Artifacts", "JLLWrappers", "JpegTurbo_jll", "Libdl", "Libtiff_jll", "Pkg"]
+git-tree-sha1 = "110897e7db2d6836be22c18bffd9422218ee6284"
+uuid = "d3a379c0-f9a3-5b72-a4c0-6bf4d2e8af0f"
+version = "2.12.0+0"
+
 [[deps.LogExpFunctions]]
 deps = ["DocStringExtensions", "IrrationalConstants", "LinearAlgebra"]
 git-tree-sha1 = "c3ce8e7420b3a6e071e0fe4745f5d4300e37b13f"
@@ -1145,6 +1210,12 @@ deps = ["Artifacts", "Imath_jll", "JLLWrappers", "Libdl", "Zlib_jll"]
 git-tree-sha1 = "a4ca623df1ae99d09bc9868b008262d0c0ac1e4f"
 uuid = "18a262bb-aa17-5467-a713-aee519bc75cb"
 version = "3.1.4+0"
+
+[[deps.OpenJpeg_jll]]
+deps = ["Artifacts", "JLLWrappers", "Libdl", "Libtiff_jll", "LittleCMS_jll", "Pkg", "libpng_jll"]
+git-tree-sha1 = "76374b6e7f632c130e78100b166e5a48464256f8"
+uuid = "643b3616-a352-519d-856d-80112ee9badc"
+version = "2.4.0+0"
 
 [[deps.OpenLibm_jll]]
 deps = ["Artifacts", "Libdl"]
@@ -1633,25 +1704,43 @@ version = "17.4.0+0"
 # ╔═╡ Cell order:
 # ╟─e4a81af6-55df-456c-ab3f-6636d2f0d631
 # ╟─50f5bcdd-dd1f-459c-89fe-7f7a81905f20
-# ╠═3cd3640f-e8a9-42ca-9588-59eb3036918d
-# ╠═86aa019b-e269-491d-ac98-4ef9a36a9cdd
+# ╟─6a95886d-985d-43f4-ad9f-6542d01d8b6a
+# ╟─3cd3640f-e8a9-42ca-9588-59eb3036918d
+# ╟─86aa019b-e269-491d-ac98-4ef9a36a9cdd
 # ╟─bbef0d04-803e-11ec-2d0c-99bccd51e7f3
 # ╟─59201f18-0185-4beb-bd39-9367a783150d
+# ╟─030156b5-6acc-48f8-a600-33c8afb46320
+# ╟─16acb9bc-002f-4ade-8b83-7cf466200700
+# ╟─23730b2b-916e-4d0d-9d44-3685b4570a82
+# ╟─98b70d8a-9c89-4a1b-9f9d-294e696fbb53
+# ╟─6ff64312-ae96-40cb-93aa-655c5c7b469d
 # ╟─bbe0b2f7-7be5-41d5-9400-1c47cf8580b5
-# ╠═d151c98c-2cb8-4dc7-8c59-42288eb2e71c
+# ╟─d151c98c-2cb8-4dc7-8c59-42288eb2e71c
 # ╟─9ddd7641-257b-408f-9422-bf7fd7fe5ceb
 # ╟─e1b1291f-2e1a-48d2-b026-113ba4b7d21f
 # ╟─e0a05b0a-273d-4246-b71c-9a193784245f
 # ╟─be7937f0-134d-4072-a2b8-804eedbefb98
-# ╟─801be716-b830-4ab8-b6f1-17fece56abc0
-# ╟─f185efb9-ce87-4807-a55a-2a0e10284b4a
-# ╟─cc210c3d-e5cc-4e1b-9e6d-e8c779f82742
-# ╟─54e002c7-084e-4e0e-b8fe-c9b877092e52
-# ╟─346130d1-24e1-4146-a2c6-a3848ddb2828
+# ╟─86ac5638-ea24-49e1-858b-821852f54c68
+# ╟─db873991-a9ea-4430-a8fb-7b1cc6a447ab
+# ╟─29e176c9-790e-4f92-8027-d9b6298c435d
+# ╠═a0c1cc74-22b5-42bb-aecd-83083000a840
+# ╠═0d0231d1-6ef5-4db9-ab94-0fb66269b916
+# ╟─c7c99d8d-331e-4083-af38-a6522dab8791
+# ╟─8d39c4f7-6f4a-4f16-82c4-e4f029b8835b
+# ╟─34787840-a092-4969-9a56-e42e676a797b
+# ╟─a846ffd2-28a0-4618-b1e6-80b28e405bf7
+# ╠═5ecbbd60-94eb-4a93-9e0c-ec9d9823d2f1
+# ╠═b48af9fb-9b6f-402f-bc36-ad466dd20661
+# ╠═c851a3af-46cf-4ea9-a0d2-6a5b52284e00
+# ╠═6e45c31d-c6bb-4322-a79d-e5a608bceac5
+# ╠═95eab698-aa17-483a-b575-05986b07bdd6
+# ╟─ac435375-f690-47b6-8596-c76a75cad795
+# ╟─0543c8d7-a3fb-401f-a3d7-aaddf6421845
+# ╟─7055f74e-3c28-4314-a303-2c732b9d08a2
+# ╟─43ca983d-90b8-4878-b6bc-10fe55fc068c
 # ╟─5e45dfb7-5ba4-4a29-8ac4-b933bbff40d0
-# ╠═80d8f71d-f4ca-4590-8f7f-9e1420f52879
+# ╟─80d8f71d-f4ca-4590-8f7f-9e1420f52879
 # ╟─194501ae-d930-4f55-b806-4fa56d88e478
-# ╟─acb117e5-0e65-42da-a388-38362fa4f2f3
 # ╟─64db31f9-564f-417e-84f2-0069ce3a14e8
 # ╟─11867dd1-f497-4efd-8b8c-a233483aa521
 # ╟─00000000-0000-0000-0000-000000000001
