@@ -738,7 +738,29 @@
             <div n="comment">
                <p>σῆμα τὸ ἐπίταγμα: σημαίνων ἐπέτελλεν: ἢ τὸ πτυκτὸν τὸ ἔχον τὰ σήματα: ὅ ἐστι τὰ γράμματα⁑</p>
             </div>
-         </div>                                                                                
+         </div>
+         <div n="58v_153" type="scholion">
+            <div n="lemma">
+               <p>θεῖον γένος:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.180</p>
+            </div>
+            <div n="comment">
+               <p>τὰ τερατύδη εἰς θεοὺς ἀναφέρι ἤτοι οὖν διὰ τὸ παρηλαγμένῃ κεχρῆσθαι φύσει: ἢ διὰ τὸ <persName n="urn:cite2:hmt:pers.v1:pers214">τυφῶνος</persName> καὶ <persName n="">ἐχίδνης</persName> εἶναι⁑</p>
+            </div>
+         </div> 
+         <div n="58v_154" type="scholion">
+            <div n="lemma">
+               <p>πρόσθε λέων:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.181</p>
+            </div>
+            <div n="comment">
+               <p>εἰ τὸ πλεῖον καὶ ἐμπρόσθιον μέρος εἶχε λέοντος, ἔδει αὐτὴν λέοντα καλεῖσθαι: ἦν οὖν τὸ πᾶν χίμαιρα: ἀφ' οὗ καὶ ὠνομάζετο: κεφαλὴν δὲ εἶχε λεαίνης: οὐρὰν δὲ <w>δράκοντ<unclear>ος</unclear></w>: τοίνυν πῦρ εἰσάγεται ἀναπνέουσα δια <choice><abbr>τ῀</abbr><expan>τοῦ</expan></choice> στόματος τοῦ <choice><abbr>λέ</abbr><expan>λέοντος</expan></choice>: <persName n="urn:cite2:hmt:pers.v1:pers4">ἠσίοδος</persName> δὲ ἠπατήθη τρικέφαλον αὐτὴν εἰπὼν: οἱ δὲ πανδοκεῖς εἶναι λέγουσι καὶ <persName n="">δράκοντα</persName> καλουμένους: μέσης δὲ αὐτῶν πανδοκεύτριαν <persName n="urn:cite2:hmt:pers.v1:pers1140">χίμαιραν</persName>: ἣ τοὺς παρίοντας ἧψε μεληδὸν καὶ τοῖς ἄλλοις παρεῖχε, παρατιθέναι: ἔνιοι δὲ ὄρος εἶναι κατὰ <placeName n="urn:cite2:hmt:place.v1:place75">λυκίαν</placeName>: ὃ καλεῖται <placeName n="">χίμαιρα</placeName>: τοῦτο δὲ κατὰ μέσον ἔχειν ἀναφυσήματα πυρός: κατὰ δὲ τὰ ἄκρα πολύθηρον⁑</p>
+            </div>
+         </div>                                                                                  
         </body>
       </text>
     </group>
