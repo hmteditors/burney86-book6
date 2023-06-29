@@ -441,7 +441,40 @@
             <div n="comment">
                <p>ἀπὸ οἰκείας ἀρχῆς ὁ <choice><abbr>στίχ</abbr><expan>στίχος</expan></choice>⁑</p>
             </div>
-         </div>                                                                                     
+         </div>
+         <div n="58v_165" type="scholion">
+            <div n="lemma">
+               <p>καππεδίον τὸ <placeName n="urn:cite2:hmt:place.v1:place309">ἀλήϊον</placeName>:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.201</p>
+            </div>
+            <div n="comment">
+               <p>τινὲς ἐδάσυναν διὰ τὸ ἅλας ἐκεῖ πήγνυσθαι: ἄμεινον δὲ ψιλοῦν. ἀπὸ τῆς ἄλης⁑</p>
+            </div>
+         </div>
+         <div n="58v_166" type="scholion">
+            <div n="lemma">
+               <p>ὃν θυμὸν κατέδων:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.202</p>
+            </div>
+            <div n="comment">
+            <p>οὐχ' ὡς οἱ νεῶτεροι μελαγχολάνας ἀλλ' ὀδυνώμενος, ἐπὶ τῇ τῶν παίδων ἀπωλείᾳ, ἐμόναζε⁑</p>
+            </div>
+         </div>
+         <div n="58v_167" type="scholion">
+            <div n="lemma">
+               <p>μαρνάμενον <rs type="ethnic" n="urn:cite2:hmt:pers.v1:pers723">σολύμοισι</rs>:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.204</p>
+            </div>
+            <div n="comment">
+            <p>ἴσως ὡς γηράσαντος τοῦ <persName n="urn:cite2:hmt:pers.v1:pers720">βελλεροφόντου</persName>: ἀπέστησαν: ὁ δὲ`, ὡς πατρῴας ἀρχῆς ἀντιποιόυμενος ἐπολέμει⁑</p>
+            </div>
+         </div>   
         </body>
       </text>
     </group>

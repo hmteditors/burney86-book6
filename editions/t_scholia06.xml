@@ -815,7 +815,19 @@
             <div n="comment">
                <p>ἐπεὶ` πῶς <persName n="urn:cite2:hmt:pers.v1:pers403">εὐρώπη</persName> ἦν: οὐ στρατεύει <persName n="urn:cite2:hmt:pers.v1:pers287">ἰδομενεῖ</persName>: ἢ ὅτι παρὰ <persName n="urn:cite2:hmt:pers.v1:pers8">διὸς</persName> τὴν ἤβην: ἐπεὶ` ἓξ ἔσχον γενεᾱς: τινές δὲ <persName n="urn:cite2:hmt:pers.v1:pers403">εὐρώπην</persName>, τὴν <persName n="urn:cite2:hmt:pers.v1:pers725">λαοδάμειαν</persName>, ἐπεὶ` εὐόφθαλμος ἦν⁑</p>
             </div>
-         </div>                                                                                              
+         </div>
+         <div n="58v_164" type="scholion">
+            <div n="lemma">
+               <p>ἀλλ' ὅτε δὴ κἀκεῖνος ἤτοι ὃ καππεδιόν: <persName n="urn:cite2:hmt:pers.v1:pers724">ἴσανδρον</persName> γάρ οἱ υἱὸν <persName n="urn:cite2:hmt:pers.v1:pers83">ἄρης</persName> ἔκτανεν: τὴν δὲ χολωσαμένη, χρυσήνιος <persName n="urn:cite2:hmt:pers.v1:pers39">ἄρτεμις</persName> ἔκτα:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.200</p>
+            </div>
+            <div n="comment">
+               <p>ἵνα ἡ ἀπώλεια τῶν παίδων, αἰτία αὐτῶ ᾖ μονασμοῦ: ὡς καὶ τῷ <persName n="urn:cite2:hmt:pers.v1:pers322">λαέρτῃ</persName>: καὶ <placeName n="urn:cite2:hmt:place.v1:place309"><w>ἀλήϊ<unclear>ο</unclear>ν</w></placeName> πεδίον ὅπερ ᾤκει: ἀλεείνων τοὺς <choice><abbr>ἀνους</abbr><expan>ἀνθρωπους</expan></choice>: τὰ δὲ: ἐκ τῆς τύχης, εἰς θεοὺς ἀναφέρομεν: ὥσπερ δὲ ἐν ἀρχῇ διέσυρε τὰ ἀνθρώπινα τὸ φρύαγμα <persName n="urn:cite2:hmt:pers.v1:pers215">διομήδους</persName> καθαιρῶν, καὶ νῦν οὐκ ἀπώκνησε τὴν περὶ τὸν πρόγονον μεταβολὴν τῆς τύχης ὁμολογῆσαι: ἢ τάχα πιστοῦται τὰ ἀγαθὰ διὰ τῆς ὁμολογίας τῶν ἀτυχιῶν: εἰ δὲ χωλὸς ἦν, πωλησάτω ἀλλ' ὅτε δὴ κἀκεῖνος ἀπήχθετο: ὥσπερ καὶ οἱ πρόγονοι αὐτοῦ <persName n="urn:cite2:hmt:pers.v1:pers724">ἴσανδρός</persName> τε καὶ <persName n="urn:cite2:hmt:pers.v1:pers725">λαοδάμεια</persName>: ἢ ὡς τὸ γένος τῶν <choice><abbr>ἀνων</abbr><expan>ἀνθρωπων</expan></choice>⁑</p>
+            </div>
+         </div>
+
         </body>
       </text>
     </group>

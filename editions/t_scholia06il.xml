@@ -571,7 +571,95 @@
             <div n="comment">
                <p>ἀπὸ τοῦ <w>προφρόν<gap/>ς</w></p>
             </div>
-         </div>                                                                                              
+         </div>
+         <div n="58v_168" type="scholion">
+            <div n="lemma">
+               <p></p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.179</p>
+            </div>
+            <div n="comment">
+               <p>τὴν ἄγαν μαιμῶσαν ἢ τὴν ἀκαταμάχητον</p>
+            </div>
+         </div>
+         <div n="58v_169" type="scholion">
+            <div n="lemma">
+               <p></p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.182</p>
+            </div>
+            <div n="comment">
+               <p><choice><abbr>λείπ</abbr><expan>λείπει</expan></choice> τὸ <rs type="waw">ως</rs> ὡς πυρός:</p>
+            </div>
+         </div>
+         <div n="58v_170" type="scholion">
+            <div n="lemma">
+               <p></p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.185</p>
+            </div>
+            <div n="comment">
+               <p>εὖ τὸ μὴ εἰπεῖν ἔφασαν ἄλλοι: ἀλλ' αὐτὸς ὁπεπειραμένος:</p>
+            </div>
+         </div>
+         <div n="58v_171" type="scholion">
+            <div n="lemma">
+               <p></p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.186</p>
+            </div>
+            <div n="comment">
+               <p>κατέτρεχον γὰρ τὴν <placeName n="urn:cite2:hmt:place.v1:place226">ἀσίαν</placeName>: ἀμέλει ἐξ αὐτῶν <placeName n="urn:cite2:hmt:place.v1:place80">ἔφεσος</placeName> καὶ <placeName n="urn:cite2:hmt:place.v1:place412">σμύρνα</placeName> καλεῖται: καὶ <w>φρυν<unclear>α</unclear>'</w> ἐς ἤλυθον:</p>
+            </div>
+         </div>
+         <div n="58v_172" type="scholion">
+            <div n="lemma">
+               <p></p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.188</p>
+            </div>
+            <div n="comment">
+               <p>διδάσκει τοὺς ἀλκιμωτάτους μόνους λοχᾶν: ἔνθα μάλιστ' ἀρετὴ διαείδεται ἀνδρῶν:</p>
+            </div>
+         </div>
+         <div n="58v_173" type="scholion">
+            <div n="lemma">
+               <p></p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.191</p>
+            </div>
+            <div n="comment">
+               <p>ἐκ τῶν πράξεων τὰς εὐγενείας ἀξιοῖ κρίνεσθαι ὁ <choice><abbr>ποιητ</abbr><expan>ποιητης</expan></choice>: <persName n="urn:cite2:hmt:pers.v1:pers47">ποσειδῶνος</persName> δὲ ἦν καὶ μητρὸς τῆς <persName n="">ἐρυσίχθονος</persName>:</p>
+            </div>
+         </div>
+         <div n="58v_174" type="scholion">
+            <div n="lemma">
+               <p></p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.202</p>
+            </div>
+            <div n="comment">
+               <p>διδάσκει πόσην ψυχαγωγίαν ἔχει ἡ συντυχία:</p>
+            </div>
+         </div>
+         <div n="58v_175" type="scholion">
+            <div n="lemma">
+               <p></p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.205</p>
+            </div>
+            <div n="comment">
+               <p>ἵσως διὰ τὰς <rs type="ethnic" n="">ἀμαζόνας</rs>:</p>
+            </div>
+         </div>      
       </body>
       </text>
     </group>
