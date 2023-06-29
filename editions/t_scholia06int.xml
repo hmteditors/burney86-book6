@@ -397,7 +397,51 @@
             <div n="comment">
                <p>γράμματα: οἱ δὲ`, κλῆρον ἐσημήνατο: ὅς μιν ἐπιγράψας: ἄτοπον γὰρ τοὺς πᾶσαν τέχνην εὑρόντας, οὐκ <w>εἰδ<unclear>έ</unclear>ναι</w> γράμματα: τινὲς δὲ ὡς παρ' <rs type="ethnic" n="urn:cite2:hmt:place.v1:place25">αιγυπτίοις</rs>: ἱερὰ ζώδια: δι' ὧν δηλοῦται τὰ πράγματα⁑</p>
             </div>
-         </div>                                                                          
+         </div>
+         <div n="58v_155" type="scholion">
+            <div n="lemma">
+               <p>καὶ τὴν μὲ`ν κατέπεφνε θεῶν τεράεσσι πιθήσας:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.183</p>
+            </div>
+            <div n="comment">
+               <p>ἀπίστου ὄντος, πῶς τὸ τοιοῦτον θηρίον κατηγωνίσατο: ἰάσατο τὸ ἄπιστον θείαν δύναμιν ἐπαγαγών⁑</p>
+            </div>
+         </div>
+         <div n="58v_156" type="scholion">
+            <div n="lemma">
+               <p>δεύτερον αὖ <rs type="ethnic" n="urn:cite2:hmt:pers.v1:pers723">σολύμοισι</rs>:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.184</p>
+            </div>
+            <div n="comment">
+               <p>καὶ ἐκ <rs type="ethnic" n="urn:cite2:hmt:pers.v1:pers723">σολύμων</rs> ὀρέων: ἀπὸ γὰρ τῶν ἀνατολικῶν <rs type="ethnic" n="urn:cite2:hmt:place.v1:place46">αἰθιόπων</rs> ἐπανιὼν ἀπὸ <placeName n="">πισιδίας</placeName> καὶ <placeName n="urn:cite2:hmt:place.v1:place55">κιλικίας</placeName> ὁρᾶ <persName n="urn:cite2:hmt:place.v1:place55">ὀδυσσέα ὁ <persName n="urn:cite2:hmt:pers.v1:pers47">ποσειδῶν⁑</persName></persName></p>
+            </div>
+         </div>
+         <div n="58v_157" type="scholion">
+            <div n="lemma">
+               <p>τῷ δ' ἂρ ἀνερχομένω:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.187</p>
+            </div>
+            <div n="comment">
+               <p><persName n="urn:cite2:hmt:pers.v1:pers16"><choice><abbr>ἀρίσταρχ</abbr><expan>ἀρίσταρχος</expan></choice></persName> ἀπερχομένω <choice><abbr>γρ</abbr><expan>γραφει</expan></choice> διὰ τοῦ <rs type="waw">ᾱ</rs>: <choice><abbr>γρ´</abbr><expan>γράφει</expan></choice> δὲ. καὶ τῷ δ' ἀνερχομένῳ⁑</p>
+            </div>
+         </div> 
+         <div n="58v_158" type="scholion">
+            <div n="lemma">
+               <p>κρίνας ἐκ <placeName n="urn:cite2:hmt:place.v1:place75">λυκίης</placeName>:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.188</p>
+            </div>
+            <div n="comment">
+               <p>ἀπὸ οἰκείας ἀρχῆς ὁ <choice><abbr>στίχ</abbr><expan>στίχος</expan></choice>⁑</p>
+            </div>
+         </div>                                                                                     
         </body>
       </text>
     </group>

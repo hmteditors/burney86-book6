@@ -760,7 +760,62 @@
             <div n="comment">
                <p>εἰ τὸ πλεῖον καὶ ἐμπρόσθιον μέρος εἶχε λέοντος, ἔδει αὐτὴν λέοντα καλεῖσθαι: ἦν οὖν τὸ πᾶν χίμαιρα: ἀφ' οὗ καὶ ὠνομάζετο: κεφαλὴν δὲ εἶχε λεαίνης: οὐρὰν δὲ <w>δράκοντ<unclear>ος</unclear></w>: τοίνυν πῦρ εἰσάγεται ἀναπνέουσα δια <choice><abbr>τ῀</abbr><expan>τοῦ</expan></choice> στόματος τοῦ <choice><abbr>λέ</abbr><expan>λέοντος</expan></choice>: <persName n="urn:cite2:hmt:pers.v1:pers4">ἠσίοδος</persName> δὲ ἠπατήθη τρικέφαλον αὐτὴν εἰπὼν: οἱ δὲ πανδοκεῖς εἶναι λέγουσι καὶ <persName n="">δράκοντα</persName> καλουμένους: μέσης δὲ αὐτῶν πανδοκεύτριαν <persName n="urn:cite2:hmt:pers.v1:pers1140">χίμαιραν</persName>: ἣ τοὺς παρίοντας ἧψε μεληδὸν καὶ τοῖς ἄλλοις παρεῖχε, παρατιθέναι: ἔνιοι δὲ ὄρος εἶναι κατὰ <placeName n="urn:cite2:hmt:place.v1:place75">λυκίαν</placeName>: ὃ καλεῖται <placeName n="">χίμαιρα</placeName>: τοῦτο δὲ κατὰ μέσον ἔχειν ἀναφυσήματα πυρός: κατὰ δὲ τὰ ἄκρα πολύθηρον⁑</p>
             </div>
-         </div>                                                                                  
+         </div>
+         <div n="58v_159" type="scholion">
+            <div n="lemma">
+               <p>εἷσε λόχον:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.189</p>
+            </div>
+            <div n="comment">
+               <p>δῆλον οὖν ὡς καὶ αὐτὸς διὰ τὴν καλοκαγαθίαν τοῦ ἀνδρὸς, οὐκ ἠθέλησεν ἐκ τοῦ προφανοῦς αὐτὸν φονεῦσαι⁑</p>
+            </div>
+         </div>
+         <div n="58v_160" type="scholion">
+            <div n="lemma">
+               <p>δίδου δ' ὅτε θυγατέρα ἣν:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.192</p>
+            </div>
+            <div n="comment">
+               <p><persName n="">ἀλκιμέδουσαν</persName> ἢ <persName n="">πασάνδραν</persName>⁑ ὅτι οὐκ εἶδεν <persName n="urn:cite2:hmt:pers.v1:pers17">ὅμηρος</persName> τὸν <persName n="urn:cite2:hmt:pers.v1:pers1252">πήγασον</persName>⁑</p>
+            </div>
+         </div> 
+         <div n="58v_161" type="scholion">
+            <div n="lemma">
+               <p>καὶ μέν οἱ <rs type="ethnic" n="urn:cite2:hmt:place.v1:place75">λύκιοι</rs> τέμενος τάμον:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.194</p>
+            </div>
+            <div n="comment">
+               <p>ὡς ἀπηλαγμένοι τῶν δεινῶν⁑</p>
+            </div>
+         </div> 
+         <div n="58v_162" type="scholion">
+            <div n="lemma">
+               <p>ἣ δ' ἔτεκε τρία τέκνα:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.196</p>
+            </div>
+            <div n="comment">
+               <p>πρὸς τὸ θυγατέρα ἥν⁑</p>
+            </div>
+         </div> 
+         <div n="58v_163" type="scholion">
+            <div n="lemma">
+               <p><persName n="urn:cite2:hmt:pers.v1:pers725">λαοδαμείη</persName> μὲν παρελέξατο μητίετα <persName n="urn:cite2:hmt:pers.v1:pers8">ζεύς</persName>: ἣ δ' ἔτεκεν <persName n="urn:cite2:hmt:pers.v1:pers195">σαρπηδόνα</persName>:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.198</p>
+            </div>
+            <div n="comment">
+               <p>ἐπεὶ` πῶς <persName n="urn:cite2:hmt:pers.v1:pers403">εὐρώπη</persName> ἦν: οὐ στρατεύει <persName n="urn:cite2:hmt:pers.v1:pers287">ἰδομενεῖ</persName>: ἢ ὅτι παρὰ <persName n="urn:cite2:hmt:pers.v1:pers8">διὸς</persName> τὴν ἤβην: ἐπεὶ` ἓξ ἔσχον γενεᾱς: τινές δὲ <persName n="urn:cite2:hmt:pers.v1:pers403">εὐρώπην</persName>, τὴν <persName n="urn:cite2:hmt:pers.v1:pers725">λαοδάμειαν</persName>, ἐπεὶ` εὐόφθαλμος ἦν⁑</p>
+            </div>
+         </div>                                                                                              
         </body>
       </text>
     </group>
