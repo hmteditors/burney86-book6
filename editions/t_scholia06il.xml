@@ -602,7 +602,7 @@
                  <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.185</p>
             </div>
             <div n="comment">
-               <p>εὖ τὸ μὴ εἰπεῖν ἔφασαν ἄλλοι: ἀλλ' αὐτὸς ὁπεπειραμένος:</p>
+               <p>εὖ τὸ μὴ εἰπεῖν ἔφασαν ἄλλοι: ἀλλ' αὐτὸς ὁ πεπειραμένος:</p>
             </div>
          </div>
          <div n="58v_171" type="scholion">
@@ -613,7 +613,7 @@
                  <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.186</p>
             </div>
             <div n="comment">
-               <p>κατέτρεχον γὰρ τὴν <placeName n="urn:cite2:hmt:place.v1:place226">ἀσίαν</placeName>: ἀμέλει ἐξ αὐτῶν <placeName n="urn:cite2:hmt:place.v1:place80">ἔφεσος</placeName> καὶ <placeName n="urn:cite2:hmt:place.v1:place412">σμύρνα</placeName> καλεῖται: καὶ <w>φρυν<unclear>α</unclear>'</w> ἐς ἤλυθον:</p>
+               <p>κατέτρεχον γὰρ τὴν <placeName n="urn:cite2:hmt:place.v1:place226">ἀσίαν</placeName>: ἀμέλει ἐξ <w>αὐτ<unclear>ῶ</unclear>ν</w> <placeName n="urn:cite2:hmt:place.v1:place80">ἔφεσος</placeName> καὶ <placeName n="urn:cite2:hmt:place.v1:place412">σμύρνα</placeName> καλεῖται: καὶ <w>φρυν<unclear>α</unclear>'</w> ἐς ἤλυθον:</p>
             </div>
          </div>
          <div n="58v_172" type="scholion">
@@ -657,7 +657,7 @@
                  <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.205</p>
             </div>
             <div n="comment">
-               <p>ἵσως διὰ τὰς <rs type="ethnic" n="">ἀμαζόνας</rs>:</p>
+               <p>ἴσως διὰ τὰς <rs type="ethnic" n="">ἀμαζόνας</rs>:</p>
             </div>
          </div>      
       </body>

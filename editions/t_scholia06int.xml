@@ -417,7 +417,7 @@
                  <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.184</p>
             </div>
             <div n="comment">
-               <p>καὶ ἐκ <rs type="ethnic" n="urn:cite2:hmt:pers.v1:pers723">σολύμων</rs> ὀρέων: ἀπὸ γὰρ τῶν ἀνατολικῶν <rs type="ethnic" n="urn:cite2:hmt:place.v1:place46">αἰθιόπων</rs> ἐπανιὼν ἀπὸ <placeName n="">πισιδίας</placeName> καὶ <placeName n="urn:cite2:hmt:place.v1:place55">κιλικίας</placeName> ὁρᾶ <persName n="urn:cite2:hmt:place.v1:place55">ὀδυσσέα ὁ <persName n="urn:cite2:hmt:pers.v1:pers47">ποσειδῶν⁑</persName></persName></p>
+               <p>καὶ ἐκ <rs type="ethnic" n="urn:cite2:hmt:pers.v1:pers723">σολύμων</rs> ὀρέων: ἀπὸ γὰρ τῶν ἀνατολικῶν <rs type="ethnic" n="urn:cite2:hmt:place.v1:place46">αἰθιόπων</rs> ἐπανιὼν ἀπὸ <placeName n="">πισιδίας</placeName> καὶ <placeName n="urn:cite2:hmt:place.v1:place55">κιλικίας</placeName>, ὁρᾶ <persName n="urn:cite2:hmt:place.v1:place55">ὀδυσσέα ὁ <persName n="urn:cite2:hmt:pers.v1:pers47">ποσειδῶν⁑</persName></persName></p>
             </div>
          </div>
          <div n="58v_157" type="scholion">
@@ -461,7 +461,7 @@
                  <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.202</p>
             </div>
             <div n="comment">
-            <p>οὐχ' ὡς οἱ νεῶτεροι μελαγχολάνας ἀλλ' ὀδυνώμενος, ἐπὶ τῇ τῶν παίδων ἀπωλείᾳ, ἐμόναζε⁑</p>
+            <p>οὐχ' ὡς οἱ νεώτεροι μελαγχολάνας ἀλλ' ὀδυνώμενος, ἐπὶ τῇ τῶν παίδων ἀπωλείᾳ, ἐμόναζε⁑</p>
             </div>
          </div>
          <div n="58v_167" type="scholion">
@@ -472,7 +472,7 @@
                  <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.204</p>
             </div>
             <div n="comment">
-            <p>ἴσως ὡς γηράσαντος τοῦ <persName n="urn:cite2:hmt:pers.v1:pers720">βελλεροφόντου</persName>: ἀπέστησαν: ὁ δὲ`, ὡς πατρῴας ἀρχῆς ἀντιποιόυμενος ἐπολέμει⁑</p>
+            <p>ἴσως ὡς γηράσαντος τοῦ <persName n="urn:cite2:hmt:pers.v1:pers720">βελλεροφόντου</persName>: ἀπέστησαν: ὁ δὲ`, ὡς πατρῴας ἀρχῆς ἀντιποιούμενος ἐπολέμει⁑</p>
             </div>
          </div>   
         </body>
