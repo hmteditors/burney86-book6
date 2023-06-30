@@ -474,7 +474,18 @@
             <div n="comment">
             <p>ἴσως ὡς γηράσαντος τοῦ <persName n="urn:cite2:hmt:pers.v1:pers720">βελλεροφόντου</persName>: ἀπέστησαν: ὁ δὲ`, ὡς πατρῴας ἀρχῆς ἀντιποιούμενος ἐπολέμει⁑</p>
             </div>
-         </div>   
+         </div>
+         <div n="58v_178" type="scholion">
+            <div n="lemma">
+               <p>γήθησεω δὲ βοὴν ἀγαθὸς <persName n="urn:cite2:hmt:pers.v1:pers215">διομηδές</persName>:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.212</p>
+            </div>
+            <div n="comment">
+               <p>ἔοικε διὰ τὸ <choice><abbr>ὄνομ</abbr><expan>ὄνομα</expan></choice> <persName n="urn:cite2:hmt:pers.v1:pers720">βελλεροφόντου</persName>, καὶ τοὺς πολλοὺς ἀνασχέσθαι λόγους τοῦ <persName n="urn:cite2:hmt:pers.v1:pers463">γλαύκου</persName>⁑</p>
+            </div>
+         </div>      
         </body>
       </text>
     </group>
