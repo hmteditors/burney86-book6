@@ -659,7 +659,41 @@
             <div n="comment">
                <p>ἴσως διὰ τὰς <rs type="ethnic" n="">ἀμαζόνας</rs>:</p>
             </div>
-         </div>      
+         </div>
+         <div n="59r_188" type="scholion">
+            <div n="lemma">
+               <p></p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.206</p>
+            </div>
+            <div n="comment">
+               <p>ἐκ <persName n="">δημωνάσης</persName>:</p>
+            </div>
+         </div>
+         <div n="59r_189" type="scholion">
+            <div n="lemma">
+               <p></p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.215</p>
+            </div>
+            <div n="comment">
+               <p>ἐπεὶ φιλοξενίαν προτρέπεται: <w><unclear>δει</unclear>κνὺς
+               </w> ὡς καὶ ἐκ κινδύνων ῥύεται:</p>
+            </div>
+         </div>
+         <div n="59r_190" type="scholion">
+            <div n="lemma">
+               <p></p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.217</p>
+            </div>
+            <div n="comment">
+               <p>οὕτως <rs type="ethnic" n="urn:cite2:hmt:place.v1:place76">ἀττικοὶ</rs> ὅθεν καὶ εἴκοσι νήριτα</p>
+            </div>
+         </div> 
       </body>
       </text>
     </group>

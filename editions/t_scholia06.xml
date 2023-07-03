@@ -881,7 +881,29 @@
             <div n="comment">
                <p>ἀλλήλων ἐκκλίνωμεν: ἁποτύχωμεν ἀλλήλων: καί τοι ἐν πλήθει ὄντες: <persName n="urn:cite2:hmt:pers.v1:pers15">ζηνόδοτος</persName> δὲ <choice><abbr>γρ⸍</abbr><expan>γράφει</expan></choice>: ἀλλήλους ἀλεώμεθα: ἔγχεα δ' ἀλλήλων ἀλεώμεθα καὶ δι' ὁμίλου: ἐπὶ παντὸς τοῦ πλήθους: ὅπως γνῶσιν ὅτι ξεῖνοι εἶεν: ἢ διὰ πάσης τῆς μάχης: ὡς τανυσάμενος διὰ μήλων: ἢ καὶ ἡμεῖς καὶ αἱ ἡμέτεραι στρατιαὶ παραφυλάξονται πρὸς ἀλλήλας στάσιν⁑</p>
             </div>
-         </div>              
+         </div>
+         <div n="59r_186" type="scholion">
+            <div n="lemma">
+               <p></p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.230</p>
+            </div>
+            <div n="comment">
+               <p><choice><sic>ἁπλοϊκῶς</sic><corr>ἀπλοϊκῶς</corr></choice> τοῦτο, οὐ δι' <choice><abbr>αἰσχροκερδ⸍</abbr><expan>αἰσχροκερδείαν</expan></choice>⁑</p>
+            </div>
+         </div>
+         <div n="59r_187" type="scholion">
+            <div n="lemma">
+               <p>ὄφρα καὶ οἵδε γνῶσι:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.230</p>
+            </div>
+            <div n="comment">
+               <p>δῆλον οὖν ὡς ἐν ἡσυχία εἰσὶ τὰ πλήθη: καραδοκοῦντες τὸ τέλος⁑</p>
+            </div>
+         </div>                                
         </body>
       </text>
     </group>
