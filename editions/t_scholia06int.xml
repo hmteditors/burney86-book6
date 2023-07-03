@@ -475,7 +475,7 @@
             <p>ἴσως ὡς γηράσαντος τοῦ <persName n="urn:cite2:hmt:pers.v1:pers720">βελλεροφόντου</persName>: ἀπέστησαν: ὁ δὲ`, ὡς πατρῴας ἀρχῆς ἀντιποιούμενος ἐπολέμει⁑</p>
             </div>
          </div>
-         <div n="58v_178" type="scholion">
+         <div n="59r_178" type="scholion">
             <div n="lemma">
                <p>γήθησεν δὲ βοὴν ἀγαθὸς <persName n="urn:cite2:hmt:pers.v1:pers215">διομήδης</persName>:</p>
             </div>
@@ -485,7 +485,51 @@
             <div n="comment">
                <p>ἔοικε διὰ τὸ <choice><abbr>ὄνομ</abbr><expan>ὄνομα</expan></choice> <persName n="urn:cite2:hmt:pers.v1:pers720">βελλεροφόντου</persName>, καὶ τοὺς πολλοὺς ἀνασχέσθαι λόγους τοῦ <persName n="urn:cite2:hmt:pers.v1:pers463">γλαύκου</persName>⁑</p>
             </div>
-         </div>      
+         </div>
+         <div n="59r_180" type="scholion">
+            <div n="lemma">
+               <p><persName n="urn:cite2:hmt:pers.v1:pers327">οἰνεὺς</persName> μὲν ζωστῆρα:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.216</p>
+            </div>
+            <div n="comment">
+               <p>οὐκ ἐκαπήλευε γὰρ τὰς δόσεις: ἢ καὶ ὁ ζωστὴρ, πολυτιμότερος ἦν: <persName n="urn:cite2:hmt:pers.v1:pers327">οἰνεὺς</persName> μὲν ζωστῆρα: <persName n="urn:cite2:hmt:pers.v1:pers720">βελλεροφόντης</persName> δὲ χρύσειον δέπας: ὁ μὲ`ν. ὡς μένοντι: ὁ δὲ` ὡς ἐκδημοῦντι⁑</p>
+            </div>
+         </div>
+         <div n="59r_182" type="scholion">
+            <div n="lemma">
+               <p><persName n="urn:cite2:hmt:pers.v1:pers251">τυδέα</persName> δ' οὐ μέμνημαι:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.222</p>
+            </div>
+            <div n="comment">
+               <p>ἄτοποι οἱ δύο στίχοι: τὸ δὲ <persName n="urn:cite2:hmt:pers.v1:pers251">τυδέα</persName> δ' οὐ μέμνημαι: ὡς μέμνημαι τόδε ἔργον⁑</p>
+            </div>
+         </div>
+         <div n="59r_183" type="scholion">
+            <div n="lemma">
+               <p><placeName n="urn:cite2:hmt:place.v1:place114">ἄργεϊ</placeName> μέσσω:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.224</p>
+            </div>
+            <div n="comment">
+               <p>τὸ <placeName n="urn:cite2:hmt:place.v1:place114">ἄργος</placeName> μέσον <placeName n="urn:cite2:hmt:place.v1:place36">πελοποννήσου</placeName>⁑</p>
+            </div>
+         </div>   
+         <div n="59r_185" type="scholion">
+            <div n="lemma">
+               <p>πολλοὶ μὲν γὰρ ἐμοὶ κτείνειν: ὅν γε <choice><abbr>θς</abbr><expan>θεος</expan></choice> πόροι:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.227</p>
+            </div>
+            <div n="comment">
+               <p>καίτοι εὐημερῶν παραπεφυλαγμένως λαλεῖ: ὡς πρὸς φίλον μετριάζων: ηὔξησέ τε αὐτὸν διὰ τοῦ δύνηαι⁑</p>
+            </div>
+         </div>                     
         </body>
       </text>
     </group>

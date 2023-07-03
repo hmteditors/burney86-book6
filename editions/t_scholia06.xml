@@ -827,7 +827,7 @@
                <p>ἵνα ἡ ἀπώλεια τῶν παίδων, αἰτία αὐτῶ ᾖ μονασμοῦ: ὡς καὶ τῷ <persName n="urn:cite2:hmt:pers.v1:pers322">λαέρτῃ</persName>: καὶ <placeName n="urn:cite2:hmt:place.v1:place309"><w>ἀλήϊ<unclear>ο</unclear>ν</w></placeName> πεδίον ὅπερ ᾤκει: ἀλεείνων τοὺς <choice><abbr>ἀνους</abbr><expan>ἀνθρωπους</expan></choice>: τὰ δὲ: ἐκ τῆς τύχης, εἰς θεοὺς ἀναφέρομεν: ὥσπερ δὲ ἐν ἀρχῇ διέσυρε τὰ ἀνθρώπινα τὸ φρύαγμα <persName n="urn:cite2:hmt:pers.v1:pers215">διομήδους</persName> καθαιρῶν, καὶ νῦν οὐκ ἀπώκνησε τὴν περὶ τὸν πρόγονον μεταβολὴν τῆς τύχης ὁμολογῆσαι: ἢ τάχα πιστοῦται τὰ ἀγαθὰ διὰ τῆς ὁμολογίας τῶν ἀτυχιῶν: εἰ δὲ χωλὸς ἦν, πωλησάτω ἀλλ' ὅτε δὴ κἀκεῖνος ἀπήχθετο: ὥσπερ καὶ οἱ πρόγονοι αὐτοῦ <persName n="urn:cite2:hmt:pers.v1:pers724">ἴσανδρός</persName> τε καὶ <persName n="urn:cite2:hmt:pers.v1:pers725">λαοδάμεια</persName>: ἢ ὡς τὸ γένος τῶν <choice><abbr>ἀνων</abbr><expan>ἀνθρωπων</expan></choice>⁑</p>
             </div>
          </div>
-         <div n="58v_176" type="scholion">
+         <div n="59r_176" type="scholion">
             <div n="lemma">
                <p>καί μοι μάλα πολλ`' ἐπέτελλεν αἰὲν ἀριστεύειν:</p>
             </div>
@@ -838,7 +838,7 @@
                <p>τοῦτο ἀναφέρει πρὸς τὸ ὑπὸ <persName n="urn:cite2:hmt:pers.v1:pers215">διομήδους</persName> εἰρημένον: ἀτὰρ νῦν γε πολὺ προβέβηκας ἁπάντων⁑</p>
             </div>
          </div>
-         <div n="58v_177" type="scholion">
+         <div n="59r_177" type="scholion">
             <div n="lemma">
                <p>ταύτης τοι γενεῆς καὶ αἵματος:</p>
             </div>
@@ -848,7 +848,40 @@
             <div n="comment">
                <p>σπέρματος: τὸ γὰρ αἷμα εἰς θορὸν μεταβάλλεται: οἱ γοὖν συνεχῶς ἀφροδισιάζοντες: τὸ τελευταῖον, αἷμα φέρουσι: τὸ γὰρ μεταβαλλόμενον ἀναλώσαντες, τὸ ἀμετάβλητον ἐξέλκουσι⁑</p>
             </div>
-         </div>      
+         </div>
+         <div n="59r_179" type="scholion">
+            <div n="lemma">
+               <p>ἔγχος μὲν κατέπηξεν:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.213</p>
+            </div>
+            <div n="comment">
+               <p>γραφικῶς ἔχει καὶ τοῦτο: ἵνα δὲ μηκέτι πόλεμον εἶναι δοκῇ. καταπήγνυσι τὸ ἔγχος ὁ <persName n="urn:cite2:hmt:pers.v1:pers215">διομήδης</persName>⁑</p>
+            </div>
+         </div>
+         <div n="59r_181" type="scholion">
+            <div n="lemma">
+               <p>καί μιν ἐγὼ κατέλειπον:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.221</p>
+            </div>
+            <div n="comment">
+               <p>ἄπαιδος γὰρ τελευτῶντος <persName n="urn:cite2:hmt:pers.v1:pers327">οἰνέως</persName>, <persName n="urn:cite2:hmt:pers.v1:pers215">διομήδης</persName> κληρονομεῖ: καί μιν ἐγὼ μνῆμα ξείνοιο φίλοιο⁑</p>
+            </div>
+         </div> 
+         <div n="59r_184" type="scholion">
+            <div n="lemma">
+               <p>ἔγχεα δ' ἀλλήλων:</p>
+            </div>
+            <div n="ref">
+                 <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.226</p>
+            </div>
+            <div n="comment">
+               <p>ἀλλήλων ἐκκλίνωμεν: ἁποτύχωμεν ἀλλήλων: καί τοι ἐν πλήθει ὄντες: <persName n="urn:cite2:hmt:pers.v1:pers15">ζηνόδοτος</persName> δὲ <choice><abbr>γρ⸍</abbr><expan>γράφει</expan></choice>: ἀλλήλους ἀλεώμεθα: ἔγχεα δ' ἀλλήλων ἀλεώμεθα καὶ δι' ὁμίλου: ἐπὶ παντὸς τοῦ πλήθους: ὅπως γνῶσιν ὅτι ξεῖνοι εἶεν: ἢ διὰ πάσης τῆς μάχης: ὡς τανυσάμενος διὰ μήλων: ἢ καὶ ἡμεῖς καὶ αἱ ἡμέτεραι στρατιαὶ παραφυλάξονται πρὸς ἀλλήλας στάσιν⁑</p>
+            </div>
+         </div>              
         </body>
       </text>
     </group>
