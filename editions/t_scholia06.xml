@@ -151,7 +151,7 @@
                  <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.39</p>
             </div>
             <div n="comment">
-               <p>ἐπεὶ` μεταξὺ ποταμῶν ἡ μάχη, εἰκότως μυρίκαι πολλαὶ: καὶ ἐν τῇ δολοφονία θῆκεν ἀνα μυρίκην⁑</p>
+               <p>ἐπεὶ⸌ μεταξὺ ποταμῶν ἡ μάχη, εἰκότως μυρίκαι πολλαὶ: καὶ ἐν τῇ δολοφονία θῆκεν ἀνα μυρίκην⁑</p>
             </div>
          </div>
          <div n="56r_40" type="scholion">
@@ -184,7 +184,7 @@
                  <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.48</p>
             </div>
             <div n="comment">
-               <p>ὁ <w><gap/><unclear>῾</unclear>´δ<gap/></w> εἰργασμένος: ἢ ὁ πολλοὺς <w>κ<unclear>ά</unclear>μνειν</w> τουτίν ἀποθνήσκειν ποιῶν: ἢ ὁ εἰς <w>πολλ<unclear>οὺς</unclear></w> καμάτους ἐπιτήδειος: ἢ ὁ δυσκατέργαστος⁑</p>
+               <p>ὁ <w><gap/><unclear>῾</unclear>⸍δ<gap/></w> εἰργασμένος: ἢ ὁ πολλοὺς <w>κ<unclear>ά</unclear>μνειν</w> τουτίν ἀποθνήσκειν ποιῶν: ἢ ὁ εἰς <w>πολλ<unclear>οὺς</unclear></w> καμάτους ἐπιτήδειος: ἢ ὁ δυσκατέργαστος⁑</p>
             </div>
          </div>
          <div n="56r_44" type="scholion">
@@ -328,7 +328,7 @@
                  <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.93</p>
             </div>
             <div n="comment">
-               <p>δωδεκηὶς θυσία εστιν: παρὰ τοῖς <rs type="ethnic" n="urn:cite2:hmt:place.v1:place76">ἀττικοῖς</rs>: εὐεπίφορος δὲ ὁ <choice><abbr>ποιητ`</abbr><expan>ποιητὴς</expan></choice> εἰς τὸ <num value="12">ϊβ</num>⁑</p>
+               <p>δωδεκηὶς θυσία εστιν: παρὰ τοῖς <rs type="ethnic" n="urn:cite2:hmt:place.v1:place76">ἀττικοῖς</rs>: εὐεπίφορος δὲ ὁ <choice><abbr>ποιητ⸌</abbr><expan>ποιητὴς</expan></choice> εἰς τὸ <num value="12">ϊβ</num>⁑</p>
             </div>
          </div>
          <div n="56v_79" type="scholion">
@@ -383,7 +383,7 @@
                  <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.99</p>
             </div>
             <div n="comment">
-               <p>ἐπεὶ` τὰ παρόντα μᾶλλον λυπεῖ: ἀμφότερα δὲ ἐξῆρε τὰ πρόσωπα: τὸ μὲ`ν, ὡς προὖχον: τὸ δὲ` ὡς τὸν ἄριστον ὑπερβαλλόμενον:</p>
+               <p>ἐπεὶ⸌ τὰ παρόντα μᾶλλον λυπεῖ: ἀμφότερα δὲ ἐξῆρε τὰ πρόσωπα: τὸ μὲ⸌ν, ὡς προὖχον: τὸ δὲ⸌ ὡς τὸν ἄριστον ὑπερβαλλόμενον:</p>
             </div>
          </div>
          <div n="57r_90" type="scholion">
@@ -450,7 +450,7 @@
                  <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.114</p>
             </div>
             <div n="comment">
-               <p>προβούλοις: πιθανῶς δὲ: ἵνα μὴ γυναῖκας μόνας ἐπὶ τοῦ στρατεύματος ὀνομάζῃ: εἴπω βουλευτῇσι: ὁ μὲν <persName n="urn:cite2:hmt:pers.v1:pers507">ἕλενος</persName> ἔλεγεν: εἰπὲ δ' ἔπειτα μητέρι σῇ καὶ ἐμῇ: ἡ δὲ` ξυνάγουσα γεραιὰς: ὁ δὲ <persName n="urn:cite2:hmt:pers.v1:pers172">ἕκτωρ</persName> τοῦ εὐπρεποῦς ἕνεκα προστίθησι μὲ`ν τοὺς γέροντας: ἐκκλείπει δὲ τὴν ὑπὲρ <persName n="urn:cite2:hmt:pers.v1:pers215">διομήδους</persName> εὐχήν⁑</p>
+               <p>προβούλοις: πιθανῶς δὲ: ἵνα μὴ γυναῖκας μόνας ἐπὶ τοῦ στρατεύματος ὀνομάζῃ: εἴπω βουλευτῇσι: ὁ μὲν <persName n="urn:cite2:hmt:pers.v1:pers507">ἕλενος</persName> ἔλεγεν: εἰπὲ δ' ἔπειτα μητέρι σῇ καὶ ἐμῇ: ἡ δὲ⸌ ξυνάγουσα γεραιὰς: ὁ δὲ <persName n="urn:cite2:hmt:pers.v1:pers172">ἕκτωρ</persName> τοῦ εὐπρεποῦς ἕνεκα προστίθησι μὲ⸌ν τοὺς γέροντας: ἐκκλείπει δὲ τὴν ὑπὲρ <persName n="urn:cite2:hmt:pers.v1:pers215">διομήδους</persName> εὐχήν⁑</p>
             </div>
          </div>
          <div n="57r_98" type="scholion">
@@ -461,7 +461,7 @@
                  <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.116</p>
             </div>
             <div n="comment">
-               <p>οὐ᾽κ ἐπὶ ἵππων ἀναχωρεῖ: διὰ τὸ μὴ δοκεῖν φεύγειν: ἢ ἐπεὶ` πρὸς ἱκετείαν ἄπεισιν: ἢ ὅπως καὶ οἱ πολέμιοι θεώμενοι τὸ ἅρμα. μὴ δοκοῖεν αὐτὸν ἀπηλάχθαι⁑</p>
+               <p>οὐ᾽κ ἐπὶ ἵππων ἀναχωρεῖ: διὰ τὸ μὴ δοκεῖν φεύγειν: ἢ ἐπεὶ⸌ πρὸς ἱκετείαν ἄπεισιν: ἢ ὅπως καὶ οἱ πολέμιοι θεώμενοι τὸ ἅρμα. μὴ δοκοῖεν αὐτὸν ἀπηλάχθαι⁑</p>
             </div>
          </div>
          <div n="57r_99" type="scholion">
@@ -483,7 +483,7 @@
                  <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.119</p>
             </div>
             <div n="comment">
-               <p>διαναπαύει τὸν ἀκροατὴν: γενεαλογίας καὶ μύθους παρεμβάλλων: οὐκ ἐᾷ τὲ κενὴν τὴν ἔξοδον <persName n="urn:cite2:hmt:pers.v1:pers172">ἕκτορος</persName>: ὅτε στρατὸς διαναπαύεται: ἀφορῶν τὸ τέλος τῶν ἀριστέων: καὶ <rs type="ethnic" n="urn:cite2:hmt:place.v1:place3">ἑλλήνων</rs> ὑποχωρησάντων, κενοῦ ὄντος τοῦ μεταιχμίου, προπηδᾷ <persName n="urn:cite2:hmt:pers.v1:pers463">γλαῦκος</persName>: ἢ καὶ ἐν τάχει μὲ`ν πέφρασται: πρὸς ὠφέλειαν δὲ ἐπεξέργασται ταῦτα ὁ ποιητής⁑</p>
+               <p>διαναπαύει τὸν ἀκροατὴν: γενεαλογίας καὶ μύθους παρεμβάλλων: οὐκ ἐᾷ τὲ κενὴν τὴν ἔξοδον <persName n="urn:cite2:hmt:pers.v1:pers172">ἕκτορος</persName>: ὅτε στρατὸς διαναπαύεται: ἀφορῶν τὸ τέλος τῶν ἀριστέων: καὶ <rs type="ethnic" n="urn:cite2:hmt:place.v1:place3">ἑλλήνων</rs> ὑποχωρησάντων, κενοῦ ὄντος τοῦ μεταιχμίου, προπηδᾷ <persName n="urn:cite2:hmt:pers.v1:pers463">γλαῦκος</persName>: ἢ καὶ ἐν τάχει μὲ⸌ν πέφρασται: πρὸς ὠφέλειαν δὲ ἐπεξέργασται ταῦτα ὁ ποιητής⁑</p>
             </div>
          </div>
          <div n="57r_101" type="scholion">
@@ -516,7 +516,7 @@
                  <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.128</p>
             </div>
             <div n="comment">
-               <p> ἐπεὶ` εἶπε φᾶν δέ τιν' ἀθανάτων: διὰ τοῦτο ταῦτα φησίν⁑</p>
+               <p> ἐπεὶ⸌ εἶπε φᾶν δέ τιν' ἀθανάτων: διὰ τοῦτο ταῦτα φησίν⁑</p>
             </div>
          </div>
          <div n="57v_111" type="scholion">
@@ -549,7 +549,7 @@
                  <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.134</p>
             </div>
             <div n="comment">
-               <p>οἱ μὲ`ν τοὺς κλάδους: οἱ δὲ`, ἀμπέλους: οἱ δὲ`, τοὺς θύρσους⁑</p>
+               <p>οἱ μὲ⸌ν τοὺς κλάδους: οἱ δὲ⸌, ἀμπέλους: οἱ δὲ⸌, τοὺς θύρσους⁑</p>
             </div>
          </div>
          <div n="57v_115" type="scholion">
@@ -642,7 +642,7 @@
          </div>
          <div n="58r_133" type="scholion">
             <div n="lemma">
-               <p>ἐπεὶ` πολὺ φέρτερον ἦεν:</p>
+               <p>ἐπεὶ⸌ πολὺ φέρτερον ἦεν:</p>
             </div>
             <div n="ref">
                  <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.158</p>
@@ -670,7 +670,7 @@
                  <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.162</p>
             </div>
             <div n="comment">
-               <p>δῆλον μὲν ἦν καὶ μὴ προστεθέντος τοῦ ὀνόματος ὅτι <persName n="urn:cite2:hmt:pers.v1:pers720">βελλεροφόντης</persName> λέγεται: περὶ γὰρ τούτου ὁ λόγος ἦν: ἄλλ ὅμως ἐπήνεγκε τοὔνομα: τοῦτον ἐν αχήματι κινῶν: τοῦτο δὲ`. ἐπὶ τῇ σωφροσύνῃ τοῦ ἀνδρὸς ἡδόμενος, διὰ στόματος ἔχει: οἷς γὰρ ἡδόμεθα τούτους ἀνὰ στόμα ἔχομεν⁑</p>
+               <p>δῆλον μὲν ἦν καὶ μὴ προστεθέντος τοῦ ὀνόματος ὅτι <persName n="urn:cite2:hmt:pers.v1:pers720">βελλεροφόντης</persName> λέγεται: περὶ γὰρ τούτου ὁ λόγος ἦν: ἄλλ ὅμως ἐπήνεγκε τοὔνομα: τοῦτον ἐν αχήματι κινῶν: τοῦτο δὲ⸌. ἐπὶ τῇ σωφροσύνῃ τοῦ ἀνδρὸς ἡδόμενος, διὰ στόματος ἔχει: οἷς γὰρ ἡδόμεθα τούτους ἀνὰ στόμα ἔχομεν⁑</p>
             </div>
          </div>
          <div n="58r_139" type="scholion">
@@ -714,7 +714,7 @@
                  <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.172</p>
             </div>
             <div n="comment">
-               <p>ποῖος γάρ φησι ποταμὸς οὐ ρεῖ: ῥητέον ὅτι ἐπεὶ` καὶ πόλις <placeName n="urn:cite2:hmt:place.v1:place75">λυκίας</placeName> ἐστὶ <placeName n="">ξάνθος</placeName>, ἢ εὐρὺ <w>ῥ<unclear>έ</unclear>οντα</w>: ἢ ἐπεὶ` ἀέναός ἐστιν⁑</p>
+               <p>ποῖος γάρ φησι ποταμὸς οὐ ρεῖ: ῥητέον ὅτι ἐπεὶ⸌ καὶ πόλις <placeName n="urn:cite2:hmt:place.v1:place75">λυκίας</placeName> ἐστὶ <placeName n="">ξάνθος</placeName>, ἢ εὐρὺ <w>ῥ<unclear>έ</unclear>οντα</w>: ἢ ἐπεὶ⸌ ἀέναός ἐστιν⁑</p>
             </div>
          </div> 
          <div n="58r_145" type="scholion">
@@ -813,7 +813,7 @@
                  <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.198</p>
             </div>
             <div n="comment">
-               <p>ἐπεὶ` πῶς <persName n="urn:cite2:hmt:pers.v1:pers403">εὐρώπη</persName> ἦν: οὐ στρατεύει <persName n="urn:cite2:hmt:pers.v1:pers287">ἰδομενεῖ</persName>: ἢ ὅτι παρὰ <persName n="urn:cite2:hmt:pers.v1:pers8">διὸς</persName> τὴν ἤβην: ἐπεὶ` ἓξ ἔσχον γενεᾱς: τινὲς δὲ <persName n="urn:cite2:hmt:pers.v1:pers403">εὐρώπην</persName>, τὴν <persName n="urn:cite2:hmt:pers.v1:pers725">λαοδάμειαν</persName>, ἐπεὶ` εὐόφθαλμος ἦν⁑</p>
+               <p>ἐπεὶ⸌ πῶς <persName n="urn:cite2:hmt:pers.v1:pers403">εὐρώπη</persName> ἦν: οὐ στρατεύει <persName n="urn:cite2:hmt:pers.v1:pers287">ἰδομενεῖ</persName>: ἢ ὅτι παρὰ <persName n="urn:cite2:hmt:pers.v1:pers8">διὸς</persName> τὴν ἤβην: ἐπεὶ⸌ ἓξ ἔσχον γενεᾱς: τινὲς δὲ <persName n="urn:cite2:hmt:pers.v1:pers403">εὐρώπην</persName>, τὴν <persName n="urn:cite2:hmt:pers.v1:pers725">λαοδάμειαν</persName>, ἐπεὶ⸌ εὐόφθαλμος ἦν⁑</p>
             </div>
          </div>
          <div n="58v_164" type="scholion">
@@ -829,7 +829,7 @@
          </div>
          <div n="59r_176" type="scholion">
             <div n="lemma">
-               <p>καί μοι μάλα πολλ`' ἐπέτελλεν αἰὲν ἀριστεύειν:</p>
+               <p>καί μοι μάλα πολλ⸌' ἐπέτελλεν αἰὲν ἀριστεύειν:</p>
             </div>
             <div n="ref">
                  <p>urn:cts:greekLit:tlg0012.tlg001.burney86:6.207</p>
