@@ -79,11 +79,8 @@ md"""$(@bind loadem Button("Reload data from repository")) $(@bind loadparser Bu
 # ╔═╡ 89c118de-c942-4c14-8372-901e4b21bc2c
 md""" $(@bind writegoats Button("Write failed forms to file"))"""
 
-# ╔═╡ 98b70d8a-9c89-4a1b-9f9d-294e696fbb53
-md"""*See list of failed forms*: $(@bind seefails CheckBox())"""
-
-# ╔═╡ e72fd57a-82fc-42aa-b6f0-c36369c8e446
-
+# ╔═╡ f2e865cd-b927-4132-837b-6289814f0d59
+md"> #### View results"
 
 # ╔═╡ d151c98c-2cb8-4dc7-8c59-42288eb2e71c
 md"""
@@ -104,6 +101,9 @@ html"""
 <br/>
 
 """
+
+# ╔═╡ 97058ef5-a810-4c18-9149-8372e46dc399
+md"> Counting results"
 
 # ╔═╡ e1b1291f-2e1a-48d2-b026-113ba4b7d21f
 md"""---
@@ -133,6 +133,9 @@ end
 # ╔═╡ 86ac5638-ea24-49e1-858b-821852f54c68
 c =  normalizedcorpus(r)
 
+# ╔═╡ d36d3d96-6bc2-448c-af38-9b02b14ea988
+histo = isnothing(c) ? nothing :  corpus_histo(c, literaryGreek(), filterby = LexicalToken())
+
 # ╔═╡ db873991-a9ea-4430-a8fb-7b1cc6a447ab
 md"> Parser"
 
@@ -161,7 +164,7 @@ scholiatokens = filter(t -> startswith(workcomponent(t.passage.urn), "tlg5026"),
 vocab = map(t  -> t.passage.text, scholiatokens) |> unique
 
 # ╔═╡ 16acb9bc-002f-4ade-8b83-7cf466200700
-md"""Scholia for this page have **$(length(vocab))** distinct forms."""
+md"""Scholia in this repository have **$(length(vocab))** distinct forms."""
 
 # ╔═╡ a0c1cc74-22b5-42bb-aecd-83083000a840
 parses = map(vocab) do wd
@@ -195,12 +198,42 @@ end
 # ╔═╡ 23730b2b-916e-4d0d-9d44-3685b4570a82
 md"""Score: **$(length(sheep))** forms analyzed / **$(length(goats))** forms failed."""
 
-# ╔═╡ 6ff64312-ae96-40cb-93aa-655c5c7b469d
-if seefails
-	join(map(wd -> "1. $(wd)", goats), "\n") |> Markdown.parse
-else
-	md"(*Check the box above to see list of $(length(goats)) failures.*)"
+# ╔═╡ e72fd57a-82fc-42aa-b6f0-c36369c8e446
+failcounts = begin
+	failnums = []
+	for s in unique(goats)
+		push!(failnums, (s, histo[s]))
+	end
+	sort(failnums, by = pr -> pr[2], rev = true)
 end
+
+# ╔═╡ 137e64f1-6a20-4c35-9708-be7f2bf11776
+isempty(failcounts) ? md"" : md"""*Show unanalyzed forms occurring at least `n` times where `n` =*  $(@bind thresh NumberField(1:failcounts[1][2], default= failcounts[1][2]))"""
+
+# ╔═╡ c89e3d8e-b6bb-4236-aafd-c32f521e4ee4
+overthresh = filter(pr -> pr[2] >= thresh, failcounts)	
+
+# ╔═╡ abbf7cb4-41cc-49c8-a101-fd4a1e3703aa
+if isnothing(parses)
+	md""
+else
+
+	overthresh_md = map(overthresh) do pr
+		string("1. ", pr[1], " **", pr[2], "** occurrences")
+	end
+	
+	Markdown.parse(join(overthresh_md, "\n"))
+	
+end
+
+# ╔═╡ e57562ba-64a5-44d5-b7df-4539e34505db
+threshtotal = isempty(overthresh) ? 0 : map(pr -> pr[2], overthresh) |> sum
+
+# ╔═╡ feada822-bb03-489b-8dba-dae790bb9aaf
+threshpct = threshtotal == 0 ? 0 : round((threshtotal / length(parses)) * 100, digits = 1 )
+
+# ╔═╡ cd77efdf-4977-4f33-a120-dbb6c4320338
+threshtotal == 0 ? md"" : md"""Tokens occurring at least **$(thresh)** times: **$(length(overthresh))** tokens  (**$(threshtotal)** occurrences = $(threshpct)%)"""
 
 # ╔═╡ 95eab698-aa17-483a-b575-05986b07bdd6
 md"> CSS"
@@ -1673,25 +1706,32 @@ version = "17.4.0+0"
 # ╟─030156b5-6acc-48f8-a600-33c8afb46320
 # ╟─16acb9bc-002f-4ade-8b83-7cf466200700
 # ╟─23730b2b-916e-4d0d-9d44-3685b4570a82
-# ╟─98b70d8a-9c89-4a1b-9f9d-294e696fbb53
-# ╟─6ff64312-ae96-40cb-93aa-655c5c7b469d
-# ╠═e72fd57a-82fc-42aa-b6f0-c36369c8e446
+# ╟─f2e865cd-b927-4132-837b-6289814f0d59
+# ╟─137e64f1-6a20-4c35-9708-be7f2bf11776
+# ╟─cd77efdf-4977-4f33-a120-dbb6c4320338
+# ╟─abbf7cb4-41cc-49c8-a101-fd4a1e3703aa
 # ╟─d151c98c-2cb8-4dc7-8c59-42288eb2e71c
 # ╟─9ddd7641-257b-408f-9422-bf7fd7fe5ceb
+# ╟─97058ef5-a810-4c18-9149-8372e46dc399
+# ╟─e72fd57a-82fc-42aa-b6f0-c36369c8e446
+# ╟─d36d3d96-6bc2-448c-af38-9b02b14ea988
+# ╟─c89e3d8e-b6bb-4236-aafd-c32f521e4ee4
+# ╟─e57562ba-64a5-44d5-b7df-4539e34505db
+# ╟─feada822-bb03-489b-8dba-dae790bb9aaf
 # ╟─e1b1291f-2e1a-48d2-b026-113ba4b7d21f
 # ╟─e0a05b0a-273d-4246-b71c-9a193784245f
 # ╟─be7937f0-134d-4072-a2b8-804eedbefb98
 # ╟─86ac5638-ea24-49e1-858b-821852f54c68
 # ╟─db873991-a9ea-4430-a8fb-7b1cc6a447ab
 # ╟─29e176c9-790e-4f92-8027-d9b6298c435d
-# ╠═a0c1cc74-22b5-42bb-aecd-83083000a840
-# ╠═0d0231d1-6ef5-4db9-ab94-0fb66269b916
+# ╟─a0c1cc74-22b5-42bb-aecd-83083000a840
+# ╟─0d0231d1-6ef5-4db9-ab94-0fb66269b916
 # ╟─c7c99d8d-331e-4083-af38-a6522dab8791
 # ╟─8d39c4f7-6f4a-4f16-82c4-e4f029b8835b
-# ╠═5ecbbd60-94eb-4a93-9e0c-ec9d9823d2f1
-# ╠═b48af9fb-9b6f-402f-bc36-ad466dd20661
-# ╠═c851a3af-46cf-4ea9-a0d2-6a5b52284e00
-# ╠═6e45c31d-c6bb-4322-a79d-e5a608bceac5
+# ╟─5ecbbd60-94eb-4a93-9e0c-ec9d9823d2f1
+# ╟─b48af9fb-9b6f-402f-bc36-ad466dd20661
+# ╟─c851a3af-46cf-4ea9-a0d2-6a5b52284e00
+# ╟─6e45c31d-c6bb-4322-a79d-e5a608bceac5
 # ╟─95eab698-aa17-483a-b575-05986b07bdd6
 # ╟─11867dd1-f497-4efd-8b8c-a233483aa521
 # ╟─00000000-0000-0000-0000-000000000001
