@@ -4,24 +4,13 @@
 using Markdown
 using InteractiveUtils
 
-# This Pluto notebook uses @bind for interactivity. When running this notebook outside of Pluto, the following 'mock version' of @bind gives bound variables a default value (instead of an error).
-macro bind(def, element)
-    quote
-        local iv = try Base.loaded_modules[Base.PkgId(Base.UUID("6e696c72-6542-2067-7265-42206c756150"), "AbstractPlutoDingetjes")].Bonds.initial_value catch; b -> missing; end
-        local el = $(esc(element))
-        global $(esc(def)) = Core.applicable(Base.get, el) ? Base.get(el) : iv(el)
-        el
-    end
-end
-
-# ╔═╡ 50f5bcdd-dd1f-459c-89fe-7f7a81905f20
-# ╠═╡ show_logs = false
+# ╔═╡ b5af8db7-a6c8-4c5d-8fa2-29bc6251c387
 begin 
 	using Markdown
 	using PlutoUI
 	using Downloads
 
-	using DataFrames
+	#using DataFrames
 	
 	# Morphology:
 	using Kanones
@@ -44,297 +33,26 @@ begin
 	# a whole bunch for some MID projects!
 	using PolytonicGreek
 	using ManuscriptOrthography
-	#using Lycian
+
 	
 end
 
-# ╔═╡ e4a81af6-55df-456c-ab3f-6636d2f0d631
-md"""*Unhide the following cell to see the packages used in this notebook.*"""
+# ╔═╡ 46b56dc0-2359-11ee-0490-39b995125353
+md"""# Read scholia with Apollodorus"""
 
-# ╔═╡ 6a95886d-985d-43f4-ad9f-6542d01d8b6a
-md"> Byzortho stuff to play with"
-
-# ╔═╡ 3cd3640f-e8a9-42ca-9588-59eb3036918d
-byzorthourl = "https://raw.githubusercontent.com/homermultitext/byzortho/master/orthoequivs.csv"
-
-# ╔═╡ 86aa019b-e269-491d-ac98-4ef9a36a9cdd
-byzorthodata = begin
-	lines = Downloads.download(byzorthourl) |> readlines
-	map(lines[2:end]) do ln
-		cols = split(ln, ",")
-		(cols[2] => cols[3])
-	end
-
-end
-
-
-# ╔═╡ bbef0d04-803e-11ec-2d0c-99bccd51e7f3
-md"""> ### HMT editors: read morphologically analyzed texts
-
-
-"""
-
-# ╔═╡ 59201f18-0185-4beb-bd39-9367a783150d
-md"""$(@bind loadem Button("Reload data from repository")) $(@bind loadparser Button("Reload parser from file"))"""
-
-# ╔═╡ 98b70d8a-9c89-4a1b-9f9d-294e696fbb53
-md"""*See list of failed forms*: $(@bind seefails CheckBox())"""
-
-# ╔═╡ d151c98c-2cb8-4dc7-8c59-42288eb2e71c
-md"""
-
-## How to do it
-
-- √ get texts for chosen surface
-- √ tokenize
-- thoroughly check this nb for normalizing forms!
-- use byzortho dict to map tokens to analyzable forms
-- analyze these morphologically
-"""
-
-# ╔═╡ 9ddd7641-257b-408f-9422-bf7fd7fe5ceb
+# ╔═╡ 3332d497-97ae-48b9-b353-533a241bef8a
 html"""
 
-<br/><br/><br/><br/><br/><br/>
-<br/>
-
+<br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/>
+<hr/>
 """
 
-# ╔═╡ e1b1291f-2e1a-48d2-b026-113ba4b7d21f
-md"""---
+# ╔═╡ 0d942002-9946-443f-9de4-9fc03b5ba899
+apollurl = "https://raw.githubusercontent.com/neelsmith/eagl-texts/wip/texts/apollodorus-filtered.cex"
 
-
-
-> Configuration and formatting you can ignore unless you're curious about how it works."""
-
-# ╔═╡ e0a05b0a-273d-4246-b71c-9a193784245f
-md"""> Repository
-
-"""
-
-# ╔═╡ be7937f0-134d-4072-a2b8-804eedbefb98
-# Create EditingRepository for this notebook's repository
-# Since the notebook is in the `notebooks` subdirectory of the repository,
-# we can just use the parent directory (dirname() in julia) for the
-# root directory.
-# Add reference to "reload" button so that the repository will be reloaded
-# when user clicks it.
-r =  begin
-	loadem
-	repository(dirname(pwd()))
-end
-
-
-# ╔═╡ 86ac5638-ea24-49e1-858b-821852f54c68
-c =  normalizedcorpus(r)
-
-# ╔═╡ db873991-a9ea-4430-a8fb-7b1cc6a447ab
-md"> Parser"
-
-# ╔═╡ 29e176c9-790e-4f92-8027-d9b6298c435d
-p = begin
-	loadparser
-	dfParser(joinpath(pwd(), "morphology", "repository-parser.csv"))
-end
-
-# ╔═╡ 030156b5-6acc-48f8-a600-33c8afb46320
-md"""Loaded parser capable of analyzing **$(nrow(p.df))** forms."""
-
-# ╔═╡ 8d39c4f7-6f4a-4f16-82c4-e4f029b8835b
-md"> Text data"
-
-# ╔═╡ d2b8e06c-7eb2-4259-a50f-5e5224f6182d
-
-
-# ╔═╡ 95eab698-aa17-483a-b575-05986b07bdd6
-
-
-# ╔═╡ ac435375-f690-47b6-8596-c76a75cad795
-md"> DSE data for page"
-
-# ╔═╡ 7055f74e-3c28-4314-a303-2c732b9d08a2
-triples = dsetriples(r)
-
-# ╔═╡ 5e45dfb7-5ba4-4a29-8ac4-b933bbff40d0
-md"> UI and user selection of data by page"
-
-# ╔═╡ 194501ae-d930-4f55-b806-4fa56d88e478
-"Create a menu of string options with an initial blank item."
-function surfacemenu()
-	options = [""]
-	for s in surfaces(r, strict = false)
-		push!(options, string(s))
-	end
-	options
-end
-
-# ╔═╡ bbe0b2f7-7be5-41d5-9400-1c47cf8580b5
-# ╠═╡ show_logs = false
-md""" ## Choose a surface to verify
-
-$(@bind surface Select(surfacemenu()))
-"""
-
-
-# ╔═╡ 0543c8d7-a3fb-401f-a3d7-aaddf6421845
-surfurn = isempty(surface) ? nothing : Cite2Urn(surface)
-
-# ╔═╡ 43ca983d-90b8-4878-b6bc-10fe55fc068c
-dsecoll = begin
-	if isempty(surface)
-		nothing
-	else
-		tempurn = Cite2Urn("urn:cite2:hcmid:tempediting.v1:$(objectcomponent(surfurn))")
-		label = "DSE records for page $(objectcomponent(surfurn))"
-		DSECollection(tempurn, label, triples)
-	end
-end
-
-# ╔═╡ 34787840-a092-4969-9a56-e42e676a797b
-psglist = isnothing(dsecoll) ? [] : textsforsurface(surfurn, dsecoll)
-
-# ╔═╡ a846ffd2-28a0-4618-b1e6-80b28e405bf7
-pagecorpus = begin
-	pagepsgs = []
-	for p in psglist
-		push!(pagepsgs, filter(cp -> urncontains(p, cp.urn), c.passages))
-	end
-	pagepsgs |> Iterators.flatten |> collect |> CitableTextCorpus
-end
-
-# ╔═╡ 5ecbbd60-94eb-4a93-9e0c-ec9d9823d2f1
-pagetokens = tokenize(pagecorpus, literaryGreek())
-
-# ╔═╡ b48af9fb-9b6f-402f-bc36-ad466dd20661
-lextokens = filter(t -> t.tokentype isa LexicalToken, pagetokens)
-
-# ╔═╡ c851a3af-46cf-4ea9-a0d2-6a5b52284e00
-scholiatokens = filter(t -> startswith(workcomponent(t.passage.urn), "tlg5026"), lextokens)
-
-# ╔═╡ 6e45c31d-c6bb-4322-a79d-e5a608bceac5
-vocab = map(t  -> t.passage.text, scholiatokens) |> unique
-
-# ╔═╡ 16acb9bc-002f-4ade-8b83-7cf466200700
-md"""Scholia for this page have **$(length(vocab))** distinct forms."""
-
-# ╔═╡ a0c1cc74-22b5-42bb-aecd-83083000a840
-parses = map(vocab) do wd
-	(wd, parsetoken(wd, p))
-	
-end
-
-# ╔═╡ 0d0231d1-6ef5-4db9-ab94-0fb66269b916
-sheep = filter(parses) do pr
-	! isempty(pr[2])
-end
-
-# ╔═╡ c7c99d8d-331e-4083-af38-a6522dab8791
-goats = begin
-	fails = filter(parses) do pr
-		isempty(pr[2])
-	end
-	map(pr -> pr[1], fails) |> sort
-end
-
-# ╔═╡ 23730b2b-916e-4d0d-9d44-3685b4570a82
-md"""Score: **$(length(sheep))** forms analyzed / **$(length(goats))** forms failed."""
-
-# ╔═╡ 6ff64312-ae96-40cb-93aa-655c5c7b469d
-if seefails
-	join(map(wd -> "1. $(wd)", goats), "\n") |> Markdown.parse
-else
-	md"(*Check the box above to see list of $(length(goats)) failures.*)"
-end
-
-# ╔═╡ 80d8f71d-f4ca-4590-8f7f-9e1420f52879
-surfaceurn = isempty(surface) ? nothing  : Cite2Urn(surface)
-
-# ╔═╡ 64db31f9-564f-417e-84f2-0069ce3a14e8
-function waiting()
-	"<span class=\"waiting\">No surface selected</span>"
-end
-
-# ╔═╡ 11867dd1-f497-4efd-8b8c-a233483aa521
-# Style named HTML elements
-css = html"""
-<style>
-.waiting {
-	color: silver;
-	font-style: italic;
-	background-color: #silver;
-	padding: 1em;
-}
-.splash {
-	background-color: #8399d4;
-	color: #800080;
-}
-.danger {
-     background-color: #fbf0f0;
-     border-left: solid 4px #db3434;
-     line-height: 18px;
-     overflow: hidden;
-     padding: 15px 60px;
-   font-style: normal;
-	  }
-.warn {
-     background-color: 	#ffeeab;
-     border-left: solid 4px  black;
-     line-height: 18px;
-     overflow: hidden;
-     padding: 15px 60px;
-   font-style: normal;
-  }
-
-  .danger h1 {
-	color: red;
-	}
-
- .invalidtoken {
-	text-decoration-line: underline;
-  	text-decoration-style: wavy;
-  	text-decoration-color: red;
-}
- .invalid {
-	color: red;
-	border: solid;
-}
- .center {
-text-align: center;
-}
-.highlight {
-  background: yellow;  
-}
-.urn {
-	color: silver;
-}
-  .note { -moz-border-radius: 6px;
-     -webkit-border-radius: 6px;
-     background-color: #eee;
-     background-image: url(../Images/icons/Pencil-48.png);
-     background-position: 9px 0px;
-     background-repeat: no-repeat;
-     border: solid 1px black;
-     border-radius: 6px;
-     line-height: 18px;
-     overflow: hidden;
-     padding: 15px 60px;
-    font-style: italic;
- }
-
-
-.instructions {
-     background-color: #f0f7fb;
-     border-left: solid 4px  #3498db;
-     line-height: 18px;
-     overflow: hidden;
-     padding: 15px 60px;
-   font-style: normal;
-  }
-
-
-
-</style>
-"""
+# ╔═╡ bc974b77-95ee-46e6-b70c-bc23030f689a
+apollodorus = fromcex(apollurl, CitableTextCorpus, UrlReader)
 
 # ╔═╡ 00000000-0000-0000-0000-000000000001
 PLUTO_PROJECT_TOML_CONTENTS = """
@@ -346,7 +64,6 @@ CitableObject = "e2b2f5ea-1cd8-4ce8-9b2b-05dad64c2a57"
 CitablePhysicalText = "e38a874e-a7c2-4ff3-8dea-81ae2e5c9b07"
 CitableTeiReaders = "b4325aa9-906c-402e-9c3f-19ab8a88308e"
 CitableText = "41e66566-473b-49d4-85b7-da83b66615d8"
-DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
 Downloads = "f43a241f-c20a-4ad4-852c-f6b1247861c6"
 EditionBuilders = "2fb66cca-c1f8-4a32-85dd-1a01a9e8cd8f"
 EditorsRepo = "3fa2051c-bcb6-4d65-8a68-41ff86d56437"
@@ -365,14 +82,13 @@ CitableObject = "~0.16.0"
 CitablePhysicalText = "~0.9.8"
 CitableTeiReaders = "~0.10.2"
 CitableText = "~0.16.0"
-DataFrames = "~1.5.0"
 EditionBuilders = "~0.8.3"
 EditorsRepo = "~0.18.7"
-Kanones = "~0.16.7"
+Kanones = "~0.18.1"
 ManuscriptOrthography = "~0.4.4"
 Orthography = "~0.21.2"
 PlutoUI = "~0.7.51"
-PolytonicGreek = "~0.18.3"
+PolytonicGreek = "~0.18.5"
 """
 
 # ╔═╡ 00000000-0000-0000-0000-000000000002
@@ -381,7 +97,7 @@ PLUTO_MANIFEST_TOML_CONTENTS = """
 
 julia_version = "1.9.1"
 manifest_format = "2.0"
-project_hash = "6ca83ad83d7cc81424cad8a7a8946e752ed7e289"
+project_hash = "2e929bc8fbfb6ba9e60fa3bd887cd1e1f5d6ed76"
 
 [[deps.ANSIColoredPrinters]]
 git-tree-sha1 = "574baf8110975760d391c710b6341da1afa48d8c"
@@ -390,9 +106,9 @@ version = "0.0.1"
 
 [[deps.AbstractFFTs]]
 deps = ["LinearAlgebra"]
-git-tree-sha1 = "16b6dbc4cf7caee4e1e75c49485ec67b667098a0"
+git-tree-sha1 = "cad4c758c0038eea30394b1b671526921ca85b21"
 uuid = "621f4979-c628-5d54-868e-fcf4e3e8185c"
-version = "1.3.1"
+version = "1.4.0"
 weakdeps = ["ChainRulesCore"]
 
     [deps.AbstractFFTs.extensions]
@@ -538,9 +254,9 @@ version = "0.10.1"
 
 [[deps.Clustering]]
 deps = ["Distances", "LinearAlgebra", "NearestNeighbors", "Printf", "Random", "SparseArrays", "Statistics", "StatsBase"]
-git-tree-sha1 = "a6e6ce44a1e0a781772fc795fb7343b1925e9898"
+git-tree-sha1 = "42fe66dbc8f1d09a44aa87f18d26926d06a35f84"
 uuid = "aaaa29a8-35af-508c-8bc3-b662a17a0fe5"
-version = "0.15.2"
+version = "0.15.3"
 
 [[deps.CodecZlib]]
 deps = ["TranscodingStreams", "Zlib_jll"]
@@ -574,9 +290,9 @@ version = "0.12.10"
 
 [[deps.Compat]]
 deps = ["UUIDs"]
-git-tree-sha1 = "7a60c856b9fa189eb34f5f8a6f6b5529b7942957"
+git-tree-sha1 = "4e88377ae7ebeaf29a047aa1ee40826e0b708a5d"
 uuid = "34da2185-b29b-5c13-b0c7-acf172513d20"
-version = "4.6.1"
+version = "4.7.0"
 weakdeps = ["Dates", "LinearAlgebra"]
 
     [deps.Compat.extensions]
@@ -594,9 +310,9 @@ version = "0.3.2"
 
 [[deps.ConcurrentUtilities]]
 deps = ["Serialization", "Sockets"]
-git-tree-sha1 = "96d823b94ba8d187a6d8f0826e731195a74b90e9"
+git-tree-sha1 = "5372dbbf8f0bdb8c700db5367132925c0771ef7e"
 uuid = "f0e56b4a-5159-44fe-b623-3e5288b988bb"
-version = "2.2.0"
+version = "2.2.1"
 
 [[deps.CoordinateTransformations]]
 deps = ["LinearAlgebra", "StaticArrays"]
@@ -620,16 +336,16 @@ uuid = "9a962f9c-6df0-11e9-0e5d-c546b8b5ee8a"
 version = "1.15.0"
 
 [[deps.DataFrames]]
-deps = ["Compat", "DataAPI", "Future", "InlineStrings", "InvertedIndices", "IteratorInterfaceExtensions", "LinearAlgebra", "Markdown", "Missings", "PooledArrays", "PrettyTables", "Printf", "REPL", "Random", "Reexport", "SentinelArrays", "SnoopPrecompile", "SortingAlgorithms", "Statistics", "TableTraits", "Tables", "Unicode"]
-git-tree-sha1 = "aa51303df86f8626a962fccb878430cdb0a97eee"
+deps = ["Compat", "DataAPI", "Future", "InlineStrings", "InvertedIndices", "IteratorInterfaceExtensions", "LinearAlgebra", "Markdown", "Missings", "PooledArrays", "PrecompileTools", "PrettyTables", "Printf", "REPL", "Random", "Reexport", "SentinelArrays", "SortingAlgorithms", "Statistics", "TableTraits", "Tables", "Unicode"]
+git-tree-sha1 = "089d29c0fc00a190661517e4f3cba5dcb3fd0c08"
 uuid = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
-version = "1.5.0"
+version = "1.6.0"
 
 [[deps.DataStructures]]
 deps = ["Compat", "InteractiveUtils", "OrderedCollections"]
-git-tree-sha1 = "d1fff3a548102f48987a52a2e0d114fa97d730f0"
+git-tree-sha1 = "cf25ccb972fec4e4817764d01c82386ae94f77b4"
 uuid = "864edb3b-99cc-5e75-8d2d-829cb0a9cfe8"
-version = "0.18.13"
+version = "0.18.14"
 
 [[deps.DataValueInterfaces]]
 git-tree-sha1 = "bfc1187b79289637fa0ef6d4436ebdfe6905cbd6"
@@ -681,9 +397,9 @@ version = "0.9.3"
 
 [[deps.Documenter]]
 deps = ["ANSIColoredPrinters", "Base64", "Dates", "DocStringExtensions", "IOCapture", "InteractiveUtils", "JSON", "LibGit2", "Logging", "Markdown", "REPL", "Test", "Unicode"]
-git-tree-sha1 = "58fea7c536acd71f3eef6be3b21c0df5f3df88fd"
+git-tree-sha1 = "39fd748a73dce4c05a9655475e437170d8fb1b67"
 uuid = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
-version = "0.27.24"
+version = "0.27.25"
 
 [[deps.Downloads]]
 deps = ["ArgTools", "FileWatching", "LibCURL", "NetworkOptions"]
@@ -702,6 +418,12 @@ git-tree-sha1 = "ede66743a0827b97247bd78b6a96d22d514cd9ee"
 uuid = "3fa2051c-bcb6-4d65-8a68-41ff86d56437"
 version = "0.18.7"
 
+[[deps.ExceptionUnwrapping]]
+deps = ["Test"]
+git-tree-sha1 = "e90caa41f5a86296e014e148ee061bd6c3edec96"
+uuid = "460bff9d-24e4-43bc-9d9f-a8973cb893f4"
+version = "0.1.9"
+
 [[deps.EzXML]]
 deps = ["Printf", "XML2_jll"]
 git-tree-sha1 = "0fa3b52a04a4e210aeb1626def9c90df3ae65268"
@@ -716,9 +438,9 @@ version = "0.3.2"
 
 [[deps.FFTW]]
 deps = ["AbstractFFTs", "FFTW_jll", "LinearAlgebra", "MKL_jll", "Preferences", "Reexport"]
-git-tree-sha1 = "f9818144ce7c8c41edf5c4c179c684d92aa4d9fe"
+git-tree-sha1 = "b4fbdd20c889804969571cc589900803edda16b7"
 uuid = "7a1cc6ca-52ef-59f5-83cd-3a7055c09341"
-version = "1.6.0"
+version = "1.7.1"
 
 [[deps.FFTW_jll]]
 deps = ["Artifacts", "JLLWrappers", "Libdl", "Pkg"]
@@ -781,10 +503,10 @@ uuid = "86223c79-3864-5bf0-83f7-82e725a168b6"
 version = "1.8.0"
 
 [[deps.HTTP]]
-deps = ["Base64", "CodecZlib", "ConcurrentUtilities", "Dates", "Logging", "LoggingExtras", "MbedTLS", "NetworkOptions", "OpenSSL", "Random", "SimpleBufferStream", "Sockets", "URIs", "UUIDs"]
-git-tree-sha1 = "5e77dbf117412d4f164a464d610ee6050cc75272"
+deps = ["Base64", "CodecZlib", "ConcurrentUtilities", "Dates", "ExceptionUnwrapping", "Logging", "LoggingExtras", "MbedTLS", "NetworkOptions", "OpenSSL", "Random", "SimpleBufferStream", "Sockets", "URIs", "UUIDs"]
+git-tree-sha1 = "3e008a7aa28d717a5badd05cb70c834e31001077"
 uuid = "cd3eb016-35fb-5094-929b-558a96fad6f3"
-version = "1.9.6"
+version = "1.9.13"
 
 [[deps.Hyperscript]]
 deps = ["Test"]
@@ -854,9 +576,9 @@ version = "1.2.1"
 
 [[deps.ImageMagick_jll]]
 deps = ["Artifacts", "Ghostscript_jll", "JLLWrappers", "JpegTurbo_jll", "Libdl", "Libtiff_jll", "OpenJpeg_jll", "Pkg", "Zlib_jll", "libpng_jll"]
-git-tree-sha1 = "124626988534986113cfd876e3093e4a03890f58"
+git-tree-sha1 = "7607ad4100c75908a79ff31fabb792cd37711d70"
 uuid = "c73af94c-d91f-53ed-93a7-00f77d67a9d7"
-version = "6.9.12+3"
+version = "6.9.12+4"
 
 [[deps.ImageMetadata]]
 deps = ["AxisArrays", "ImageAxes", "ImageBase", "ImageCore"]
@@ -872,9 +594,9 @@ version = "0.3.2"
 
 [[deps.ImageQualityIndexes]]
 deps = ["ImageContrastAdjustment", "ImageCore", "ImageDistances", "ImageFiltering", "LazyModules", "OffsetArrays", "PrecompileTools", "Statistics"]
-git-tree-sha1 = "bcc2f0db769e5d42a67f501ec6781401a4389e8f"
+git-tree-sha1 = "bfb3a198ef5c96582b8095f8a6eece8937c8ceb3"
 uuid = "2996bd0c-7a13-11e9-2da2-2f5ce47296a9"
-version = "0.3.5"
+version = "0.3.6"
 
 [[deps.ImageSegmentation]]
 deps = ["Clustering", "DataStructures", "Distances", "Graphs", "ImageCore", "ImageFiltering", "ImageMorphology", "LinearAlgebra", "MetaGraphs", "RegionTrees", "SimpleWeightedGraphs", "StaticArrays", "Statistics"]
@@ -983,9 +705,9 @@ version = "1.0.0"
 
 [[deps.JLD2]]
 deps = ["FileIO", "MacroTools", "Mmap", "OrderedCollections", "Pkg", "Printf", "Reexport", "Requires", "TranscodingStreams", "UUIDs"]
-git-tree-sha1 = "42c17b18ced77ff0be65957a591d34f4ed57c631"
+git-tree-sha1 = "5df8278ad24772c0c6dbbeb97b162ccf29ced2a9"
 uuid = "033835bb-8acc-5ee8-8aae-3f567f8a3819"
-version = "0.4.31"
+version = "0.4.32"
 
 [[deps.JLLWrappers]]
 deps = ["Preferences"]
@@ -1012,10 +734,10 @@ uuid = "aacddb02-875f-59d6-b918-886e6ef4fbf8"
 version = "2.1.91+0"
 
 [[deps.Kanones]]
-deps = ["AtticGreek", "BenchmarkTools", "CSV", "CitableBase", "CitableCorpus", "CitableObject", "CitableParserBuilder", "CitableText", "Compat", "DataFrames", "Dates", "DelimitedFiles", "DocStringExtensions", "Documenter", "Downloads", "Glob", "HTTP", "Orthography", "PolytonicGreek", "Query", "SplitApplyCombine", "Test", "TestSetExtensions", "Unicode"]
-git-tree-sha1 = "3e1099911e5a6947e3c4ce109114c66dfbc71d01"
+deps = ["AtticGreek", "BenchmarkTools", "CSV", "CitableBase", "CitableCorpus", "CitableObject", "CitableParserBuilder", "CitableText", "Compat", "DataFrames", "Dates", "DelimitedFiles", "DocStringExtensions", "Documenter", "Downloads", "Glob", "HTTP", "OrderedCollections", "Orthography", "PolytonicGreek", "Query", "SplitApplyCombine", "StatsBase", "Test", "TestSetExtensions", "Unicode"]
+git-tree-sha1 = "805e09a7886743f85e4b3893d1da8f75542e6166"
 uuid = "107500f9-53d4-4696-8485-0747242ad8bc"
-version = "0.16.7"
+version = "0.18.1"
 
 [[deps.LERC_jll]]
 deps = ["Artifacts", "JLLWrappers", "Libdl", "Pkg"]
@@ -1113,9 +835,9 @@ version = "0.1.4"
 
 [[deps.MKL_jll]]
 deps = ["Artifacts", "IntelOpenMP_jll", "JLLWrappers", "LazyArtifacts", "Libdl", "Pkg"]
-git-tree-sha1 = "2ce8695e1e699b68702c03402672a69f54b8aca9"
+git-tree-sha1 = "154d7aaa82d24db6d8f7e4ffcfe596f40bff214b"
 uuid = "856f044c-d86e-5d09-b602-aeab76dc8ba7"
-version = "2022.2.0+0"
+version = "2023.1.0+0"
 
 [[deps.MacroTools]]
 deps = ["Markdown", "Random"]
@@ -1198,9 +920,9 @@ version = "1.2.0"
 
 [[deps.OffsetArrays]]
 deps = ["Adapt"]
-git-tree-sha1 = "82d7c9e310fe55aa54996e6f7f94674e2a38fcb4"
+git-tree-sha1 = "2ac17d29c523ce1cd38e27785a7d23024853a4bb"
 uuid = "6fe1bfb0-de20-5000-8ca7-80f57d26f881"
-version = "1.12.9"
+version = "1.12.10"
 
 [[deps.OpenBLAS_jll]]
 deps = ["Artifacts", "CompilerSupportLibraries_jll", "Libdl"]
@@ -1279,9 +1001,9 @@ version = "0.12.3"
 
 [[deps.Parsers]]
 deps = ["Dates", "PrecompileTools", "UUIDs"]
-git-tree-sha1 = "a5aef8d4a6e8d81f171b2bd4be5265b01384c74c"
+git-tree-sha1 = "4b2e829ee66d4218e0cef22c0a64ee37cf258c29"
 uuid = "69de0a69-1ddd-5017-9359-2bf0b02dc9f0"
-version = "2.5.10"
+version = "2.7.1"
 
 [[deps.Pkg]]
 deps = ["Artifacts", "Dates", "Downloads", "FileWatching", "LibGit2", "Libdl", "Logging", "Markdown", "Printf", "REPL", "Random", "SHA", "Serialization", "TOML", "Tar", "UUIDs", "p7zip_jll"]
@@ -1302,9 +1024,9 @@ version = "0.7.51"
 
 [[deps.PolytonicGreek]]
 deps = ["Compat", "DocStringExtensions", "Documenter", "Orthography", "Test", "TestSetExtensions", "Unicode"]
-git-tree-sha1 = "0915606f601128264489dc23c7a35605774bcf7d"
+git-tree-sha1 = "ec4997801f7fc1a7d3fcb8952ed9f2ec7717f2d7"
 uuid = "72b824a7-2b4a-40fa-944c-ac4f345dc63a"
-version = "0.18.3"
+version = "0.18.5"
 
 [[deps.PooledArrays]]
 deps = ["DataAPI", "Future"]
@@ -1326,9 +1048,9 @@ version = "1.4.0"
 
 [[deps.PrettyTables]]
 deps = ["Crayons", "Formatting", "LaTeXStrings", "Markdown", "Reexport", "StringManipulation", "Tables"]
-git-tree-sha1 = "213579618ec1f42dea7dd637a42785a608b1ea9c"
+git-tree-sha1 = "331cc8048cba270591eab381e7aa3e2e3fef7f5e"
 uuid = "08abe8d2-0d0c-5749-adfa-8a2ac140af0d"
-version = "2.2.4"
+version = "2.2.5"
 
 [[deps.Printf]]
 deps = ["Unicode"]
@@ -1471,9 +1193,9 @@ uuid = "6462fe0b-24de-5631-8697-dd941f90decc"
 
 [[deps.SortingAlgorithms]]
 deps = ["DataStructures"]
-git-tree-sha1 = "a4ada03f999bd01b3a25dcaa30b2d929fe537e00"
+git-tree-sha1 = "c60ec5c62180f27efea3ba2908480f8055e17cee"
 uuid = "a2af1166-a08f-5f64-846c-94a0d3cef48c"
-version = "1.1.0"
+version = "1.1.1"
 
 [[deps.SparseArrays]]
 deps = ["Libdl", "LinearAlgebra", "Random", "Serialization", "SuiteSparse_jll"]
@@ -1481,9 +1203,9 @@ uuid = "2f01184e-e22b-5df5-ae63-d93ebab69eaf"
 
 [[deps.SpecialFunctions]]
 deps = ["IrrationalConstants", "LogExpFunctions", "OpenLibm_jll", "OpenSpecFun_jll"]
-git-tree-sha1 = "ef28127915f4229c971eb43f3fc075dd3fe91880"
+git-tree-sha1 = "7beb031cf8145577fbccacd94b8a8f4ce78428d3"
 uuid = "276daf66-3868-5448-9aa4-cd146d93841b"
-version = "2.2.0"
+version = "2.3.0"
 weakdeps = ["ChainRulesCore"]
 
     [deps.SpecialFunctions.extensions]
@@ -1502,15 +1224,19 @@ uuid = "cae243ae-269e-4f55-b966-ac2d0dc13c15"
 version = "0.1.1"
 
 [[deps.StaticArrays]]
-deps = ["LinearAlgebra", "Random", "StaticArraysCore", "Statistics"]
-git-tree-sha1 = "832afbae2a45b4ae7e831f86965469a24d1d8a83"
+deps = ["LinearAlgebra", "Random", "StaticArraysCore"]
+git-tree-sha1 = "0da7e6b70d1bb40b1ace3b576da9ea2992f76318"
 uuid = "90137ffa-7385-5640-81b9-e52037218182"
-version = "1.5.26"
+version = "1.6.0"
+weakdeps = ["Statistics"]
+
+    [deps.StaticArrays.extensions]
+    StaticArraysStatisticsExt = "Statistics"
 
 [[deps.StaticArraysCore]]
-git-tree-sha1 = "6b7ba252635a5eff6a0b0664a41ee140a1c9e72a"
+git-tree-sha1 = "1d5708d926c76a505052d0d24a846d5da08bc3a4"
 uuid = "1e83bf80-4336-4d27-bf5d-d5a4f845583c"
-version = "1.4.0"
+version = "1.4.1"
 
 [[deps.Statistics]]
 deps = ["LinearAlgebra", "SparseArrays"]
@@ -1591,9 +1317,9 @@ uuid = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 
 [[deps.TestImages]]
 deps = ["AxisArrays", "ColorTypes", "FileIO", "ImageIO", "ImageMagick", "OffsetArrays", "Pkg", "StringDistances"]
-git-tree-sha1 = "03492434a1bdde3026288939fc31b5660407b624"
+git-tree-sha1 = "0567860ec35a94c087bd98f35de1dddf482d7c67"
 uuid = "5e47fb64-e119-507b-a336-dd2b206d9990"
-version = "1.7.1"
+version = "1.8.0"
 
 [[deps.TestSetExtensions]]
 deps = ["DeepDiffs", "Distributed", "Test"]
@@ -1710,47 +1436,10 @@ version = "17.4.0+0"
 """
 
 # ╔═╡ Cell order:
-# ╟─e4a81af6-55df-456c-ab3f-6636d2f0d631
-# ╟─50f5bcdd-dd1f-459c-89fe-7f7a81905f20
-# ╟─6a95886d-985d-43f4-ad9f-6542d01d8b6a
-# ╟─3cd3640f-e8a9-42ca-9588-59eb3036918d
-# ╟─86aa019b-e269-491d-ac98-4ef9a36a9cdd
-# ╟─bbef0d04-803e-11ec-2d0c-99bccd51e7f3
-# ╟─59201f18-0185-4beb-bd39-9367a783150d
-# ╟─030156b5-6acc-48f8-a600-33c8afb46320
-# ╟─bbe0b2f7-7be5-41d5-9400-1c47cf8580b5
-# ╟─16acb9bc-002f-4ade-8b83-7cf466200700
-# ╟─23730b2b-916e-4d0d-9d44-3685b4570a82
-# ╟─98b70d8a-9c89-4a1b-9f9d-294e696fbb53
-# ╟─6ff64312-ae96-40cb-93aa-655c5c7b469d
-# ╟─d151c98c-2cb8-4dc7-8c59-42288eb2e71c
-# ╟─9ddd7641-257b-408f-9422-bf7fd7fe5ceb
-# ╟─e1b1291f-2e1a-48d2-b026-113ba4b7d21f
-# ╟─e0a05b0a-273d-4246-b71c-9a193784245f
-# ╟─be7937f0-134d-4072-a2b8-804eedbefb98
-# ╟─86ac5638-ea24-49e1-858b-821852f54c68
-# ╟─db873991-a9ea-4430-a8fb-7b1cc6a447ab
-# ╟─29e176c9-790e-4f92-8027-d9b6298c435d
-# ╟─a0c1cc74-22b5-42bb-aecd-83083000a840
-# ╠═0d0231d1-6ef5-4db9-ab94-0fb66269b916
-# ╟─c7c99d8d-331e-4083-af38-a6522dab8791
-# ╟─8d39c4f7-6f4a-4f16-82c4-e4f029b8835b
-# ╠═d2b8e06c-7eb2-4259-a50f-5e5224f6182d
-# ╟─34787840-a092-4969-9a56-e42e676a797b
-# ╟─a846ffd2-28a0-4618-b1e6-80b28e405bf7
-# ╠═5ecbbd60-94eb-4a93-9e0c-ec9d9823d2f1
-# ╠═b48af9fb-9b6f-402f-bc36-ad466dd20661
-# ╠═c851a3af-46cf-4ea9-a0d2-6a5b52284e00
-# ╠═6e45c31d-c6bb-4322-a79d-e5a608bceac5
-# ╠═95eab698-aa17-483a-b575-05986b07bdd6
-# ╟─ac435375-f690-47b6-8596-c76a75cad795
-# ╟─0543c8d7-a3fb-401f-a3d7-aaddf6421845
-# ╟─7055f74e-3c28-4314-a303-2c732b9d08a2
-# ╟─43ca983d-90b8-4878-b6bc-10fe55fc068c
-# ╟─5e45dfb7-5ba4-4a29-8ac4-b933bbff40d0
-# ╟─80d8f71d-f4ca-4590-8f7f-9e1420f52879
-# ╟─194501ae-d930-4f55-b806-4fa56d88e478
-# ╟─64db31f9-564f-417e-84f2-0069ce3a14e8
-# ╟─11867dd1-f497-4efd-8b8c-a233483aa521
+# ╟─b5af8db7-a6c8-4c5d-8fa2-29bc6251c387
+# ╟─46b56dc0-2359-11ee-0490-39b995125353
+# ╟─3332d497-97ae-48b9-b353-533a241bef8a
+# ╠═0d942002-9946-443f-9de4-9fc03b5ba899
+# ╠═bc974b77-95ee-46e6-b70c-bc23030f689a
 # ╟─00000000-0000-0000-0000-000000000001
 # ╟─00000000-0000-0000-0000-000000000002
