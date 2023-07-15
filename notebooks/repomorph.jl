@@ -70,17 +70,35 @@ end
 
 # ╔═╡ bbef0d04-803e-11ec-2d0c-99bccd51e7f3
 md"""> ### HMT editors: assess morphology for all scholia in repository
+>
+> - make sure `Kanones.jl` is cloned in an adjacent directory
 
+![layout](./dirlayout.png)
 """
 
+# ╔═╡ 65f0af47-76a3-42f0-9ace-063e5e211ae8
+md""">#### Reload text corpus"""
+
 # ╔═╡ 59201f18-0185-4beb-bd39-9367a783150d
-md"""$(@bind loadem Button("Reload data from repository")) $(@bind loadparser Button("Reload parser from file"))"""
+md"""$(@bind loadem Button("Reload text corpus from repository"))"""
+
+# ╔═╡ 82432b0b-bf21-4325-85e9-e76d3dcd71a1
+md"> #### Loading and saving morphological data"
+
+# ╔═╡ e297165f-9204-4922-9bc0-f5f45a0648b1
+md""" $(@bind rebuild Button("Rebuild parser"))"""
+
+# ╔═╡ 0560dd12-1871-4af4-bae8-4c3ce1d9d9db
+md""" $(@bind writeparser Button("Save parser to file"))"""
 
 # ╔═╡ 89c118de-c942-4c14-8372-901e4b21bc2c
 md""" $(@bind writegoats Button("Write failed forms to file"))"""
 
 # ╔═╡ f2e865cd-b927-4132-837b-6289814f0d59
 md"> #### View results"
+
+# ╔═╡ 87b56202-0716-44e7-81d1-b36b942d5054
+md"""*Parse* $(@bind parsethis TextField(;placeholder="ποταμοῖο"))"""
 
 # ╔═╡ d151c98c-2cb8-4dc7-8c59-42288eb2e71c
 md"""
@@ -139,14 +157,46 @@ histo = isnothing(c) ? nothing :  corpus_histo(c, literaryGreek(), filterby = Le
 # ╔═╡ db873991-a9ea-4430-a8fb-7b1cc6a447ab
 md"> Parser"
 
-# ╔═╡ 29e176c9-790e-4f92-8027-d9b6298c435d
+# ╔═╡ 798a0be7-eeee-474b-8780-af0a8335269c
+"Load Kanones data from local files."
+function kdata()
+    # 1. rules with demo vocab:
+    lgr = joinpath((pwd() |> dirname |> dirname), "Kanones.jl", "datasets", "literarygreek-rules")
+    # 2. manually validated LSJ vocab:
+    lsj = joinpath((pwd() |> dirname |> dirname), "Kanones.jl", "datasets", "lsj-vocab")
+    # 3. manually validated NOT in LSJ:
+    extras = joinpath((pwd() |> dirname |> dirname), "Kanones.jl", "datasets", "extra")
+	 # 4. Homeric content:
+    extras = joinpath((pwd() |> dirname |> dirname), "Kanones.jl", "datasets", "homeric")
+	localadds = joinpath(pwd() |> dirname, "morphology-tables")
+    dataset([lgr, lsj, extras, localadds]) 
+end
+
+# ╔═╡ de4d04a8-f511-4517-b5fb-ea9c857bab87
+"Compile Kanones parser from local dataset."
+function buildparser()
+	kdata() |> stringParser
+end
+
+# ╔═╡ dbf5303c-f6b2-4d58-ae59-710e7e60a562
+# ╠═╡ show_logs = false
 p = begin
-	loadparser
-	dfParser(joinpath(pwd(), "morphology", "current-core.csv"))
+	rebuild
+	buildparser()
 end
 
 # ╔═╡ 030156b5-6acc-48f8-a600-33c8afb46320
-md"""Loaded parser capable of analyzing **$(nrow(p.df))** forms."""
+md"""Compiled parser capable of analyzing **$(length(p.entries))** forms."""
+
+# ╔═╡ e2422f20-da1a-4946-9b26-d7d3c8a759aa
+if isempty(parsethis) 
+	nothing 
+else 
+	map(parsetoken(parsethis, p)) do answer
+		answer.form |> greekForm |> label
+	end
+	
+end
 
 # ╔═╡ 8d39c4f7-6f4a-4f16-82c4-e4f029b8835b
 md"> Text data"
@@ -167,8 +217,11 @@ vocab = map(t  -> t.passage.text, scholiatokens) |> unique
 md"""Scholia in this repository have **$(length(vocab))** distinct forms."""
 
 # ╔═╡ a0c1cc74-22b5-42bb-aecd-83083000a840
-parses = map(vocab) do wd
-	(wd, parsetoken(wd, p))
+parses = begin
+	buildparser
+	map(vocab) do wd
+		(wd, parsetoken(wd, p))
+	end
 	
 end
 
@@ -193,6 +246,16 @@ begin
 		write(io, join(goats, "\n"))
 	end
 	md"*Wrote list of failures to* $(f)"
+end
+
+# ╔═╡ f9439e00-876f-4f62-a6b1-722ec26d2cc7
+begin
+	writegoats
+	parserfile = joinpath(pwd(), "morphology", "repository-parser.csv")
+	open(f, "w") do io
+		write(io, Kanones.tofile(p,parserfile,delimiter = ","))
+	end
+	md"*Saved parser to $(parserfile)*"
 end
 
 # ╔═╡ 23730b2b-916e-4d0d-9d44-3685b4570a82
@@ -1700,16 +1763,23 @@ version = "17.4.0+0"
 # ╟─3cd3640f-e8a9-42ca-9588-59eb3036918d
 # ╟─86aa019b-e269-491d-ac98-4ef9a36a9cdd
 # ╟─bbef0d04-803e-11ec-2d0c-99bccd51e7f3
+# ╟─65f0af47-76a3-42f0-9ace-063e5e211ae8
 # ╟─59201f18-0185-4beb-bd39-9367a783150d
-# ╟─89c118de-c942-4c14-8372-901e4b21bc2c
+# ╟─82432b0b-bf21-4325-85e9-e76d3dcd71a1
 # ╟─cfb9fe47-4fe9-415c-9de6-93c768f96de4
+# ╟─e297165f-9204-4922-9bc0-f5f45a0648b1
 # ╟─030156b5-6acc-48f8-a600-33c8afb46320
+# ╟─0560dd12-1871-4af4-bae8-4c3ce1d9d9db
+# ╟─f9439e00-876f-4f62-a6b1-722ec26d2cc7
+# ╟─89c118de-c942-4c14-8372-901e4b21bc2c
+# ╟─f2e865cd-b927-4132-837b-6289814f0d59
 # ╟─16acb9bc-002f-4ade-8b83-7cf466200700
 # ╟─23730b2b-916e-4d0d-9d44-3685b4570a82
-# ╟─f2e865cd-b927-4132-837b-6289814f0d59
 # ╟─137e64f1-6a20-4c35-9708-be7f2bf11776
 # ╟─cd77efdf-4977-4f33-a120-dbb6c4320338
 # ╟─abbf7cb4-41cc-49c8-a101-fd4a1e3703aa
+# ╟─87b56202-0716-44e7-81d1-b36b942d5054
+# ╟─e2422f20-da1a-4946-9b26-d7d3c8a759aa
 # ╟─d151c98c-2cb8-4dc7-8c59-42288eb2e71c
 # ╟─9ddd7641-257b-408f-9422-bf7fd7fe5ceb
 # ╟─97058ef5-a810-4c18-9149-8372e46dc399
@@ -1723,8 +1793,10 @@ version = "17.4.0+0"
 # ╟─be7937f0-134d-4072-a2b8-804eedbefb98
 # ╟─86ac5638-ea24-49e1-858b-821852f54c68
 # ╟─db873991-a9ea-4430-a8fb-7b1cc6a447ab
-# ╟─29e176c9-790e-4f92-8027-d9b6298c435d
-# ╟─a0c1cc74-22b5-42bb-aecd-83083000a840
+# ╠═dbf5303c-f6b2-4d58-ae59-710e7e60a562
+# ╟─de4d04a8-f511-4517-b5fb-ea9c857bab87
+# ╟─798a0be7-eeee-474b-8780-af0a8335269c
+# ╠═a0c1cc74-22b5-42bb-aecd-83083000a840
 # ╟─0d0231d1-6ef5-4db9-ab94-0fb66269b916
 # ╟─c7c99d8d-331e-4083-af38-a6522dab8791
 # ╟─8d39c4f7-6f4a-4f16-82c4-e4f029b8835b

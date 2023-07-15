@@ -69,7 +69,8 @@ end
 
 
 # ╔═╡ bbef0d04-803e-11ec-2d0c-99bccd51e7f3
-md"""> ### HMT editors: assess morphology
+md"""> ### HMT editors: read morphologically analyzed texts
+
 
 """
 
@@ -1717,11 +1718,11 @@ version = "17.4.0+0"
 # ╟─bbef0d04-803e-11ec-2d0c-99bccd51e7f3
 # ╟─59201f18-0185-4beb-bd39-9367a783150d
 # ╟─030156b5-6acc-48f8-a600-33c8afb46320
+# ╟─bbe0b2f7-7be5-41d5-9400-1c47cf8580b5
 # ╟─16acb9bc-002f-4ade-8b83-7cf466200700
 # ╟─23730b2b-916e-4d0d-9d44-3685b4570a82
 # ╟─98b70d8a-9c89-4a1b-9f9d-294e696fbb53
 # ╟─6ff64312-ae96-40cb-93aa-655c5c7b469d
-# ╟─bbe0b2f7-7be5-41d5-9400-1c47cf8580b5
 # ╟─d151c98c-2cb8-4dc7-8c59-42288eb2e71c
 # ╟─9ddd7641-257b-408f-9422-bf7fd7fe5ceb
 # ╟─e1b1291f-2e1a-48d2-b026-113ba4b7d21f
@@ -1730,7 +1731,7 @@ version = "17.4.0+0"
 # ╟─86ac5638-ea24-49e1-858b-821852f54c68
 # ╟─db873991-a9ea-4430-a8fb-7b1cc6a447ab
 # ╟─29e176c9-790e-4f92-8027-d9b6298c435d
-# ╠═a0c1cc74-22b5-42bb-aecd-83083000a840
+# ╟─a0c1cc74-22b5-42bb-aecd-83083000a840
 # ╠═0d0231d1-6ef5-4db9-ab94-0fb66269b916
 # ╟─c7c99d8d-331e-4083-af38-a6522dab8791
 # ╟─8d39c4f7-6f4a-4f16-82c4-e4f029b8835b
