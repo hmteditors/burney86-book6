@@ -65,6 +65,23 @@ html"""
 # ╔═╡ 4051d4a8-99b7-41f8-85c3-a7db930286a6
 md"""> **Reading UI**"""
 
+# ╔═╡ cd22dda1-38fd-449d-852e-629721748b3a
+"""Compose a menu of persons in this passage."""
+function folksmenu(triplelist)
+	menu = ["" => ""]
+	for tr in triplelist
+		push!(menu, (tr[2] => tr[3]))
+	end
+	menu |> unique |> sort
+end
+
+# ╔═╡ 4adeffec-3da8-4ab0-adc8-dd6cc5f030fc
+"Normalize string reference to a scholion."
+function scholref(u::CtsUrn)
+	# Temp kludge: bug in `collapsePassageTo`, see issue on gh repo
+	collapsePassageBy(u, 1) |> dropexemplar |> string
+end
+
 # ╔═╡ 6d554ad7-46c1-470d-a656-ec515b4b2c2e
 """Format a list of strings from a list of CtsUrns"""
 function urnmenu(objlist)
@@ -135,6 +152,9 @@ md"""*Choose a scholion* $(@bind scholion Select(scholiamenu))"""
 # ╔═╡ ef76f9c3-6dcd-4683-938e-aa7b4b45a6de
 isempty(scholion) ? nothing : md"*Scholion $(scholion)*"
 
+# ╔═╡ af319b0b-2d46-4bb6-be38-149ad466951f
+displayscholia = filter(s -> startswith(string(dropexemplar(urn(s))), scholion), scholia)
+
 # ╔═╡ b51b2b60-d0e7-4af2-abe0-bb4c2bc36b78
 begin
 	if isempty(scholion) 
@@ -142,8 +162,8 @@ begin
 	else
 		
 		htmlstrs = []
-		dispscholia = filter(s -> startswith(string(dropexemplar(urn(s))), scholion), scholia)
-		for s in dispscholia
+		
+		for s in displayscholia
 			if endswith(passagecomponent(s.urn), ".lemma")
 				push!(htmlstrs, "<b>" * s.text * "</b>")
 			else
@@ -184,6 +204,28 @@ end
 # ╔═╡ d8719336-df5b-457a-8f5b-c4381c47400e
 persnameidx = indexpersnames(archivalcorpus(r))
 
+# ╔═╡ a5dc657c-1ef2-430d-b2df-bd5af178af64
+"""Find persons displayed in the selected passage"""
+function displayfolks()
+	debug = []
+	for s in displayscholia
+		ref1 = scholref(s.urn)
+		matches = filter(persnameidx) do s
+			scholref(s[1]) == ref1
+		end
+		for s in matches
+			push!(debug, s)
+		end
+	end
+	debug
+end
+
+# ╔═╡ 5f808614-e425-4335-8059-ad642669c6df
+currentfolks = displayfolks()
+
+# ╔═╡ b8fb55c4-ead6-4d20-9064-8e33a3948570
+isempty(currentfolks) ? nothing : md"""*References to people in this passage*: $(@bind person Select(folksmenu(currentfolks)))"""
+
 # ╔═╡ 67ccca5c-58ab-46b5-9dc9-ae682dc54006
 md"> **Apollodorus**"
 
@@ -200,7 +242,7 @@ apollindex = corpusindex(apollodorus, lg)
 apollhisto = corpus_histo(apollodorus, lg)
 
 # ╔═╡ 46207696-6810-46cd-bfde-dbfa59734165
-
+md"> **Parser**"
 
 # ╔═╡ 00000000-0000-0000-0000-000000000001
 PLUTO_PROJECT_TOML_CONTENTS = """
@@ -1593,10 +1635,16 @@ version = "17.4.0+0"
 # ╟─4336d73c-efd3-48a3-b061-5d5a52b6813f
 # ╟─ef76f9c3-6dcd-4683-938e-aa7b4b45a6de
 # ╟─b51b2b60-d0e7-4af2-abe0-bb4c2bc36b78
+# ╟─b8fb55c4-ead6-4d20-9064-8e33a3948570
 # ╟─3332d497-97ae-48b9-b353-533a241bef8a
 # ╟─4051d4a8-99b7-41f8-85c3-a7db930286a6
 # ╟─b7eb242b-ef08-48dd-bbf6-8f0243c5570a
 # ╟─3c61327f-b943-4376-aa4e-a3ef35ffc9a5
+# ╟─af319b0b-2d46-4bb6-be38-149ad466951f
+# ╟─cd22dda1-38fd-449d-852e-629721748b3a
+# ╠═5f808614-e425-4335-8059-ad642669c6df
+# ╠═a5dc657c-1ef2-430d-b2df-bd5af178af64
+# ╟─4adeffec-3da8-4ab0-adc8-dd6cc5f030fc
 # ╟─6d554ad7-46c1-470d-a656-ec515b4b2c2e
 # ╟─55436e9e-d279-445c-b137-750072829fea
 # ╟─bf488426-6641-4526-8b69-20051400ff9f
@@ -1616,6 +1664,6 @@ version = "17.4.0+0"
 # ╟─bc974b77-95ee-46e6-b70c-bc23030f689a
 # ╟─0616efee-cbdf-4f1a-b06b-1125ddc66811
 # ╟─c5bd61bf-a8a6-4ae2-86e2-d7bd14dfbf0c
-# ╠═46207696-6810-46cd-bfde-dbfa59734165
+# ╟─46207696-6810-46cd-bfde-dbfa59734165
 # ╟─00000000-0000-0000-0000-000000000001
 # ╟─00000000-0000-0000-0000-000000000002
