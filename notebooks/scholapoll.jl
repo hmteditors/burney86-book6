@@ -4,12 +4,23 @@
 using Markdown
 using InteractiveUtils
 
+# This Pluto notebook uses @bind for interactivity. When running this notebook outside of Pluto, the following 'mock version' of @bind gives bound variables a default value (instead of an error).
+macro bind(def, element)
+    quote
+        local iv = try Base.loaded_modules[Base.PkgId(Base.UUID("6e696c72-6542-2067-7265-42206c756150"), "AbstractPlutoDingetjes")].Bonds.initial_value catch; b -> missing; end
+        local el = $(esc(element))
+        global $(esc(def)) = Core.applicable(Base.get, el) ? Base.get(el) : iv(el)
+        el
+    end
+end
+
 # ╔═╡ b5af8db7-a6c8-4c5d-8fa2-29bc6251c387
 begin 
 	using Markdown
 	using PlutoUI
 	using Downloads
 
+	using EzXML
 	#using DataFrames
 	
 	# Morphology:
@@ -37,6 +48,9 @@ begin
 	
 end
 
+# ╔═╡ 24d2160a-b195-4534-bd70-da0cc10acdff
+md"*Unhide the following cell to see the Julia environment*."
+
 # ╔═╡ 46b56dc0-2359-11ee-0490-39b995125353
 md"""# Read scholia with Apollodorus"""
 
@@ -48,11 +62,145 @@ html"""
 <hr/>
 """
 
+# ╔═╡ 4051d4a8-99b7-41f8-85c3-a7db930286a6
+md"""> **Reading UI**"""
+
+# ╔═╡ 6d554ad7-46c1-470d-a656-ec515b4b2c2e
+"""Format a list of strings from a list of CtsUrns"""
+function urnmenu(objlist)
+	options = [""]
+	vcat(options, objlist .|> dropexemplar .|> string)
+end
+
+# ╔═╡ bf488426-6641-4526-8b69-20051400ff9f
+function surfacescholia(pg, triplelist)
+	pgtriples = filter(trp -> string(trp.surface) == pg, triplelist)
+	schlist = filter(tr -> startswith(workcomponent(tr.passage), "tlg5026"), pgtriples)
+	map(tr -> tr.passage, schlist)
+end
+
+# ╔═╡ ab003805-07f2-40d9-8d39-e9d237ccbac7
+md"""> **Repository data**
+>
+> Texts
+"""
+
+# ╔═╡ 38b5c7be-99f6-419d-83e8-023885aad212
+lg = literaryGreek()
+
+# ╔═╡ 9a257096-c9f6-40e0-9636-d26f32e6bfaa
+@bind loadem Button("Reload repository data")
+
+# ╔═╡ f01430fe-6fb8-44f0-b455-96b52e6ccfe6
+r =  begin
+	loadem
+	repository(dirname(pwd()))
+end
+
+# ╔═╡ 55436e9e-d279-445c-b137-750072829fea
+"Create a menu of string options with an initial blank item."
+function surfacemenu()
+	options = [""]
+	for s in surfaces(r, strict = false)
+		push!(options, string(s))
+	end
+	options
+end
+
+# ╔═╡ c52503b3-36b0-4df1-bf4c-5ace3c144672
+# ╠═╡ show_logs = false
+md"""*Choose a page* $(@bind surface Select(surfacemenu()))"""
+
+# ╔═╡ d95e34ef-4a27-4f70-85f4-d7d5d6a7c7c4
+repotexts =  normalizedcorpus(r)
+
+# ╔═╡ f74ff948-5c13-4d65-9cd4-913affe300d3
+scholia = filter(psg -> startswith(workcomponent(urn(psg)),"tlg5026"), repotexts.passages)
+
+# ╔═╡ aece1e2a-8117-4a87-bb5f-421157000669
+md"> Indexes"
+
+# ╔═╡ 04dc66f9-bc0d-4e8d-ae1f-78734cd8acc7
+triples = dsetriples(r)
+
+# ╔═╡ b7eb242b-ef08-48dd-bbf6-8f0243c5570a
+pgscholl = surfacescholia(surface, triples)
+
+# ╔═╡ 3c61327f-b943-4376-aa4e-a3ef35ffc9a5
+scholiamenu = urnmenu(pgscholl)
+
+# ╔═╡ 4336d73c-efd3-48a3-b061-5d5a52b6813f
+md"""*Choose a scholion* $(@bind scholion Select(scholiamenu))"""
+
+# ╔═╡ ef76f9c3-6dcd-4683-938e-aa7b4b45a6de
+isempty(scholion) ? nothing : md"*Scholion $(scholion)*"
+
+# ╔═╡ b51b2b60-d0e7-4af2-abe0-bb4c2bc36b78
+begin
+	if isempty(scholion) 
+		nothing 
+	else
+		
+		htmlstrs = []
+		dispscholia = filter(s -> startswith(string(dropexemplar(urn(s))), scholion), scholia)
+		for s in dispscholia
+			if endswith(passagecomponent(s.urn), ".lemma")
+				push!(htmlstrs, "<b>" * s.text * "</b>")
+			else
+				push!(htmlstrs,  s.text)
+			end
+		end
+		push!(htmlstrs, "</b>")
+		HTML(join(htmlstrs, " "))
+	end
+end
+
+# ╔═╡ 9522fdb9-2d5d-4acb-a658-cdee5af88590
+"""Normalize white space in strings coming from XML source."""
+function texttidy(s)
+	replace(s, r"[ ]+" => "") |> strip
+end
+
+# ╔═╡ 46a23110-7cd5-4a6a-a962-d67800e6945f
+"""Compute index of `persname` elements in archival XML."""
+function indexpersnames(corp)
+	tripleindex = Tuple{CtsUrn, String, String}[]
+	for psg in corp.passages
+		root = EzXML.parsexml(text(psg))
+		for pn in findall("//persName", root)
+			nattrs = filter(a -> nodename(a) == "n", attributes(pn))
+			if length(nattrs) == 1
+				
+				push!(tripleindex, 
+					(psg.urn, nodecontent(nattrs[1]), texttidy(nodecontent(pn)))
+				)
+			end
+			
+		end
+	end
+	tripleindex
+end
+
+# ╔═╡ d8719336-df5b-457a-8f5b-c4381c47400e
+persnameidx = indexpersnames(archivalcorpus(r))
+
+# ╔═╡ 67ccca5c-58ab-46b5-9dc9-ae682dc54006
+md"> **Apollodorus**"
+
 # ╔═╡ 0d942002-9946-443f-9de4-9fc03b5ba899
 apollurl = "https://raw.githubusercontent.com/neelsmith/eagl-texts/wip/texts/apollodorus-filtered.cex"
 
 # ╔═╡ bc974b77-95ee-46e6-b70c-bc23030f689a
 apollodorus = fromcex(apollurl, CitableTextCorpus, UrlReader)
+
+# ╔═╡ 0616efee-cbdf-4f1a-b06b-1125ddc66811
+apollindex = corpusindex(apollodorus, lg)
+
+# ╔═╡ c5bd61bf-a8a6-4ae2-86e2-d7bd14dfbf0c
+apollhisto = corpus_histo(apollodorus, lg)
+
+# ╔═╡ 46207696-6810-46cd-bfde-dbfa59734165
+
 
 # ╔═╡ 00000000-0000-0000-0000-000000000001
 PLUTO_PROJECT_TOML_CONTENTS = """
@@ -67,6 +215,7 @@ CitableText = "41e66566-473b-49d4-85b7-da83b66615d8"
 Downloads = "f43a241f-c20a-4ad4-852c-f6b1247861c6"
 EditionBuilders = "2fb66cca-c1f8-4a32-85dd-1a01a9e8cd8f"
 EditorsRepo = "3fa2051c-bcb6-4d65-8a68-41ff86d56437"
+EzXML = "8f5d6c58-4d21-5cfd-889c-e3ad7ee6a615"
 Kanones = "107500f9-53d4-4696-8485-0747242ad8bc"
 ManuscriptOrthography = "c7d01213-112e-44c9-bed3-ac95fd3728c7"
 Markdown = "d6f4376e-aef5-505a-96c1-9c027394607a"
@@ -84,6 +233,7 @@ CitableTeiReaders = "~0.10.2"
 CitableText = "~0.16.0"
 EditionBuilders = "~0.8.3"
 EditorsRepo = "~0.18.7"
+EzXML = "~1.1.0"
 Kanones = "~0.18.1"
 ManuscriptOrthography = "~0.4.4"
 Orthography = "~0.21.2"
@@ -97,7 +247,7 @@ PLUTO_MANIFEST_TOML_CONTENTS = """
 
 julia_version = "1.9.1"
 manifest_format = "2.0"
-project_hash = "2e929bc8fbfb6ba9e60fa3bd887cd1e1f5d6ed76"
+project_hash = "50c7d127bd6cde9793805e14ad620fb3271bf334"
 
 [[deps.ANSIColoredPrinters]]
 git-tree-sha1 = "574baf8110975760d391c710b6341da1afa48d8c"
@@ -1436,10 +1586,36 @@ version = "17.4.0+0"
 """
 
 # ╔═╡ Cell order:
+# ╟─24d2160a-b195-4534-bd70-da0cc10acdff
 # ╟─b5af8db7-a6c8-4c5d-8fa2-29bc6251c387
 # ╟─46b56dc0-2359-11ee-0490-39b995125353
+# ╟─c52503b3-36b0-4df1-bf4c-5ace3c144672
+# ╟─4336d73c-efd3-48a3-b061-5d5a52b6813f
+# ╟─ef76f9c3-6dcd-4683-938e-aa7b4b45a6de
+# ╟─b51b2b60-d0e7-4af2-abe0-bb4c2bc36b78
 # ╟─3332d497-97ae-48b9-b353-533a241bef8a
-# ╠═0d942002-9946-443f-9de4-9fc03b5ba899
-# ╠═bc974b77-95ee-46e6-b70c-bc23030f689a
+# ╟─4051d4a8-99b7-41f8-85c3-a7db930286a6
+# ╟─b7eb242b-ef08-48dd-bbf6-8f0243c5570a
+# ╟─3c61327f-b943-4376-aa4e-a3ef35ffc9a5
+# ╟─6d554ad7-46c1-470d-a656-ec515b4b2c2e
+# ╟─55436e9e-d279-445c-b137-750072829fea
+# ╟─bf488426-6641-4526-8b69-20051400ff9f
+# ╟─ab003805-07f2-40d9-8d39-e9d237ccbac7
+# ╟─38b5c7be-99f6-419d-83e8-023885aad212
+# ╟─9a257096-c9f6-40e0-9636-d26f32e6bfaa
+# ╟─f01430fe-6fb8-44f0-b455-96b52e6ccfe6
+# ╟─d95e34ef-4a27-4f70-85f4-d7d5d6a7c7c4
+# ╟─f74ff948-5c13-4d65-9cd4-913affe300d3
+# ╟─aece1e2a-8117-4a87-bb5f-421157000669
+# ╟─04dc66f9-bc0d-4e8d-ae1f-78734cd8acc7
+# ╟─d8719336-df5b-457a-8f5b-c4381c47400e
+# ╟─46a23110-7cd5-4a6a-a962-d67800e6945f
+# ╟─9522fdb9-2d5d-4acb-a658-cdee5af88590
+# ╟─67ccca5c-58ab-46b5-9dc9-ae682dc54006
+# ╟─0d942002-9946-443f-9de4-9fc03b5ba899
+# ╟─bc974b77-95ee-46e6-b70c-bc23030f689a
+# ╟─0616efee-cbdf-4f1a-b06b-1125ddc66811
+# ╟─c5bd61bf-a8a6-4ae2-86e2-d7bd14dfbf0c
+# ╠═46207696-6810-46cd-bfde-dbfa59734165
 # ╟─00000000-0000-0000-0000-000000000001
 # ╟─00000000-0000-0000-0000-000000000002
