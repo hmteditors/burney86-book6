@@ -51,29 +51,11 @@ end
 # ╔═╡ e4a81af6-55df-456c-ab3f-6636d2f0d631
 md"""*Unhide the following cell to see the packages used in this notebook.*"""
 
-# ╔═╡ 6a95886d-985d-43f4-ad9f-6542d01d8b6a
-md"> Byzortho stuff to play with"
-
-# ╔═╡ 3cd3640f-e8a9-42ca-9588-59eb3036918d
-byzorthourl = "https://raw.githubusercontent.com/homermultitext/byzortho/master/orthoequivs.csv"
-
-# ╔═╡ 86aa019b-e269-491d-ac98-4ef9a36a9cdd
-byzorthodata = begin
-	lines = Downloads.download(byzorthourl) |> readlines
-	map(lines[2:end]) do ln
-		cols = split(ln, ",")
-		(cols[2] => cols[3])
-	end
-
-end
-
-
 # ╔═╡ bbef0d04-803e-11ec-2d0c-99bccd51e7f3
 md"""> ### HMT editors: assess morphology for all scholia in repository
 >
 > - make sure `Kanones.jl` is cloned in an adjacent directory
 
-![layout](./dirlayout.png)
 """
 
 # ╔═╡ 65f0af47-76a3-42f0-9ace-063e5e211ae8
@@ -100,18 +82,6 @@ md"> #### View results"
 # ╔═╡ 87b56202-0716-44e7-81d1-b36b942d5054
 md"""*Parse* $(@bind parsethis TextField(;placeholder="ποταμοῖο"))"""
 
-# ╔═╡ d151c98c-2cb8-4dc7-8c59-42288eb2e71c
-md"""
-
-## How to do it
-
-- √ get texts for chosen surface
-- √ tokenize
-- thoroughly check this nb for normalizing forms!
-- use byzortho dict to map tokens to analyzable forms
-- analyze these morphologically
-"""
-
 # ╔═╡ 9ddd7641-257b-408f-9422-bf7fd7fe5ceb
 html"""
 
@@ -120,8 +90,40 @@ html"""
 
 """
 
+# ╔═╡ d151c98c-2cb8-4dc7-8c59-42288eb2e71c
+md"""
+
+## How to make this work eventually
+
+- √ get texts for chosen surface
+- √ tokenize
+- thoroughly check this nb for normalizing forms!
+- use byzortho dict to map tokens to analyzable forms
+- analyze these morphologically
+"""
+
+# ╔═╡ 6a95886d-985d-43f4-ad9f-6542d01d8b6a
+md"> Byzortho stuff to incoporate"
+
+# ╔═╡ 3cd3640f-e8a9-42ca-9588-59eb3036918d
+byzorthourl = "https://raw.githubusercontent.com/homermultitext/byzortho/master/orthoequivs.csv"
+
+# ╔═╡ 86aa019b-e269-491d-ac98-4ef9a36a9cdd
+byzorthodata = begin
+	lines = Downloads.download(byzorthourl) |> readlines
+	map(lines[2:end]) do ln
+		cols = split(ln, ",")
+		(cols[2] => cols[3])
+	end
+
+end
+
+
 # ╔═╡ 97058ef5-a810-4c18-9149-8372e46dc399
 md"> Counting results"
+
+# ╔═╡ 3fbda39d-6f54-459f-b22a-1f3453d382c4
+failreport  = joinpath(pwd() |> dirname, "morphology-tables", "singleton-fails.txt") 
 
 # ╔═╡ e1b1291f-2e1a-48d2-b026-113ba4b7d21f
 md"""---
@@ -167,9 +169,9 @@ function kdata()
     # 3. manually validated NOT in LSJ:
     extras = joinpath((pwd() |> dirname |> dirname), "Kanones.jl", "datasets", "extra")
 	 # 4. Homeric content:
-    extras = joinpath((pwd() |> dirname |> dirname), "Kanones.jl", "datasets", "homeric")
+    homer = joinpath((pwd() |> dirname |> dirname), "Kanones.jl", "datasets", "homeric")
 	localadds = joinpath(pwd() |> dirname, "morphology-tables")
-    dataset([lgr, lsj, extras, localadds]) 
+    dataset([lgr, lsj, extras, homer, localadds]) 
 end
 
 # ╔═╡ de4d04a8-f511-4517-b5fb-ea9c857bab87
@@ -297,6 +299,16 @@ threshpct = threshtotal == 0 ? 0 : round((threshtotal / length(parses)) * 100, d
 
 # ╔═╡ cd77efdf-4977-4f33-a120-dbb6c4320338
 threshtotal == 0 ? md"" : md"""Tokens occurring at least **$(thresh)** times: **$(length(overthresh))** tokens  (**$(threshtotal)** occurrences = $(threshpct)%)"""
+
+# ╔═╡ 53b3902b-dd81-4305-8775-d443d5018987
+singletons = map(filter(pr -> pr[2] == 1, failcounts)) do pr
+	pr[1]
+end |> sort
+
+# ╔═╡ 47f11109-473c-4559-99b8-4381a2ddd834
+open(failreport, "w") do io
+	write(io, join(singletons, "\n"))
+end
 
 # ╔═╡ 95eab698-aa17-483a-b575-05986b07bdd6
 md"> CSS"
@@ -1759,9 +1771,6 @@ version = "17.4.0+0"
 # ╔═╡ Cell order:
 # ╟─e4a81af6-55df-456c-ab3f-6636d2f0d631
 # ╟─50f5bcdd-dd1f-459c-89fe-7f7a81905f20
-# ╟─6a95886d-985d-43f4-ad9f-6542d01d8b6a
-# ╟─3cd3640f-e8a9-42ca-9588-59eb3036918d
-# ╟─86aa019b-e269-491d-ac98-4ef9a36a9cdd
 # ╟─bbef0d04-803e-11ec-2d0c-99bccd51e7f3
 # ╟─65f0af47-76a3-42f0-9ace-063e5e211ae8
 # ╟─59201f18-0185-4beb-bd39-9367a783150d
@@ -1780,12 +1789,18 @@ version = "17.4.0+0"
 # ╟─abbf7cb4-41cc-49c8-a101-fd4a1e3703aa
 # ╟─87b56202-0716-44e7-81d1-b36b942d5054
 # ╟─e2422f20-da1a-4946-9b26-d7d3c8a759aa
-# ╟─d151c98c-2cb8-4dc7-8c59-42288eb2e71c
 # ╟─9ddd7641-257b-408f-9422-bf7fd7fe5ceb
+# ╟─d151c98c-2cb8-4dc7-8c59-42288eb2e71c
+# ╟─6a95886d-985d-43f4-ad9f-6542d01d8b6a
+# ╟─3cd3640f-e8a9-42ca-9588-59eb3036918d
+# ╟─86aa019b-e269-491d-ac98-4ef9a36a9cdd
 # ╟─97058ef5-a810-4c18-9149-8372e46dc399
 # ╟─e72fd57a-82fc-42aa-b6f0-c36369c8e446
 # ╟─d36d3d96-6bc2-448c-af38-9b02b14ea988
-# ╟─c89e3d8e-b6bb-4236-aafd-c32f521e4ee4
+# ╠═c89e3d8e-b6bb-4236-aafd-c32f521e4ee4
+# ╠═53b3902b-dd81-4305-8775-d443d5018987
+# ╠═3fbda39d-6f54-459f-b22a-1f3453d382c4
+# ╠═47f11109-473c-4559-99b8-4381a2ddd834
 # ╟─e57562ba-64a5-44d5-b7df-4539e34505db
 # ╟─feada822-bb03-489b-8dba-dae790bb9aaf
 # ╟─e1b1291f-2e1a-48d2-b026-113ba4b7d21f
@@ -1793,9 +1808,9 @@ version = "17.4.0+0"
 # ╟─be7937f0-134d-4072-a2b8-804eedbefb98
 # ╟─86ac5638-ea24-49e1-858b-821852f54c68
 # ╟─db873991-a9ea-4430-a8fb-7b1cc6a447ab
-# ╠═dbf5303c-f6b2-4d58-ae59-710e7e60a562
-# ╟─de4d04a8-f511-4517-b5fb-ea9c857bab87
 # ╟─798a0be7-eeee-474b-8780-af0a8335269c
+# ╟─de4d04a8-f511-4517-b5fb-ea9c857bab87
+# ╟─dbf5303c-f6b2-4d58-ae59-710e7e60a562
 # ╠═a0c1cc74-22b5-42bb-aecd-83083000a840
 # ╟─0d0231d1-6ef5-4db9-ab94-0fb66269b916
 # ╟─c7c99d8d-331e-4083-af38-a6522dab8791
