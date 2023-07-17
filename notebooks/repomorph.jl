@@ -123,7 +123,7 @@ end
 md"> Counting results"
 
 # ╔═╡ 3fbda39d-6f54-459f-b22a-1f3453d382c4
-failreport  = joinpath(pwd() |> dirname, "morphology-tables", "singleton-fails.txt") 
+failreport  = joinpath(pwd() |> dirname, "morphology-notes", "singleton-fails.txt") 
 
 # ╔═╡ e1b1291f-2e1a-48d2-b026-113ba4b7d21f
 md"""---
