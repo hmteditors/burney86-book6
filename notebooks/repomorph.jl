@@ -301,9 +301,12 @@ threshpct = threshtotal == 0 ? 0 : round((threshtotal / length(parses)) * 100, d
 threshtotal == 0 ? md"" : md"""Tokens occurring at least **$(thresh)** times: **$(length(overthresh))** tokens  (**$(threshtotal)** occurrences = $(threshpct)%)"""
 
 # ╔═╡ 53b3902b-dd81-4305-8775-d443d5018987
-singletons = map(filter(pr -> pr[2] == 1, failcounts)) do pr
-	pr[1]
-end |> sort
+singletons = begin
+	singles = map(filter(pr -> pr[2] == 1, failcounts)) do pr
+		pr[1]
+	end 
+	PolytonicGreek.sortWords(singles, literaryGreek())
+end
 
 # ╔═╡ 47f11109-473c-4559-99b8-4381a2ddd834
 open(failreport, "w") do io
@@ -1798,7 +1801,7 @@ version = "17.4.0+0"
 # ╟─e72fd57a-82fc-42aa-b6f0-c36369c8e446
 # ╟─d36d3d96-6bc2-448c-af38-9b02b14ea988
 # ╠═c89e3d8e-b6bb-4236-aafd-c32f521e4ee4
-# ╠═53b3902b-dd81-4305-8775-d443d5018987
+# ╟─53b3902b-dd81-4305-8775-d443d5018987
 # ╠═3fbda39d-6f54-459f-b22a-1f3453d382c4
 # ╠═47f11109-473c-4559-99b8-4381a2ddd834
 # ╟─e57562ba-64a5-44d5-b7df-4539e34505db
@@ -1811,7 +1814,7 @@ version = "17.4.0+0"
 # ╟─798a0be7-eeee-474b-8780-af0a8335269c
 # ╟─de4d04a8-f511-4517-b5fb-ea9c857bab87
 # ╟─dbf5303c-f6b2-4d58-ae59-710e7e60a562
-# ╠═a0c1cc74-22b5-42bb-aecd-83083000a840
+# ╟─a0c1cc74-22b5-42bb-aecd-83083000a840
 # ╟─0d0231d1-6ef5-4db9-ab94-0fb66269b916
 # ╟─c7c99d8d-331e-4083-af38-a6522dab8791
 # ╟─8d39c4f7-6f4a-4f16-82c4-e4f029b8835b
