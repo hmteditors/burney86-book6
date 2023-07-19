@@ -21,10 +21,11 @@ begin
 	using Downloads
 
 	using EzXML
-	#using DataFrames
+	using DataFrames
 	
 	# Morphology:
 	using Kanones
+	
 	# Required CITE architecture packages:
 	using EditorsRepo
 
@@ -53,6 +54,15 @@ md"*Unhide the following cell to see the Julia environment*."
 
 # ╔═╡ 46b56dc0-2359-11ee-0490-39b995125353
 md"""# Read scholia with Apollodorus"""
+
+# ╔═╡ be621d2e-16c1-4365-8bbf-7caee8eedd5f
+md"""*Load a parser from a local file*: $(@bind file_data FilePicker())"""
+
+# ╔═╡ 1082c30e-9b48-48b6-84cd-61d835c32000
+md"""## Browse scholia by page"""
+
+# ╔═╡ 56f9ebdb-d05a-46c9-a89a-8a292d6e20ca
+md"""## Find scholia for person"""
 
 # ╔═╡ 3332d497-97ae-48b9-b353-533a241bef8a
 html"""
@@ -135,7 +145,7 @@ repotexts =  normalizedcorpus(r)
 scholia = filter(psg -> startswith(workcomponent(urn(psg)),"tlg5026"), repotexts.passages)
 
 # ╔═╡ aece1e2a-8117-4a87-bb5f-421157000669
-md"> Indexes"
+md"> **Indexes**"
 
 # ╔═╡ 04dc66f9-bc0d-4e8d-ae1f-78734cd8acc7
 triples = dsetriples(r)
@@ -224,7 +234,49 @@ end
 currentfolks = displayfolks()
 
 # ╔═╡ b8fb55c4-ead6-4d20-9064-8e33a3948570
-isempty(currentfolks) ? nothing : md"""*References to people in this passage*: $(@bind person Select(folksmenu(currentfolks)))"""
+isempty(currentfolks) ? md"""*No people named in this passage* $(@bind person (Select([""])))""" : md"""*References to people in this passage*: $(@bind person Select(folksmenu(currentfolks)))"""
+
+# ╔═╡ b6b01eb5-7c91-4584-adae-87a3591487ad
+"""Format a correctly sorted menu of name forms with URN values."""
+function bypersonopts()
+	menu = ["" => ""]
+
+	strlist = map(trip -> trip[3] * "+" * trip[2], persnameidx)
+	
+	for s in unique(sortWords(strlist, literaryGreek()))
+		cols = split(s, "+")
+		push!(menu, Pair(cols[2], cols[1]))
+	end
+	menu
+		
+	
+	
+end
+
+# ╔═╡ 26e1a8fd-c927-4c12-bb7f-8c3c08d5b186
+@bind byperson Select(bypersonopts())
+
+# ╔═╡ 5737a9d2-187d-4239-aff2-08750216835f
+if isempty(byperson)
+	nothing
+else
+	scholiaforperson = filter(trip -> trip[2] == byperson && startswith(workcomponent(trip[1]), "tlg5026"), persnameidx)
+	
+	mdlines = ["Some form of this name appears in **$(length(scholiaforperson))** scholia `$(byperson)`", ""]
+	for tr in scholiaforperson
+		push!(mdlines, "\n---\n")
+		push!(mdlines, "*" * string(tr[1]) * "*")
+		
+		psglist = filter(scholia) do psg
+			dropversion(urn(psg)) == dropversion(tr[1])
+			
+		end
+		push!(mdlines, join(map(p -> text(p), psglist), " "))
+	end
+	join(mdlines, "\n") |> Markdown.parse
+		#mdlines
+	
+end
 
 # ╔═╡ 67ccca5c-58ab-46b5-9dc9-ae682dc54006
 md"> **Apollodorus**"
@@ -235,14 +287,146 @@ apollurl = "https://raw.githubusercontent.com/neelsmith/eagl-texts/wip/texts/apo
 # ╔═╡ bc974b77-95ee-46e6-b70c-bc23030f689a
 apollodorus = fromcex(apollurl, CitableTextCorpus, UrlReader)
 
+# ╔═╡ 4e966f42-4f59-48a0-bd01-bb36f8366093
+apengurl = "https://raw.githubusercontent.com/neelsmith/apollodorus/main/texts/apollodorus_jgf.cex"
+
+# ╔═╡ 4ec83ef8-567a-4f5b-9927-7ab1ec1d4865
+frazer = fromcex(apengurl, CitableTextCorpus, UrlReader)
+
 # ╔═╡ 0616efee-cbdf-4f1a-b06b-1125ddc66811
 apollindex = corpusindex(apollodorus, lg)
 
 # ╔═╡ c5bd61bf-a8a6-4ae2-86e2-d7bd14dfbf0c
 apollhisto = corpus_histo(apollodorus, lg)
 
+# ╔═╡ 9ec76fcc-3122-4b06-b03d-210a8e8938ab
+nelisturl = "https://raw.githubusercontent.com/neelsmith/apollodorus/main/named-entities/apollodorus-nelist.txt"
+
+# ╔═╡ 0446dd7a-8f84-4755-b168-9ec01652737d
+"""Retrieve named entity ID list for Apollodorus"""
+function apollnamedentities()
+	f = Downloads.download(nelisturl)
+	data = readlines(f)
+	rm(f)
+	map(data[2:end]) do ln
+		split(ln, "|")
+	end
+end
+
+# ╔═╡ 90c0478c-ec76-4ab2-a839-aa291859bf00
+nepairs = apollnamedentities()
+
+# ╔═╡ e9c05e2a-0eb3-4ea2-8f3e-bd183251ed81
+"""Find passages in Frazer translation containing the currently selected person."""
+function apollpassages()
+	answers = []
+	for ne in filter(pr -> pr[1] == person, nepairs)
+		psgs = filter(psg -> occursin(ne[2], text(psg)), frazer.passages)
+		push!(answers, psgs)
+	end
+	answers |> Iterators.flatten |> collect
+end
+
+# ╔═╡ ba185579-f924-4917-b1af-3d6bc226c521
+begin
+	if isempty(person)
+		nothing
+	else
+		engpassages = apollpassages()
+		lns = ["### $(length(engpassages)) passages in Apollodorus name this person ", "", "`$(person)`", ""]
+		for psg in engpassages
+			ref = passagecomponent(urn(psg))
+			push!(lns, "*$(ref)* " * psg.text)
+			push!(lns, "")
+		end
+		join(lns, "\n") |> Markdown.parse
+	end
+end
+
 # ╔═╡ 46207696-6810-46cd-bfde-dbfa59734165
 md"> **Parser**"
+
+# ╔═╡ 03cd3522-28c3-4d8e-9578-ae0bbb23f92c
+"""Construct a `DataFrameParser` from a local `.csv` file."""
+function fromfile(fdata)
+	if isnothing(fdata)
+		nothing
+	else
+		f = tempname()
+		open(f, "w") do io
+			write(f, fdata["data"])
+		end
+		dfparser = dfParser(f)
+		rm(f)
+		dfparser
+	end
+end
+
+# ╔═╡ 61c5e486-6777-40f2-8e91-f43ae90e3fbb
+parser = fromfile(file_data)
+
+# ╔═╡ b43330bf-f59d-4769-b555-a343bbfbe2e1
+isnothing(parser) ? md"**Parser**: no parser loaded." : md"""**Parser**: loaded parser capable of analyzing **$(nrow(parser.df))** forms."""
+
+# ╔═╡ a0a224e2-169d-4433-864a-81b47b6af5d7
+md"> **Analyses**"
+
+# ╔═╡ 20e960b2-a64b-4aa7-8843-69dd1d891e74
+aptokens = tokenizedcorpus(apollodorus, lg, filterby=LexicalToken())
+
+# ╔═╡ c7e2db11-cf5b-4662-8df7-8a5d04550def
+# ╠═╡ show_logs = false
+apparses = parsecorpus(aptokens, parser)
+
+# ╔═╡ 19e96087-b618-475e-a9ac-6a2f79106cbd
+successes = filter(apparses.analyses) do a
+	!isempty(a.analyses) 
+end
+
+# ╔═╡ a75e34e3-04ec-42de-aba1-edb43e45856a
+verbs = filter(successes) do a
+	greekForm(a.analyses[1]) isa GMFFiniteVerb
+end
+
+# ╔═╡ d6c3461d-1443-4406-aa81-7e784b0a2119
+md"""*Analyzed $(round(100 *(length(successes) / length(aptokens.passages))))% of tokens, including* **$(length(verbs))** *finite verb forms*
+"""
+
+# ╔═╡ 371bf8a5-1630-48be-a980-926ebf09ea39
+"""Find Greek verbs in Apollodorus occuring in text with named figure."""
+function apollverbs()
+	answers = []
+	for ne in filter(pr -> pr[1] == person, nepairs)
+		
+		
+	
+			
+		psgs = filter(psg -> occursin(ne[2], text(psg)), frazer.passages)
+		#push!(answers, map(p -> passagecomponent(urn(p)), psgs))
+		for ref in map(p -> passagecomponent(urn(p)), psgs)
+			vmatches = filter(verbs) do v
+				vref = passagecomponent(v.ctoken.passage.urn)
+				startswith(vref, ref)
+			end
+			push!(answers, vmatches)
+		end
+	
+	
+	end
+	answers |> Iterators.flatten |> collect
+end
+
+# ╔═╡ 125fcf06-3d11-4f86-8b54-e1c1c9f4d1bd
+begin
+	if isempty(person)
+		nothing
+	else
+		apollverbs()
+	end
+end
+
+# ╔═╡ ed1d2d0a-f654-4266-9244-c9d76059bfea
+lexdict = Kanones.lsjdict()
 
 # ╔═╡ 00000000-0000-0000-0000-000000000001
 PLUTO_PROJECT_TOML_CONTENTS = """
@@ -254,6 +438,7 @@ CitableObject = "e2b2f5ea-1cd8-4ce8-9b2b-05dad64c2a57"
 CitablePhysicalText = "e38a874e-a7c2-4ff3-8dea-81ae2e5c9b07"
 CitableTeiReaders = "b4325aa9-906c-402e-9c3f-19ab8a88308e"
 CitableText = "41e66566-473b-49d4-85b7-da83b66615d8"
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
 Downloads = "f43a241f-c20a-4ad4-852c-f6b1247861c6"
 EditionBuilders = "2fb66cca-c1f8-4a32-85dd-1a01a9e8cd8f"
 EditorsRepo = "3fa2051c-bcb6-4d65-8a68-41ff86d56437"
@@ -273,6 +458,7 @@ CitableObject = "~0.16.0"
 CitablePhysicalText = "~0.9.8"
 CitableTeiReaders = "~0.10.2"
 CitableText = "~0.16.0"
+DataFrames = "~1.6.0"
 EditionBuilders = "~0.8.3"
 EditorsRepo = "~0.18.7"
 EzXML = "~1.1.0"
@@ -289,7 +475,7 @@ PLUTO_MANIFEST_TOML_CONTENTS = """
 
 julia_version = "1.9.1"
 manifest_format = "2.0"
-project_hash = "50c7d127bd6cde9793805e14ad620fb3271bf334"
+project_hash = "48471e5030b5e534a72d2c75240f679c06d287eb"
 
 [[deps.ANSIColoredPrinters]]
 git-tree-sha1 = "574baf8110975760d391c710b6341da1afa48d8c"
@@ -1631,23 +1817,35 @@ version = "17.4.0+0"
 # ╟─24d2160a-b195-4534-bd70-da0cc10acdff
 # ╟─b5af8db7-a6c8-4c5d-8fa2-29bc6251c387
 # ╟─46b56dc0-2359-11ee-0490-39b995125353
+# ╟─be621d2e-16c1-4365-8bbf-7caee8eedd5f
+# ╟─b43330bf-f59d-4769-b555-a343bbfbe2e1
+# ╟─c7e2db11-cf5b-4662-8df7-8a5d04550def
+# ╟─d6c3461d-1443-4406-aa81-7e784b0a2119
+# ╟─1082c30e-9b48-48b6-84cd-61d835c32000
 # ╟─c52503b3-36b0-4df1-bf4c-5ace3c144672
 # ╟─4336d73c-efd3-48a3-b061-5d5a52b6813f
 # ╟─ef76f9c3-6dcd-4683-938e-aa7b4b45a6de
 # ╟─b51b2b60-d0e7-4af2-abe0-bb4c2bc36b78
 # ╟─b8fb55c4-ead6-4d20-9064-8e33a3948570
+# ╟─125fcf06-3d11-4f86-8b54-e1c1c9f4d1bd
+# ╟─371bf8a5-1630-48be-a980-926ebf09ea39
+# ╟─ba185579-f924-4917-b1af-3d6bc226c521
+# ╟─56f9ebdb-d05a-46c9-a89a-8a292d6e20ca
+# ╟─26e1a8fd-c927-4c12-bb7f-8c3c08d5b186
+# ╟─5737a9d2-187d-4239-aff2-08750216835f
 # ╟─3332d497-97ae-48b9-b353-533a241bef8a
 # ╟─4051d4a8-99b7-41f8-85c3-a7db930286a6
 # ╟─b7eb242b-ef08-48dd-bbf6-8f0243c5570a
 # ╟─3c61327f-b943-4376-aa4e-a3ef35ffc9a5
 # ╟─af319b0b-2d46-4bb6-be38-149ad466951f
 # ╟─cd22dda1-38fd-449d-852e-629721748b3a
-# ╠═5f808614-e425-4335-8059-ad642669c6df
-# ╠═a5dc657c-1ef2-430d-b2df-bd5af178af64
+# ╟─5f808614-e425-4335-8059-ad642669c6df
+# ╟─a5dc657c-1ef2-430d-b2df-bd5af178af64
 # ╟─4adeffec-3da8-4ab0-adc8-dd6cc5f030fc
 # ╟─6d554ad7-46c1-470d-a656-ec515b4b2c2e
 # ╟─55436e9e-d279-445c-b137-750072829fea
 # ╟─bf488426-6641-4526-8b69-20051400ff9f
+# ╟─b6b01eb5-7c91-4584-adae-87a3591487ad
 # ╟─ab003805-07f2-40d9-8d39-e9d237ccbac7
 # ╟─38b5c7be-99f6-419d-83e8-023885aad212
 # ╟─9a257096-c9f6-40e0-9636-d26f32e6bfaa
@@ -1655,15 +1853,28 @@ version = "17.4.0+0"
 # ╟─d95e34ef-4a27-4f70-85f4-d7d5d6a7c7c4
 # ╟─f74ff948-5c13-4d65-9cd4-913affe300d3
 # ╟─aece1e2a-8117-4a87-bb5f-421157000669
-# ╟─04dc66f9-bc0d-4e8d-ae1f-78734cd8acc7
-# ╟─d8719336-df5b-457a-8f5b-c4381c47400e
+# ╠═04dc66f9-bc0d-4e8d-ae1f-78734cd8acc7
+# ╠═d8719336-df5b-457a-8f5b-c4381c47400e
 # ╟─46a23110-7cd5-4a6a-a962-d67800e6945f
 # ╟─9522fdb9-2d5d-4acb-a658-cdee5af88590
 # ╟─67ccca5c-58ab-46b5-9dc9-ae682dc54006
 # ╟─0d942002-9946-443f-9de4-9fc03b5ba899
 # ╟─bc974b77-95ee-46e6-b70c-bc23030f689a
+# ╟─4e966f42-4f59-48a0-bd01-bb36f8366093
+# ╟─4ec83ef8-567a-4f5b-9927-7ab1ec1d4865
 # ╟─0616efee-cbdf-4f1a-b06b-1125ddc66811
 # ╟─c5bd61bf-a8a6-4ae2-86e2-d7bd14dfbf0c
+# ╟─9ec76fcc-3122-4b06-b03d-210a8e8938ab
+# ╟─0446dd7a-8f84-4755-b168-9ec01652737d
+# ╠═90c0478c-ec76-4ab2-a839-aa291859bf00
+# ╟─e9c05e2a-0eb3-4ea2-8f3e-bd183251ed81
 # ╟─46207696-6810-46cd-bfde-dbfa59734165
+# ╟─61c5e486-6777-40f2-8e91-f43ae90e3fbb
+# ╟─03cd3522-28c3-4d8e-9578-ae0bbb23f92c
+# ╟─a0a224e2-169d-4433-864a-81b47b6af5d7
+# ╠═20e960b2-a64b-4aa7-8843-69dd1d891e74
+# ╟─19e96087-b618-475e-a9ac-6a2f79106cbd
+# ╟─a75e34e3-04ec-42de-aba1-edb43e45856a
+# ╠═ed1d2d0a-f654-4266-9244-c9d76059bfea
 # ╟─00000000-0000-0000-0000-000000000001
 # ╟─00000000-0000-0000-0000-000000000002
